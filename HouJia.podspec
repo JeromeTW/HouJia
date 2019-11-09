@@ -30,6 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
   s.platform     = :ios, '11.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'HouJia/Classes/**/*'
   
