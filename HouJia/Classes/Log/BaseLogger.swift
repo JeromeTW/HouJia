@@ -78,7 +78,7 @@ public class BaseLogger {
     
 
     if shouldShow {
-      show(logString)
+      self.show(logString)
     }
 
     if shouldCache {

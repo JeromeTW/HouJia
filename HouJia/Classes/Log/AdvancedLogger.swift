@@ -11,14 +11,18 @@ import UIKit
 
 public class AdvancedLogger: BaseLogger {
   override func show(_ logString: String) {
-    logTextView.text += "\n\(logString)"
+    logTextView.logText += "\n\(logString)"
   }
 
   override func cache(_ logString: String) {
     do {
       try FileManager.default.saveLog(logString)
     } catch {
-      logE("", error: error)
+      if UnitTesting.isRunning {
+        fatalError()
+      } else {
+        print("⭐️❌: ERROR!!!")
+      }
     }
   }
 }
@@ -30,7 +34,7 @@ extension FileManager {
 
   func saveLog(_ logString: String) throws {
     guard let cachesDirectory = cachesDirectory else { return }
-    let currentDateString = Date().string(format: "yyyy/MM/dd")
+    let currentDateString = Date().string(format: "yyyy-MM-dd")
     let filePath = cachesDirectory.appendingPathComponent("\(currentDateString).log")
 
     if fileExists(atPath: filePath.path) { // adding content to file
@@ -82,8 +86,12 @@ extension UserDefaults {
   public var APPVersionsHistory: String {
     let key = "APPVersionsHistory"
     guard let result = string(forKey: key) else {
-      assertionFailure("Not set APPVersionsHistory")
-      return ""
+      if UnitTesting.isRunning {
+        return ""
+      } else {
+        assertionFailure("Not set APPVersionsHistory")
+        return ""
+      }
     }
     return result
   }

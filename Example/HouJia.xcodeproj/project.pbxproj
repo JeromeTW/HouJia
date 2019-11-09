@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		02CE534023765A0600BBA9E8 /* ImportModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE533F23765A0600BBA9E8 /* ImportModules.swift */; };
 		02CE534123765A0600BBA9E8 /* ImportModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE533F23765A0600BBA9E8 /* ImportModules.swift */; };
+		02CE535C2376CCC500BBA9E8 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE53582376CCC400BBA9E8 /* CoreDataTests.swift */; };
+		02CE535D2376CCC500BBA9E8 /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE53592376CCC400BBA9E8 /* ImageLoaderTests.swift */; };
+		02CE535E2376CCC500BBA9E8 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE535A2376CCC400BBA9E8 /* NetworkTests.swift */; };
+		02CE535F2376CCC500BBA9E8 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE535B2376CCC500BBA9E8 /* LoggerTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		C7B10EA6685B1C8147875A2A /* Pods_HouJia_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BBCA5731C830AD8A7164A0 /* Pods_HouJia_Example.framework */; };
 		D28930D7A0F596DD28D5BA93 /* Pods_HouJia_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 161E2C5E0835BE74D0FAB589 /* Pods_HouJia_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +35,10 @@
 /* Begin PBXFileReference section */
 		02BBCA5731C830AD8A7164A0 /* Pods_HouJia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouJia_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CE533F23765A0600BBA9E8 /* ImportModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportModules.swift; sourceTree = "<group>"; };
+		02CE53582376CCC400BBA9E8 /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
+		02CE53592376CCC400BBA9E8 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
+		02CE535A2376CCC400BBA9E8 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		02CE535B2376CCC500BBA9E8 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
 		161E2C5E0835BE74D0FAB589 /* Pods_HouJia_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouJia_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		167952101BA6BAEB286ED88D /* Pods-HouJia_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouJia_Tests.release.xcconfig"; path = "Target Support Files/Pods-HouJia_Tests/Pods-HouJia_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2ADE0B9F5D5A75FEAA8A5A41 /* HouJia.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HouJia.podspec; path = ../HouJia.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -46,7 +53,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* HouJia_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HouJia_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		A74011E491B6F1F56AAACBF2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A950B6EDC8F730D4E118E72C /* Pods-HouJia_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouJia_Example.debug.xcconfig"; path = "Target Support Files/Pods-HouJia_Example/Pods-HouJia_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F941A8DA89A5A7002CC41ADE /* Pods-HouJia_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouJia_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HouJia_Tests/Pods-HouJia_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,7 +145,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				02CE53582376CCC400BBA9E8 /* CoreDataTests.swift */,
+				02CE53592376CCC400BBA9E8 /* ImageLoaderTests.swift */,
+				02CE535B2376CCC500BBA9E8 /* LoggerTests.swift */,
+				02CE535A2376CCC400BBA9E8 /* NetworkTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -352,7 +361,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				02CE534123765A0600BBA9E8 /* ImportModules.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				02CE535F2376CCC500BBA9E8 /* LoggerTests.swift in Sources */,
+				02CE535E2376CCC500BBA9E8 /* NetworkTests.swift in Sources */,
+				02CE535D2376CCC500BBA9E8 /* ImageLoaderTests.swift in Sources */,
+				02CE535C2376CCC500BBA9E8 /* CoreDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

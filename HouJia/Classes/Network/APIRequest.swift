@@ -35,8 +35,8 @@ public struct APIRequest {
 }
 
 public struct APIResponse<Body> {
-  let statusCode: Int
-  let body: Body
+  public let statusCode: Int
+  public let body: Body
 }
 
 // MARK: - For JSON Object

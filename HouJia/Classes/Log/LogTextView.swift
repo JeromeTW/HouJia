@@ -6,6 +6,13 @@
 import UIKit
 
 public class LogTextView: UITextView {
+  public var logText = "" {
+    didSet {
+      DispatchQueue.main.async {
+        logTextView.text = self.logText
+      }
+    }
+  }
   override public init(frame: CGRect, textContainer: NSTextContainer?) {
     super.init(frame: frame, textContainer: textContainer)
     layer.zPosition = .greatestFiniteMagnitude
