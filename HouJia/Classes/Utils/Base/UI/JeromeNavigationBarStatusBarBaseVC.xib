@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController storyboardIdentifier="MusicListVC" id="t0x-EI-5FV">
+            <view key="view" contentMode="scaleToFill" id="M7Y-ar-A8l">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dge-gD-5ww" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-2c-cQG" userLabel="Top View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLZ-IK-9IG" userLabel="Status View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ywc-N3-y87"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuY-8f-eR7" userLabel="Navigation Bar View">
+                                <rect key="frame" x="0.0" y="43" width="414" height="85"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="U0c-ip-bCy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PuY-8f-eR7" firstAttribute="top" secondItem="JLZ-IK-9IG" secondAttribute="bottom" constant="-1" id="A0I-hu-xoq"/>
+                            <constraint firstAttribute="trailing" secondItem="PuY-8f-eR7" secondAttribute="trailing" id="In8-Dl-lVh"/>
+                            <constraint firstItem="PuY-8f-eR7" firstAttribute="leading" secondItem="cjh-2c-cQG" secondAttribute="leading" id="JnR-4t-nSL"/>
+                            <constraint firstItem="JLZ-IK-9IG" firstAttribute="leading" secondItem="cjh-2c-cQG" secondAttribute="leading" id="ap7-lZ-5QC"/>
+                            <constraint firstAttribute="trailing" secondItem="JLZ-IK-9IG" secondAttribute="trailing" id="btq-6D-lZ9"/>
+                            <constraint firstItem="JLZ-IK-9IG" firstAttribute="top" secondItem="cjh-2c-cQG" secondAttribute="top" id="gsN-ZY-Wgn"/>
+                            <constraint firstAttribute="bottom" secondItem="PuY-8f-eR7" secondAttribute="bottom" id="hNM-EC-IC7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="0Ea-l6-p0D" firstAttribute="trailing" secondItem="dge-gD-5ww" secondAttribute="trailing" id="0Iq-yo-r1k"/>
+                    <constraint firstItem="dge-gD-5ww" firstAttribute="top" secondItem="M7Y-ar-A8l" secondAttribute="top" id="ToP-cN-ln7"/>
+                    <constraint firstItem="cjh-2c-cQG" firstAttribute="top" secondItem="M7Y-ar-A8l" secondAttribute="top" id="ZNa-LD-P2Q"/>
+                    <constraint firstAttribute="trailing" secondItem="cjh-2c-cQG" secondAttribute="trailing" id="lFH-Ee-EX6"/>
+                    <constraint firstItem="dge-gD-5ww" firstAttribute="leading" secondItem="0Ea-l6-p0D" secondAttribute="leading" id="n9c-aq-fT1"/>
+                    <constraint firstItem="0Ea-l6-p0D" firstAttribute="bottom" secondItem="dge-gD-5ww" secondAttribute="bottom" id="tY0-zd-CfD"/>
+                    <constraint firstItem="cjh-2c-cQG" firstAttribute="leading" secondItem="M7Y-ar-A8l" secondAttribute="leading" id="v5l-v8-aOT"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="0Ea-l6-p0D"/>
+            </view>
+            <navigationItem key="navigationItem" id="4ms-Jg-Dfd"/>
+            <point key="canvasLocation" x="-313.04347826086956" y="182.8125"/>
+        </viewController>
+    </objects>
+</document>

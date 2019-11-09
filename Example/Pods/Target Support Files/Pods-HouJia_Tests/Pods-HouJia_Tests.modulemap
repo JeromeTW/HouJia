@@ -1,0 +1,6 @@
+framework module Pods_HouJia_Tests {
+  umbrella header "Pods-HouJia_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

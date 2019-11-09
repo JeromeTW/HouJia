@@ -1,0 +1,27 @@
+PODS:
+  - DeviceGuru (6.0.0)
+  - HouJia (0.0.1):
+    - DeviceGuru
+    - SwiftyUtils
+  - SwiftyUtils (4.0.0)
+
+DEPENDENCIES:
+  - HouJia (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - DeviceGuru
+    - SwiftyUtils
+
+EXTERNAL SOURCES:
+  HouJia:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DeviceGuru: af478ea9bff7614d85198b7516ea7657153c65bb
+  HouJia: 325793c243b636612afee7aebe503f7206ddd94c
+  SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
+
+PODFILE CHECKSUM: 2feb571a0c447ec6296735467a3349278f78f227
+
+COCOAPODS: 1.8.4

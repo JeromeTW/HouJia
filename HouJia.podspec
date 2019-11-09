@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HouJia'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'A short description of HouJia.'
 
 # This description is used to generate tags and improve search results.
@@ -21,14 +21,15 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/jerome.developer.tw@gmail.com/HouJia'
+  s.homepage         = 'https://github.com/JeromeTW/HouJia'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jerome.developer.tw@gmail.com' => 'jerome.developer.tw@gmail.com' }
-  s.source           = { :git => 'https://github.com/jerome.developer.tw@gmail.com/HouJia.git', :tag => s.version.to_s }
+  s.author           = { 'JeromeTW' => 'jerome.developer.tw@gmail.com' }
+  s.source           = { :git => 'https://github.com/JeromeTW/HouJia.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
+  s.platform     = :ios, '11.0'
 
   s.source_files = 'HouJia/Classes/**/*'
   
@@ -39,4 +40,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'DeviceGuru'
+  s.dependency 'SwiftyUtils'
 end
