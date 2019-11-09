@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HouJia_Example' do
+  pod 'HouJia', :path => '../'
+
+  target 'HouJia_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
