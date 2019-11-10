@@ -18,6 +18,15 @@ import UIKit
     }
   }
 
+  override public init(frame: CGRect) {
+    super.init(frame: frame)
+    addXibView()
+  }
+
+  required public init?(coder: NSCoder) {
+    super.init(coder: coder)
+  }
+  
   override public func prepareForInterfaceBuilder() {
     super.prepareForInterfaceBuilder()
     addXibView()

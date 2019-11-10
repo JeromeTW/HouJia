@@ -4,7 +4,7 @@
 
 import UIKit
 
-@IBDesignable public class ButtonWithImageAndLabelSuperView: UIView {
+@IBDesignable public class ButtonWithImageAndLabelSuperView: BaseView {
   public weak var buttonWithImageAndLabelView: ButtonWithImageAndLabelView!
   public var text: String? {
     didSet {
@@ -30,6 +30,22 @@ import UIKit
     }
   }
 
+  public var name = ""
+  public var buttonPressedHandler: ((String) -> Void)?
+
+  override public init(frame: CGRect) {
+    super.init(frame: frame)
+    addXibView()
+  }
+
+  required public init?(coder: NSCoder) {
+    super.init(coder: coder)
+  }
+
+  @objc public func buttonPressed() {
+    buttonPressedHandler?(name)
+  }
+
   override public func prepareForInterfaceBuilder() {
     super.prepareForInterfaceBuilder()
     addXibView()
@@ -45,6 +61,7 @@ import UIKit
       self.buttonWithImageAndLabelView = buttonWithImageAndLabelView
       addSubview(buttonWithImageAndLabelView)
       buttonWithImageAndLabelView.frame = bounds
+      buttonWithImageAndLabelView.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
   }
 }
