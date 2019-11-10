@@ -15,42 +15,42 @@ open class BaseView: UIView {
     super.init(frame: frame)
   }
 
-  override public func awakeFromNib() {
+  override open func awakeFromNib() {
     logC("awakeFromNib")
     super.awakeFromNib()
   }
 
-  override public func willMove(toWindow newWindow: UIWindow?) {
+  override open func willMove(toWindow newWindow: UIWindow?) {
     logC("willMove(toWindow newWindow: UIWindow?)")
     super.willMove(toWindow: newWindow)
   }
 
-  override public func didMoveToWindow() {
+  override open func didMoveToWindow() {
     logC("didMoveToWindow")
     super.didMoveToWindow()
   }
 
-  override public func willMove(toSuperview newSuperview: UIView?) {
+  override open func willMove(toSuperview newSuperview: UIView?) {
     logC("willMove(toSuperview newSuperview: UIView?)")
     super.willMove(toSuperview: newSuperview)
   }
 
-  override public func didMoveToSuperview() {
+  override open func didMoveToSuperview() {
     logC("didMoveToSuperview")
     super.didMoveToSuperview()
   }
 
-  override public func didAddSubview(_ subview: UIView) {
+  override open func didAddSubview(_ subview: UIView) {
     logC("didAddSubview(_ subview: UIView)")
     super.didAddSubview(subview)
   }
 
-  override public func willRemoveSubview(_ subview: UIView) {
+  override open func willRemoveSubview(_ subview: UIView) {
     logC("willRemoveSubview")
     super.willRemoveSubview(subview)
   }
 
-  override public func layoutSubviews() {
+  override open func layoutSubviews() {
     logC("layoutSubviews")
     super.layoutSubviews()
   }
@@ -58,7 +58,7 @@ open class BaseView: UIView {
   #if DEBUG
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override public func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
       logC("draw(_ rect: CGRect)")
       super.draw(rect)
     }
