@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0191E57136316897D108BDD4CCDD96E2 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58190130E89690C845DCEED707FD0CE /* UITextFieldExtension.swift */; };
 		01BF551C84327E70DC2D4C8D1C2D520F /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A8CA903216FC177235290F76AF24F3 /* CGFloatLiteral.swift */; };
+		02502D9023779485001FF4F4 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02502D8E23779485001FF4F4 /* UITextFieldExtension.swift */; };
+		02502D9123779485001FF4F4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02502D8F23779485001FF4F4 /* UIViewControllerExtension.swift */; };
 		049813FE57EEA918CE9246A2F9591F55 /* ButtonWithImageAndLabelView.xib in Sources */ = {isa = PBXBuildFile; fileRef = C68DE34390FEED86D67C4C584CE84A6A /* ButtonWithImageAndLabelView.xib */; };
 		09D383C32F2479790F8112510F5CF30D /* Pods-HouJia_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7713A1DA444C9D7A2CDBB30B104A1F2A /* Pods-HouJia_Example-dummy.m */; };
 		0DE7FBBCA67DB2C44ED1AE7B83964B79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC900BE6DBDB417353D10E05333DAC3 /* Foundation.framework */; };
@@ -158,6 +160,8 @@
 
 /* Begin PBXFileReference section */
 		01C943DD32D843DDCB50680B73E98B4C /* DeviceGuru-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DeviceGuru-Info.plist"; sourceTree = "<group>"; };
+		02502D8E23779485001FF4F4 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		02502D8F23779485001FF4F4 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		03F92C1E6F44C8F9A9785129C5BAD5FE /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
 		044D70075FB8DB66D8C32C7D1604C884 /* UIScreenExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScreenExtension.swift; path = Sources/Extensions/UIKit/UIScreenExtension.swift; sourceTree = "<group>"; };
 		055ABC47BD9853EAEDC193C1FD6D5000 /* DeviceGuru.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceGuru.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -506,6 +510,8 @@
 				65B80A1DF88801E2B270AE0D9D76CED9 /* exporteImport.swift */,
 				0D1B100DEB9E7E346F83373A3CAD1564 /* StoryboardExtension.swift */,
 				C76C2D74C6F95D78AB1204CC3A23658C /* UIViewController+Alerts.swift */,
+				02502D8E23779485001FF4F4 /* UITextFieldExtension.swift */,
+				02502D8F23779485001FF4F4 /* UIViewControllerExtension.swift */,
 				DEE62EB5A66DF2ECA4D274065AEE9302 /* Base */,
 			);
 			name = Utils;
@@ -1022,12 +1028,14 @@
 				C912D19FB6133F40BF8E3DD3D241A7E3 /* AsynchronousOperation.swift in Sources */,
 				ED1FF791643A32A177DAE0E30261A95D /* BaseLogger.swift in Sources */,
 				1EDD9AB0978E24129A1D4B5BD858C30C /* BaseView.swift in Sources */,
+				02502D9023779485001FF4F4 /* UITextFieldExtension.swift in Sources */,
 				EC64665D67915F75DD1EF7ADF2DD8555 /* BaseViewController.swift in Sources */,
 				DA0819B17F650E29A3B54EDB1CBDCCA0 /* ButtonWithImageAndLabelSuperView.swift in Sources */,
 				7C260AB26647B8FB057B7CD270F9D464 /* ButtonWithImageAndLabelView.swift in Sources */,
 				049813FE57EEA918CE9246A2F9591F55 /* ButtonWithImageAndLabelView.xib in Sources */,
 				29E7D4B88C238F7F11B760947A0522EC /* CGFloatExtension.swift in Sources */,
 				51214109C91615AB20639114917F30DD /* CoordinatedNavigationController.swift in Sources */,
+				02502D9123779485001FF4F4 /* UIViewControllerExtension.swift in Sources */,
 				7A14BA1B02C97FF94CAF7042CC05EFC8 /* Coordinator.swift in Sources */,
 				ACC021454A5F6C7AA361178D4CB91249 /* CoreDataConnect.swift in Sources */,
 				8B891CCC8F9DB4F548432EDDB884EBFD /* DeviceGuruExtension.swift in Sources */,

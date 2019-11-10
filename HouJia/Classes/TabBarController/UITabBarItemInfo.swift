@@ -5,7 +5,7 @@
 import UIKit
 
 public struct UITabBarItemInfo {
-  var title: String?
-  var image: UIImage?
-  var selectedImage: UIImage?
+  public var title: String?
+  public var image: UIImage?
+  public var selectedImage: UIImage?
 }

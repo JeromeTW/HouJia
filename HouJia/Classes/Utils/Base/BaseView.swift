@@ -4,13 +4,13 @@
 
 import UIKit
 
-public class BaseView: UIView {
-  required init?(coder: NSCoder) {
+open class BaseView: UIView {
+  required public init?(coder: NSCoder) {
     logC("init?(coder: NSCoder)")
     super.init(coder: coder)
   }
 
-  override init(frame: CGRect) {
+  override public init(frame: CGRect) {
     logC("init(frame: NSCoder)")
     super.init(frame: frame)
   }
