@@ -8,4 +8,10 @@ public struct UITabBarItemInfo {
   public var title: String?
   public var image: UIImage?
   public var selectedImage: UIImage?
+  
+  public init(title: String?, image: UIImage?, selectedImage: UIImage?) {
+      self.title = title
+      self.image = image
+      self.selectedImage = selectedImage
+  }
 }

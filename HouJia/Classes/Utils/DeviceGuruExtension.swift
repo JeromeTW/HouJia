@@ -14,7 +14,7 @@ extension DeviceGuru {
 }
 
 extension CGFloat {
-  public static var statusAndNavigationTotalHeight: CGFloat {
+  static var statusAndNavigationTotalHeight: CGFloat {
     let navaigationHeight = CGFloat.navagationViewHeight
     var statusHeight: CGFloat = 0
     if DeviceGuru().hasSensorHousing {
@@ -23,5 +23,13 @@ extension CGFloat {
       statusHeight = CGFloat.defaultStatusBarHeight
     }
     return navaigationHeight + statusHeight
+  }
+
+  static var statusHeight: CGFloat {
+    if DeviceGuru().hasSensorHousing {
+      return CGFloat.iPhoneXStatusBarHeight
+    } else {
+      return CGFloat.defaultStatusBarHeight
+    }
   }
 }
