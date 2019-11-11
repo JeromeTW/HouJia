@@ -11,6 +11,7 @@ public enum LogLevel: CustomStringConvertible {
   case code
   case trace(issue: String)
   case error(error: Error)
+  case fault
   
   public var description: String {
     switch self {
@@ -22,6 +23,8 @@ public enum LogLevel: CustomStringConvertible {
         return "🦋"
       case .error:
         return "❌"
+      case .fault:
+        return "👻"
     }
   }
 }
@@ -74,6 +77,12 @@ public class BaseLogger {
           logString += "\(fileName) [\(line)], [\(function)]: \(message), error: \(error.localizedDescription)"
           print(logString)
         #endif
+      case .fault:
+        //        CLSLogv("code: \(fileName) [\(line)], [\(function)]: \(message)", getVaList([]))
+        #if DEBUG
+          logString += "\(fileName) [\(line)], [\(function)]: \(message)"
+          print(logString)
+        #endif
     }
     
 
@@ -104,4 +113,8 @@ public func logT(issue: String = "", message: Any, file: String = #file, functio
 
 public func logE(_ message: Any = "", error: Error, file: String = #file, function: String = #function, line: Int = #line) {
   logger.log(message, level: .error(error: error), file: file, function: function, line: line)
+}
+
+public func logF(_ message: Any, file: String = #file, function: String = #function, line: Int = #line) {
+  logger.log(message, level: .fault, file: file, function: function, line: line)
 }

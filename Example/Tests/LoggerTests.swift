@@ -28,25 +28,31 @@ class LoggerTests: XCTestCase {
     let codeString = "codeString"
     let traceString = "traceString"
     let errorString = "errorString"
+    let faultString = "faultString"
     logU(userString)
     logC(codeString)
     logT(issue: "#36", message: traceString)
     logE(errorString, error: APIError.invalidURL)
+    logF(faultString)
     XCTAssert(logTextView.logText.contains(userString))
     XCTAssert(logTextView.logText.contains(codeString))
     XCTAssert(logTextView.logText.contains(traceString))
     XCTAssert(logTextView.logText.contains(errorString))
+    XCTAssert(logTextView.logText.contains(faultString))
   }
   
   func test_log_file_is_existed() {
     logger.configure(shouldShow: false, shouldCache: true)
     let userString = "userString"
+    let codeString = "codeString"
     let traceString = "traceString"
     let errorString = "errorString"
+    let faultString = "faultString"
     logU(userString)
-    logC(errorString)
+    logC(codeString)
     logT(issue: "#36", message: traceString)
     logE(errorString, error: APIError.invalidURL)
+    logF(faultString)
     let fileManager = FileManager.default
     guard let cachesDirectory = fileManager.cachesDirectory else { return }
     let currentDateString = Date().string(format: "yyyy-MM-dd")

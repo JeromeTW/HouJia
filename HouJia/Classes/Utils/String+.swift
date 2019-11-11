@@ -5,7 +5,7 @@
 import UIKit
 
 extension String {
-  func generateBarcode() -> UIImage? {
+  public func generateBarcode() -> UIImage? {
     let data = self.data(using: String.Encoding.ascii)
 
     if let filter = CIFilter(name: "CICode128BarcodeGenerator") {

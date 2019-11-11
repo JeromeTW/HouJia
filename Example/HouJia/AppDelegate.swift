@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     _ = "".isIP4Address
     logC("happy")
+    logF("THIS IS FAULT")
     return true
   }
   
