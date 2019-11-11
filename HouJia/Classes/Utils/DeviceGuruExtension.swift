@@ -11,6 +11,12 @@ extension DeviceGuru {
     let hasSensorHousingDevices: [Hardware] = [.iphone_x, .iphone_xs, .iphone_xs_max, .iphone_xs_max_cn, .iphone_xr]
     return hasSensorHousingDevices.contains(deviceName)
   }
+  
+  public var is4InchDevice: Bool {
+    let deviceName = hardware()
+    let is4InchDevices: [Hardware] = [.iphone_se]
+    return is4InchDevices.contains(deviceName)
+  }
 }
 
 extension CGFloat {

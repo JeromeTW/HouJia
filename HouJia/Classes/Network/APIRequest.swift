@@ -16,15 +16,17 @@ public struct HTTPHeader {
 
 public struct APIRequest {
   public var url: URL
-  public let method: HTTPMethod
+  public var method: HTTPMethod
   public var queryItems: [URLQueryItem]?
   public var headers: [HTTPHeader]?
   public var body: Data?
 
-  public init(url: URL, method: HTTPMethod = .get, bodyData: Data? = nil) {
+  public init(url: URL, method: HTTPMethod = .get, queryItems: [URLQueryItem]? = nil, headers: [HTTPHeader]? = nil, body: Data? = nil) {
     self.url = url
     self.method = method
-    body = bodyData
+    self.queryItems = queryItems
+    self.headers = headers
+    self.body = body
   }
 
   public init<JSONObject: Encodable>(url: URL, method: HTTPMethod = .get, jsonObject: JSONObject) throws {
