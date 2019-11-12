@@ -20,7 +20,7 @@ class NetworkTests: XCTestCase {
     super.tearDown()
   }
   
-  func testExample() {
+  func test_get_request() {
     let exp = expectation(description: "Download json file")
     let url = URL(string: "https://jsonplaceholder.typicode.com/todos/1")!
     let request = APIRequest(url: url)
@@ -70,11 +70,85 @@ class NetworkTests: XCTestCase {
     wait(for: [exp], timeout: 5)
   }
   
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measure() {
-      // Put the code you want to measure the time of here.
+  func test_get_postman_request() {
+    let url = URL(string: "https://postman-echo.com/get?foo1=bar1&foo2=bar2")!
+    let request = APIRequest(url: url)
+    let args = ["foo1": "bar1", "foo2": "bar2"]
+    startPostManGetRequest(request: request, args: args)
+  }
+  
+  func test_get_postman_request_with_queryItems() {
+    let url = URL(string: "https://postman-echo.com/get")!
+    let queryItems = [
+        URLQueryItem(name: "item key", value: "產品"),
+        URLQueryItem(name: "size", value: "small"),
+        URLQueryItem(name: "current", value: nil)
+    ]
+    let args = ["item key": "產品", "size": "small", "current": ""]
+    guard let request = APIRequest(withoutQueryItemsURL: url, queryItems: queryItems) else {
+      XCTFail()
+      return
     }
+    startPostManGetRequest(request: request, args: args)
+  }
+  
+  func startPostManGetRequest(request: APIRequest, args: [String: String]) {
+    let exp = expectation(description: "request successfully")
+    let operation = NetworkRequestOperation(request: request) { result in
+      switch result {
+      case let .success(response):
+        if let data = response.body {
+          do {
+            guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+              XCTFail()
+              fatalError()
+            }
+            
+            /*
+             {
+               "args": {
+                 "foo1": "bar1",
+                 "foo2": "bar2"
+               },
+               "headers": {
+                 "x-forwarded-proto": "https",
+                 "host": "postman-echo.com",
+                 "accept": "*//*",
+                 "accept-encoding": "gzip, deflate",
+                 "cache-control": "no-cache",
+                 "postman-token": "5c27cd7d-6b16-4e5a-a0ef-191c9a3a275f",
+                 "user-agent": "PostmanRuntime/7.6.1",
+                 "x-forwarded-port": "443"
+               },
+               "url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2"
+             }
+             */
+            
+            guard let responseArgs = json["args"] as? [String: String], let headers = json["headers"] as? [String: String], let url = json["url"] as? String else {
+              XCTFail()
+              fatalError()
+            }
+            logT(issue: "NetworkTest", message: "responseArgs: \(responseArgs)")
+            logT(issue: "NetworkTest", message: "headers: \(headers)")
+            logT(issue: "NetworkTest", message: "url: \(url)")
+            XCTAssert(responseArgs == args)
+            exp.fulfill()
+          } catch {
+            XCTFail()
+            fatalError()
+          }
+        } else {
+          XCTFail()
+          fatalError()
+        }
+        
+      case let .failure(error):
+        XCTFail()
+        fatalError()
+      }
+    }
+    queue.addOperation(operation)
+    wait(for: [exp], timeout: 5)
   }
   
 }

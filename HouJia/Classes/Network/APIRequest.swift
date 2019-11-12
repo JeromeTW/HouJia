@@ -27,7 +27,7 @@ public struct APIRequest {
     self.body = body
   }
   
-  public init?(withoutQueryItemsURL: URL, method: HTTPMethod = .get, queryItems: [URLQueryItem]? = nil, headers: [HTTPHeader]? = nil, body: Data? = nil) {
+  public init?(withoutQueryItemsURL: URL, method: HTTPMethod = .get, queryItems: [URLQueryItem], headers: [HTTPHeader]? = nil, body: Data? = nil) {
     // resolvingAgainstBaseURL == true，URL組件代表完全解析的URL,而不是局部如 "bar/file.html"
     // http://hk.voidcc.com/question/p-yodyelmt-oc.html
     guard var urlComponent = URLComponents(url: withoutQueryItemsURL, resolvingAgainstBaseURL: true) else {
