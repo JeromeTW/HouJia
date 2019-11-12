@@ -83,10 +83,3 @@ extension APIResponse where Body == Data? {
     return APIResponse<BodyType>(statusCode: statusCode, body: decodeJSON)
   }
 }
-
-public enum APIError: Error {
-  case invalidURL
-  case requestFailed
-  case decodingFailure
-  case unknown(error: Error)
-}

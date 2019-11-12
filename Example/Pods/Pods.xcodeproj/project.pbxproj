@@ -12,6 +12,7 @@
 		02502D9023779485001FF4F4 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02502D8E23779485001FF4F4 /* UITextFieldExtension.swift */; };
 		02502D9123779485001FF4F4 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02502D8F23779485001FF4F4 /* UIViewControllerExtension.swift */; };
 		025AB3472378E93F00E36403 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025AB3462378E93F00E36403 /* String+.swift */; };
+		026BB5BF237A96180093748B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BB5BE237A96180093748B /* APIError.swift */; };
 		049813FE57EEA918CE9246A2F9591F55 /* ButtonWithImageAndLabelView.xib in Sources */ = {isa = PBXBuildFile; fileRef = C68DE34390FEED86D67C4C584CE84A6A /* ButtonWithImageAndLabelView.xib */; };
 		09D383C32F2479790F8112510F5CF30D /* Pods-HouJia_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7713A1DA444C9D7A2CDBB30B104A1F2A /* Pods-HouJia_Example-dummy.m */; };
 		0DE7FBBCA67DB2C44ED1AE7B83964B79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC900BE6DBDB417353D10E05333DAC3 /* Foundation.framework */; };
@@ -164,6 +165,7 @@
 		02502D8E23779485001FF4F4 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		02502D8F23779485001FF4F4 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		025AB3462378E93F00E36403 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		026BB5BE237A96180093748B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		03F92C1E6F44C8F9A9785129C5BAD5FE /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
 		044D70075FB8DB66D8C32C7D1604C884 /* UIScreenExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScreenExtension.swift; path = Sources/Extensions/UIKit/UIScreenExtension.swift; sourceTree = "<group>"; };
 		055ABC47BD9853EAEDC193C1FD6D5000 /* DeviceGuru.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceGuru.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -527,6 +529,7 @@
 				69ABBBA3F3C07DEE919830BF1B8B379D /* APIRequest.swift */,
 				319D6E3C8DF68F8CF7B8B3FD7F1FA0E1 /* AsynchronousOperation.swift */,
 				B341F775FFDA062257E5E6103D5CCDC0 /* NetworkRequestOperation.swift */,
+				026BB5BE237A96180093748B /* APIError.swift */,
 			);
 			name = Network;
 			path = HouJia/Classes/Network;
@@ -1036,6 +1039,7 @@
 				DA0819B17F650E29A3B54EDB1CBDCCA0 /* ButtonWithImageAndLabelSuperView.swift in Sources */,
 				7C260AB26647B8FB057B7CD270F9D464 /* ButtonWithImageAndLabelView.swift in Sources */,
 				049813FE57EEA918CE9246A2F9591F55 /* ButtonWithImageAndLabelView.xib in Sources */,
+				026BB5BF237A96180093748B /* APIError.swift in Sources */,
 				29E7D4B88C238F7F11B760947A0522EC /* CGFloatExtension.swift in Sources */,
 				51214109C91615AB20639114917F30DD /* CoordinatedNavigationController.swift in Sources */,
 				02502D9123779485001FF4F4 /* UIViewControllerExtension.swift in Sources */,
