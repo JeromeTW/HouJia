@@ -17,14 +17,28 @@ public struct HTTPHeader {
 public struct APIRequest {
   public var url: URL
   public var method: HTTPMethod
-  public var queryItems: [URLQueryItem]?
   public var headers: [HTTPHeader]?
   public var body: Data?
 
-  public init(url: URL, method: HTTPMethod = .get, queryItems: [URLQueryItem]? = nil, headers: [HTTPHeader]? = nil, body: Data? = nil) {
+  public init(url: URL, method: HTTPMethod = .get, headers: [HTTPHeader]? = nil, body: Data? = nil) {
     self.url = url
     self.method = method
-    self.queryItems = queryItems
+    self.headers = headers
+    self.body = body
+  }
+  
+  public init?(withoutQueryItemsURL: URL, method: HTTPMethod = .get, queryItems: [URLQueryItem]? = nil, headers: [HTTPHeader]? = nil, body: Data? = nil) {
+    // resolvingAgainstBaseURL == true，URL組件代表完全解析的URL,而不是局部如 "bar/file.html"
+    // http://hk.voidcc.com/question/p-yodyelmt-oc.html
+    guard var urlComponent = URLComponents(url: withoutQueryItemsURL, resolvingAgainstBaseURL: true) else {
+      return nil
+    }
+    urlComponent.queryItems = queryItems
+    guard let fullURL = urlComponent.url else {
+      return nil
+    }
+    self.url = fullURL
+    self.method = method
     self.headers = headers
     self.body = body
   }
