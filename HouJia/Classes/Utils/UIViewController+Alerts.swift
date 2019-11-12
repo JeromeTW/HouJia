@@ -13,6 +13,11 @@ extension UIViewController {
   public struct TextFieldData {
     var text: String?
     var placeholder: String?
+    
+    public init(text: String?, placeholder: String?) {
+      self.text = text
+      self.placeholder = placeholder
+    }
   }
 
   /// Show alert view controller with actions.

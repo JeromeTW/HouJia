@@ -12,6 +12,11 @@ public enum HTTPMethod: String {
 public struct HTTPHeader {
   let field: String
   let value: String
+  
+  public init(field: String, value: String) {
+    self.field = field
+    self.value = value
+  }
 }
 
 public struct APIRequest {
@@ -53,6 +58,11 @@ public struct APIRequest {
 public struct APIResponse<Body> {
   public let statusCode: Int
   public let body: Body
+  
+  public init(statusCode: Int, body: Body) {
+    self.statusCode = statusCode
+    self.body = body
+  }
 }
 
 // MARK: - For JSON Object
