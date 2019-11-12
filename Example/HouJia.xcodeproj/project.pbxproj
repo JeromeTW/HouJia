@@ -11,6 +11,7 @@
 		02502D8A2377877C001FF4F4 /* LoginTextFieldViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02502D882377877C001FF4F4 /* LoginTextFieldViewTests.swift */; };
 		026BB5C1237AA3100093748B /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BB5C0237AA3100093748B /* NetworkController.swift */; };
 		026BB5C2237AA3100093748B /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BB5C0237AA3100093748B /* NetworkController.swift */; };
+		026BB5C4237AA4750093748B /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BB5C3237AA4750093748B /* APITests.swift */; };
 		02CE534023765A0600BBA9E8 /* ImportModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE533F23765A0600BBA9E8 /* ImportModules.swift */; };
 		02CE534123765A0600BBA9E8 /* ImportModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE533F23765A0600BBA9E8 /* ImportModules.swift */; };
 		02CE535C2376CCC500BBA9E8 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE53582376CCC400BBA9E8 /* CoreDataTests.swift */; };
@@ -40,6 +41,7 @@
 		02502D872377877C001FF4F4 /* ButtonWithImageAndLabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithImageAndLabelTests.swift; sourceTree = "<group>"; };
 		02502D882377877C001FF4F4 /* LoginTextFieldViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextFieldViewTests.swift; sourceTree = "<group>"; };
 		026BB5C0237AA3100093748B /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		026BB5C3237AA4750093748B /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		02BBCA5731C830AD8A7164A0 /* Pods_HouJia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouJia_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02CE533F23765A0600BBA9E8 /* ImportModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportModules.swift; sourceTree = "<group>"; };
 		02CE53582376CCC400BBA9E8 /* CoreDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				02CE535A2376CCC400BBA9E8 /* NetworkTests.swift */,
 				02502D872377877C001FF4F4 /* ButtonWithImageAndLabelTests.swift */,
 				02502D882377877C001FF4F4 /* LoginTextFieldViewTests.swift */,
+				026BB5C3237AA4750093748B /* APITests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -373,6 +376,7 @@
 			files = (
 				026BB5C2237AA3100093748B /* NetworkController.swift in Sources */,
 				02CE534123765A0600BBA9E8 /* ImportModules.swift in Sources */,
+				026BB5C4237AA4750093748B /* APITests.swift in Sources */,
 				02CE535F2376CCC500BBA9E8 /* LoggerTests.swift in Sources */,
 				02CE535E2376CCC500BBA9E8 /* NetworkTests.swift in Sources */,
 				02CE535D2376CCC500BBA9E8 /* ImageLoaderTests.swift in Sources */,
