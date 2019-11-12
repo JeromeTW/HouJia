@@ -8,7 +8,7 @@
 import Foundation
 
 /// 不在 API 預期範圍內的連線錯誤
-enum APIError: Error {
+public enum APIError: Error {
   /// 後台沒有回應
   case noResponse
   
@@ -18,14 +18,17 @@ enum APIError: Error {
   /// 後台回應了不在 api 規格中的 JSON 資料, 通常可能發生在 api 改版的時候
   case unexpectedJSON(httpStatusCode: Int, json: Any)
   
-  /// 其他可能的錯誤
+  /// HTTP Response 其他可能的錯誤
   case unexpectedError(httpStatusCode: Int, dataString: String?)
+  
+  /// 其他可能的錯誤
+  case unknown(error: Error)
 }
 
 extension APIError: LocalizedError {
   
   /// 本地化字串
-  var errorDescription: String? {
+  public var errorDescription: String? {
     switch self {
     case .noResponse:
       return "伺服器無回應"
@@ -38,10 +41,13 @@ extension APIError: LocalizedError {
       
     case .unexpectedError(let httpStatusCode, let dataString):
       if let dataString = dataString {
-        return "發生未預期的錯誤 \(httpStatusCode), \(dataString)"
+        return "HTTP Response 發生未預期的錯誤 \(httpStatusCode), \(dataString)"
       } else {
-        return "發生未預期的錯誤 \(httpStatusCode)"
+        return "HTTP Response 發生未預期的錯誤 \(httpStatusCode)"
       }
+      
+    case .unknown(let error):
+      return "發生未預期的錯誤 Error: \(error.localizedDescription)"
     }
   }
 }

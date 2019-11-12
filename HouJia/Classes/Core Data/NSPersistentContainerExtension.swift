@@ -11,7 +11,7 @@ extension NSPersistentContainer {
     do {
       try context.save()
     } catch {
-      logE("", error: error)
+      logE(error)
       throw error
     }
   }

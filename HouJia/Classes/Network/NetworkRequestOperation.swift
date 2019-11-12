@@ -5,7 +5,6 @@
 import Foundation
 
 public class NetworkRequestOperation: AsynchronousOperation {
-  public typealias APIClientCompletionHandler = (Result<APIResponse<Data?>, APIError>) -> Void
   public var data: Data?
   public var error: NSError?
 
@@ -19,7 +18,7 @@ public class NetworkRequestOperation: AsynchronousOperation {
     return URLSession(configuration: config)
   }()
 
-  public init(request: APIRequest, completionHandler: @escaping APIClientCompletionHandler) {
+  public init(request: APIRequest, completionHandler: @escaping ((Result<APIResponse, APIError>) -> Void)) {
     super.init()
 
     var urlRequest = URLRequest(url: request.url)
@@ -39,10 +38,16 @@ public class NetworkRequestOperation: AsynchronousOperation {
       }
 
       guard let httpResponse = response as? HTTPURLResponse else {
-        completionHandler(.failure(.requestFailed))
+        completionHandler(.failure(.noResponse))
         return
       }
-      completionHandler(.success(APIResponse<Data?>(statusCode: httpResponse.statusCode, body: data)))
+      
+      guard let noEmptyData = data else {
+        completionHandler(.failure(.noData))
+        return
+      }
+      
+      completionHandler(.success(APIResponse(statusCode: httpResponse.statusCode, body: noEmptyData)))
     }
   }
 

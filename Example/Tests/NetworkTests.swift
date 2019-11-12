@@ -48,50 +48,46 @@ class NetworkTests: XCTestCase {
     let operation = NetworkRequestOperation(request: request) { result in
       switch result {
       case let .success(response):
-        if let data = response.body {
-          do {
-            guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-              XCTFail()
-              fatalError()
-            }
-            logT(issue: "NetworkTest", message: "json: \(json)")
-            guard let headers = json["headers"] as? [String: String] else {
-              XCTFail()
-              fatalError()
-            }
-            
-            exceptionHeaders?.forEach {
-              XCTAssert(headers[$0.key] == $0.value)
-            }
-            
-            logT(issue: "NetworkTest", message: "headers: \(headers)")
-            if let responseArgs = json["args"] as? [String: String], let exceptionArgs = exceptionArgs {
-              logT(issue: "NetworkTest", message: "responseArgs: \(responseArgs)")
-              XCTAssert(responseArgs == exceptionArgs)
-            }
-            
-            if let url = json["url"] as? String {
-              logT(issue: "NetworkTest", message: "url: \(url)")
-            }
-            
-            if let responseJson = json["json"] as? [String: String], let exceptionJson = exceptionJson {
-              logT(issue: "NetworkTest", message: "responseJson: \(responseJson)")
-              let diffDic = responseJson.difference(with: exceptionJson)
-              logT(issue: "NetworkTest", message: "diffDic: \(diffDic)")
-              XCTAssert(diffDic.isEmpty)
-            }
-            
-            exp.fulfill()
-          } catch {
+        do {
+          guard let json = try JSONSerialization.jsonObject(with: response.data, options: []) as? [String: Any] else {
             XCTFail()
             fatalError()
           }
-        } else {
+          logT(issue: "NetworkTest", message: "json: \(json)")
+          guard let headers = json["headers"] as? [String: String] else {
+            XCTFail()
+            fatalError()
+          }
+          
+          exceptionHeaders?.forEach {
+            XCTAssert(headers[$0.key] == $0.value)
+          }
+          
+          logT(issue: "NetworkTest", message: "headers: \(headers)")
+          if let responseArgs = json["args"] as? [String: String], let exceptionArgs = exceptionArgs {
+            logT(issue: "NetworkTest", message: "responseArgs: \(responseArgs)")
+            XCTAssert(responseArgs == exceptionArgs)
+          }
+          
+          if let url = json["url"] as? String {
+            logT(issue: "NetworkTest", message: "url: \(url)")
+          }
+          
+          if let responseJson = json["json"] as? [String: String], let exceptionJson = exceptionJson {
+            logT(issue: "NetworkTest", message: "responseJson: \(responseJson)")
+            let diffDic = responseJson.difference(with: exceptionJson)
+            logT(issue: "NetworkTest", message: "diffDic: \(diffDic)")
+            XCTAssert(diffDic.isEmpty)
+          }
+          
+          exp.fulfill()
+        } catch {
           XCTFail()
           fatalError()
         }
         
       case let .failure(error):
+        logE(error)
         XCTFail()
         fatalError()
       }

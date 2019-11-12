@@ -139,7 +139,7 @@ public class CoreDataConnect {
     do {
       try fetchedResultsController.performFetch()
     } catch {
-      logE("", error: error)
+      logE(error)
     }
 
     return fetchedResultsController

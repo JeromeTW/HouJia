@@ -56,30 +56,18 @@ public struct APIRequest {
       let body = try JSONSerialization.data(withJSONObject: jsonDictionary, options: JSONSerialization.WritingOptions(rawValue: 0))
       self.body = body
     } catch {
-      logE(error: error)
+      logE(error)
       return nil
     }
   }
 }
 
-public struct APIResponse<Body> {
+public struct APIResponse {
   public let statusCode: Int
-  public let body: Body
+  public let data: Data
   
-  public init(statusCode: Int, body: Body) {
+  public init(statusCode: Int, body: Data) {
     self.statusCode = statusCode
-    self.body = body
-  }
-}
-
-// MARK: - For JSON Object
-
-extension APIResponse where Body == Data? {
-  public func decode<BodyType: Decodable>(to _: BodyType.Type) throws -> APIResponse<BodyType> {
-    guard let data = body else {
-      throw APIError.decodingFailure
-    }
-    let decodeJSON = try JSONDecoder().decode(BodyType.self, from: data)
-    return APIResponse<BodyType>(statusCode: statusCode, body: decodeJSON)
+    self.data = body
   }
 }

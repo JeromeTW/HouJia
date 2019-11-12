@@ -87,21 +87,15 @@ public class ImageLoader: NSObject {
 
         switch result {
         case let .success(response):
-          if let data = response.body {
-            if let image = UIImage(data: data) {
-              self.imageCache.setObject(image, forKey: url.absoluteString as NSString)
-              mainThreadCompletionHandler(image: image, url)
-            } else {
-              logC("Data Format Wrong")
-              mainThreadCompletionHandler(image: nil, url)
-            }
+          if let image = UIImage(data: response.data) {
+            self.imageCache.setObject(image, forKey: url.absoluteString as NSString)
+            mainThreadCompletionHandler(image: image, url)
           } else {
-            logC("No Data")
+            logC("Data Format Wrong")
             mainThreadCompletionHandler(image: nil, url)
           }
-
         case let .failure(error):
-          logC(error)
+          logE(error)
           mainThreadCompletionHandler(image: nil, url)
         }
       }

@@ -18,7 +18,7 @@ class LoggerTests: XCTestCase {
     super.tearDown()
   }
   
-  enum APIError: Error {
+  enum URLError: Error {
     case invalidURL
   }
   
@@ -32,7 +32,7 @@ class LoggerTests: XCTestCase {
     logU(userString)
     logC(codeString)
     logT(issue: "#36", message: traceString)
-    logE(errorString, error: APIError.invalidURL)
+    logE(URLError.invalidURL, message: errorString)
     logF(faultString)
     XCTAssert(logTextView.logText.contains(userString))
     XCTAssert(logTextView.logText.contains(codeString))
@@ -51,7 +51,7 @@ class LoggerTests: XCTestCase {
     logU(userString)
     logC(codeString)
     logT(issue: "#36", message: traceString)
-    logE(errorString, error: APIError.invalidURL)
+    logE(URLError.invalidURL, message: errorString)
     logF(faultString)
     let fileManager = FileManager.default
     guard let cachesDirectory = fileManager.cachesDirectory else { return }
