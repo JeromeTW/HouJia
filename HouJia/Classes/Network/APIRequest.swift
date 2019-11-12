@@ -48,10 +48,17 @@ public struct APIRequest {
     self.body = body
   }
 
-  public init<JSONObject: Encodable>(url: URL, method: HTTPMethod = .get, jsonObject: JSONObject) throws {
+  public init?(url: URL, jsonDictionary: [String: Any]) {
     self.url = url
-    self.method = method
-    body = try JSONEncoder().encode(jsonObject)
+    self.method = .post
+    self.headers = [HTTPHeader(field: "Content-Type", value: "application/json; charset=utf-8")]
+    do {
+      let body = try JSONSerialization.data(withJSONObject: jsonDictionary, options: JSONSerialization.WritingOptions(rawValue: 0))
+      self.body = body
+    } catch {
+      logE(error: error)
+      return nil
+    }
   }
 }
 
