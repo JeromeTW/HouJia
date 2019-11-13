@@ -113,3 +113,105 @@ public class DoubleFlexible: NSObject, Decodable {
     }
   }
 }
+
+public class BoolFlexible: NSObject, Decodable {
+  public override var description: String {
+    return "\(value)"
+  }
+  
+  public var value: Bool
+  
+  public init(_ value: Bool) {
+    self.value = value
+  }
+  
+  /// Creates a new instance by decoding from the given decoder.
+  ///
+  /// This initializer throws an error if reading from the decoder fails, or
+  /// if the data read is corrupted or otherwise invalid.
+  ///
+  /// - Parameter decoder: The decoder to read data from.
+  public required convenience init(from decoder: Decoder) throws {
+    let container = try decoder.singleValueContainer()
+    do {
+      let boolValue = try container.decode(Bool.self)
+      self.init(boolValue)
+    } catch {
+      logF("\(type(of: self).className) decoder catch wrong type")
+      do {
+        let doubleValue = try container.decode(Double.self)
+        if doubleValue > 0 {
+          self.init(true)
+        } else {
+          self.init(false)
+        }
+      } catch {
+        do {
+          let intValue = try container.decode(Int.self)
+          if intValue > 0 {
+            self.init(true)
+          } else {
+            self.init(false)
+          }
+        } catch {
+          do {
+            let stringValue = try container.decode(String.self)
+            if stringValue == "true" {
+              self.init(true)
+            } else {
+              self.init(false)
+            }
+          } catch {
+            logF("\(type(of: self).className) decoder failed -2")
+            self.init(false)
+          }
+        }
+      }
+    }
+  }
+}
+
+public class StringFlexible: NSObject, Decodable {
+  public override var description: String {
+    return value
+  }
+  
+  public var value: String
+  
+  public init(_ value: String) {
+    self.value = value
+  }
+  
+  /// Creates a new instance by decoding from the given decoder.
+  ///
+  /// This initializer throws an error if reading from the decoder fails, or
+  /// if the data read is corrupted or otherwise invalid.
+  ///
+  /// - Parameter decoder: The decoder to read data from.
+  public required convenience init(from decoder: Decoder) throws {
+    let container = try decoder.singleValueContainer()
+    do {
+      let stringValue = try container.decode(String.self)
+      self.init(stringValue)
+    } catch {
+      logF("\(type(of: self).className) decoder catch wrong type")
+      do {
+        let boolValue = try container.decode(Bool.self)
+        self.init(String(boolValue))
+      } catch {
+        do {
+          let intValue = try container.decode(Int.self)
+          self.init(String(intValue))
+        } catch {
+          do {
+            let doubleValue = try container.decode(Double.self)
+            self.init(String(doubleValue))
+          } catch {
+            logF("\(type(of: self).className) decoder failed -2")
+            self.init("-2")
+          }
+        }
+      }
+    }
+  }
+}

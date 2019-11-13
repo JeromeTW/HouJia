@@ -41,6 +41,28 @@ class FlexibleObjectTests: XCTestCase {
     var double: DoubleFlexible
   }
   
+  struct BoolFlexibleObject: Mixed {
+    var description: String {
+      return "string: \(string.value), bool: \(bool.value), int: \(int.value), double: \(double.value)"
+    }
+    
+    var string: BoolFlexible
+    var bool: BoolFlexible
+    var int: BoolFlexible
+    var double: BoolFlexible
+  }
+  
+  struct StringFlexibleObject: Mixed {
+    var description: String {
+      return "string: \(string.value), bool: \(bool.value), int: \(int.value), double: \(double.value)"
+    }
+    
+    var string: StringFlexible
+    var bool: StringFlexible
+    var int: StringFlexible
+    var double: StringFlexible
+  }
+  
   var data1: Data {
     let jsonString =
     """
@@ -133,6 +155,58 @@ class FlexibleObjectTests: XCTestCase {
       return
     }
     XCTAssertTrue(doubleFlexibleObject3.string.value == 30)
+  }
+  
+  func test_BoolFlexible() {
+    guard let boolFlexibleObject1: FlexibleObjectTests.BoolFlexibleObject = decodeObject(data: data1) else {
+      XCTFail()
+      return
+    }
+    XCTAssertTrue(boolFlexibleObject1.string.value == false)
+    XCTAssertTrue(boolFlexibleObject1.bool.value == true)
+    XCTAssertTrue(boolFlexibleObject1.int.value == true)
+    XCTAssertTrue(boolFlexibleObject1.double.value == true)
+    
+    guard let boolFlexibleObject2: FlexibleObjectTests.BoolFlexibleObject = decodeObject(data: data2) else {
+      XCTFail()
+      return
+    }
+    XCTAssertTrue(boolFlexibleObject2.string.value == false)
+    XCTAssertTrue(boolFlexibleObject2.bool.value == false)
+    XCTAssertTrue(boolFlexibleObject2.int.value == false)
+    XCTAssertTrue(boolFlexibleObject2.double.value == false)
+    
+    guard let boolFlexibleObject3: FlexibleObjectTests.BoolFlexibleObject = decodeObject(data: data3) else {
+      XCTFail()
+      return
+    }
+    XCTAssertTrue(boolFlexibleObject3.string.value == false)
+  }
+  
+  func test_StringFlexible() {
+    guard let stringFlexibleObject1: FlexibleObjectTests.StringFlexibleObject = decodeObject(data: data1) else {
+      XCTFail()
+      return
+    }
+    XCTAssertTrue(stringFlexibleObject1.string.value == "eyJhbGciOiJSUzI1NiIsO8whNpZFjNRu1JMfnczDK8oHSUxsoPg")
+    XCTAssertTrue(stringFlexibleObject1.bool.value == "true")
+    XCTAssertTrue(stringFlexibleObject1.int.value == "2")
+    XCTAssertTrue(stringFlexibleObject1.double.value == "1.2")
+    
+    guard let stringFlexibleObject2: FlexibleObjectTests.StringFlexibleObject = decodeObject(data: data2) else {
+      XCTFail()
+      return
+    }
+    XCTAssertTrue(stringFlexibleObject2.string.value == "20")
+    XCTAssertTrue(stringFlexibleObject2.bool.value == "false")
+    XCTAssertTrue(stringFlexibleObject2.int.value == "-2")
+    XCTAssertTrue(stringFlexibleObject2.double.value == "-100.2")
+    
+    guard let stringFlexibleObject3: FlexibleObjectTests.StringFlexibleObject = decodeObject(data: data3) else {
+      XCTFail()
+      return
+    }
+    XCTAssertTrue(stringFlexibleObject3.string.value == "30.0")
   }
   
   func decodeObject<T: Mixed>(data: Data) -> T? {
