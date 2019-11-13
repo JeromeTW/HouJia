@@ -7,11 +7,17 @@
 
 import Foundation
 
-public class IntFlexible: NSObject, Decodable {
+protocol Flexible: Decodable, CustomStringConvertible {
+  associatedtype FlexibleType
+  var value: FlexibleType { get set }
+  init(_ value: FlexibleType)
+}
+
+public class IntFlexible: NSObject, Flexible {
   
   public var value: Int
   
-  public init(_ value: Int) {
+  required public init(_ value: Int) {
     self.value = value
   }
   
@@ -59,14 +65,14 @@ public class IntFlexible: NSObject, Decodable {
   }
 }
 
-public class DoubleFlexible: NSObject, Decodable {
+public class DoubleFlexible: NSObject, Flexible {
   public override var description: String {
     return "\(value)"
   }
   
   public var value: Double
   
-  public init(_ value: Double) {
+  required public init(_ value: Double) {
     self.value = value
   }
   
@@ -114,14 +120,14 @@ public class DoubleFlexible: NSObject, Decodable {
   }
 }
 
-public class BoolFlexible: NSObject, Decodable {
+public class BoolFlexible: NSObject, Flexible {
   public override var description: String {
     return "\(value)"
   }
   
   public var value: Bool
   
-  public init(_ value: Bool) {
+  required public init(_ value: Bool) {
     self.value = value
   }
   
@@ -171,14 +177,14 @@ public class BoolFlexible: NSObject, Decodable {
   }
 }
 
-public class StringFlexible: NSObject, Decodable {
+public class StringFlexible: NSObject, Flexible {
   public override var description: String {
     return value
   }
   
   public var value: String
   
-  public init(_ value: String) {
+  required public init(_ value: String) {
     self.value = value
   }
   
