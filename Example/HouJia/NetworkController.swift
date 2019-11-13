@@ -16,9 +16,6 @@ struct LoginReponse: Decodable {
   var tokeyType: StringFlexible
 }
 
-extension APIError {
-  
-}
 class NetworkController: NSObject {
   static let shared = NetworkController()
   lazy var requestOperationDictionary = [URL: AsynchronousOperation]()
