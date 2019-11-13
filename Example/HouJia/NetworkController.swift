@@ -9,11 +9,11 @@
 import Foundation
 
 
-struct LoginReponse: Codable {
-  var accessToken: String
-  var expiresIn: Int
-  var requestAt: String
-  var tokeyType: String
+struct LoginReponse: Decodable {
+  var accessToken: StringFlexible
+  var expiresIn: IntFlexible
+  var requestAt: StringFlexible
+  var tokeyType: StringFlexible
 }
 
 extension APIError {

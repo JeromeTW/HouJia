@@ -24,6 +24,11 @@ class APITests: XCTestCase {
       result in
       switch result {
       case .success(let response):
+        logT(issue: "APITests", message: "response.accessToken.value:\(response.accessToken.value)")
+        logT(issue: "APITests", message: "response.expiresIn.value:\(response.expiresIn.value)")
+        logT(issue: "APITests", message: "response.accessToken.value:\(response.requestAt.value)")
+        logT(issue: "APITests", message: "response.accessToken.value:\(response.tokeyType.value)")
+        
         exp.fulfill()
       case .failure(let error):
         logE(error)
@@ -32,5 +37,4 @@ class APITests: XCTestCase {
     }
     wait(for: [exp], timeout: 5)
   }
-  
 }
