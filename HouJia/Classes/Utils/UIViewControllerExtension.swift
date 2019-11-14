@@ -22,7 +22,7 @@ extension UIViewController {
 // MARK: - Move view with keyboard when keyboard hided textfiled
 
 extension UIViewController {
-  func addKeyboardObserver() {
+  public func addKeyboardObserver() {
     
     NotificationCenter.default.addObserver(self,
                                            selector: #selector(self.keyboardNotifications(notification:)),
@@ -30,7 +30,7 @@ extension UIViewController {
                                            object: nil)
   }
   
-  func removeKeyboardObserver(){
+  public func removeKeyboardObserver(){
     NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
   }
   
