@@ -28,7 +28,7 @@ public enum APIError: Error {
 extension APIError: LocalizedError {
   
   /// 本地化字串
-  public var errorDescription: String? {
+  public var errorDescription: String {
     switch self {
     case .noResponse:
       return "伺服器無回應"

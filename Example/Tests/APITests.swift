@@ -31,10 +31,20 @@ class APITests: XCTestCase {
         
         exp.fulfill()
       case .failure(let error):
+        print(error.errorDescription)
+        logE(error)
         exp.fulfill()
       }
       
     }
     wait(for: [exp], timeout: 5)
+  }
+  
+  func test_print_apierror() {
+    let error = APIError.noData
+    logE(error)
+    let error2 = APIError.unexpectedJSON(httpStatusCode: 400, json: Data())
+    logE(error2)
+    XCTAssert(true)
   }
 }
