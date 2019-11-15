@@ -47,6 +47,11 @@ public class NetworkRequestOperation: AsynchronousOperation {
         return
       }
       
+      guard httpResponse.statusCode / 100 == 2 else {
+        completionHandler(.failure(.unexpectedError(httpStatusCode: httpResponse.statusCode, data: noEmptyData)))
+        return
+      }
+      
       completionHandler(.success(APIResponse(statusCode: httpResponse.statusCode, body: noEmptyData)))
     }
   }

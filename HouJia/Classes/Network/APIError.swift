@@ -19,7 +19,7 @@ public enum APIError: Error {
   case unexpectedJSON(httpStatusCode: Int, json: Any)
   
   /// HTTP Response 其他可能的錯誤
-  case unexpectedError(httpStatusCode: Int, dataString: String?)
+  case unexpectedError(httpStatusCode: Int, data: Data)
   
   /// 其他可能的錯誤
   case unknown(error: Error)
@@ -39,8 +39,8 @@ extension APIError: LocalizedError {
     case .unexpectedJSON(let httpStatusCode, let json):
       return "伺服器回傳非預期的 JSON 資料 \(httpStatusCode), \(json)"
       
-    case .unexpectedError(let httpStatusCode, let dataString):
-      if let dataString = dataString {
+    case .unexpectedError(let httpStatusCode, let data):
+      if let dataString = String(data: data, encoding: .utf8) {
         return "HTTP Response 發生未預期的錯誤 \(httpStatusCode), \(dataString)"
       } else {
         return "HTTP Response 發生未預期的錯誤 \(httpStatusCode)"
