@@ -31,7 +31,7 @@ class APITests: XCTestCase {
         
         exp.fulfill()
       case .failure(let error):
-        logE(error)
+        exp.fulfill()
       }
       
     }

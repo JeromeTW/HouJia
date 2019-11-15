@@ -16,7 +16,7 @@ public enum APIError: Error {
   case noData
   
   /// 後台回應了不在 api 規格中的 JSON 資料, 通常可能發生在 api 改版的時候
-  case unexpectedJSON(httpStatusCode: Int, json: Any)
+  case unexpectedJSON(httpStatusCode: Int, json: Data)
   
   /// HTTP Response 其他可能的錯誤
   case unexpectedError(httpStatusCode: Int, data: Data)
