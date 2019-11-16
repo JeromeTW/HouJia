@@ -57,6 +57,7 @@
             <connections>
                 <outlet property="button" destination="Fg3-PU-2Vf" id="tff-zc-UWb"/>
                 <outlet property="imageAndLabelHeight" destination="2QE-fk-FGW" id="3fz-wF-959"/>
+                <outlet property="imageAndLabelVerticalSpace" destination="ITj-2b-q4v" id="yeg-js-Krj"/>
                 <outlet property="imageView" destination="jls-cu-CxL" id="b5s-zd-SOh"/>
                 <outlet property="label" destination="KCK-Ia-ZfH" id="euP-W6-J4W"/>
             </connections>

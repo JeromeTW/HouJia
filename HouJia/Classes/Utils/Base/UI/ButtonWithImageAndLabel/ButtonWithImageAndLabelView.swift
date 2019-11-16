@@ -9,4 +9,5 @@ public class ButtonWithImageAndLabelView: BaseView {
   @IBOutlet public var imageView: UIImageView!
   @IBOutlet public var label: UILabel!
   @IBOutlet public var imageAndLabelHeight: NSLayoutConstraint!
+  @IBOutlet weak var imageAndLabelVerticalSpace: NSLayoutConstraint!
 }

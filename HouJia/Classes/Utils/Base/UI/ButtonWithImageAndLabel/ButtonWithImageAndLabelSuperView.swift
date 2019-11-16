@@ -29,6 +29,12 @@ import UIKit
       buttonWithImageAndLabelView.label.font = font
     }
   }
+  
+  public var imageAndLabelVerticalSpaceConstant: CGFloat = 0 {
+    didSet {
+      buttonWithImageAndLabelView.imageAndLabelVerticalSpace.constant = imageAndLabelVerticalSpaceConstant
+    }
+  }
 
   public var name = ""
   public var buttonPressedHandler: ((String) -> Void)?
