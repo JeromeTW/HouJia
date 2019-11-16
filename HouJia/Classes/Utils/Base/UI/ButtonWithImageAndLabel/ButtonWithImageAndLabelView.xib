@@ -20,10 +20,10 @@
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqz-bP-iJo">
                     <rect key="frame" x="0.0" y="72.5" width="200" height="55"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="receivedTaskIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jls-cu-CxL">
-                            <rect key="frame" x="75.5" y="0.0" width="49" height="34.5"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jls-cu-CxL">
+                            <rect key="frame" x="90.5" y="-1" width="19" height="35.5"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-Ia-ZfH">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-Ia-ZfH">
                             <rect key="frame" x="79" y="34.5" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -40,9 +40,29 @@
                         <constraint firstItem="jls-cu-CxL" firstAttribute="centerX" secondItem="dqz-bP-iJo" secondAttribute="centerX" id="yiL-zq-hRa"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vhC-WF-Mhs" userLabel="Badge View">
+                    <rect key="frame" x="105" y="61" width="30" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHm-Dd-rWC">
+                            <rect key="frame" x="10" y="4.5" width="10.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="vhC-WF-Mhs" secondAttribute="height" id="1hb-XY-qmN"/>
+                        <constraint firstItem="YHm-Dd-rWC" firstAttribute="centerX" secondItem="vhC-WF-Mhs" secondAttribute="centerX" id="5nj-CY-7XU"/>
+                        <constraint firstItem="YHm-Dd-rWC" firstAttribute="centerY" secondItem="vhC-WF-Mhs" secondAttribute="centerY" id="EcH-Zb-yFI"/>
+                        <constraint firstAttribute="width" constant="30" id="r4B-pH-3Oj"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="vhC-WF-Mhs" firstAttribute="centerX" secondItem="jls-cu-CxL" secondAttribute="centerX" multiplier="1.2" id="EaT-9E-1rl"/>
+                <constraint firstItem="vhC-WF-Mhs" firstAttribute="centerY" secondItem="jls-cu-CxL" secondAttribute="centerY" multiplier="0.2" id="ShJ-zN-2Pr"/>
                 <constraint firstAttribute="trailing" secondItem="Fg3-PU-2Vf" secondAttribute="trailing" id="VL9-sf-Ap9"/>
                 <constraint firstItem="dqz-bP-iJo" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="W9X-Tu-nmJ"/>
                 <constraint firstItem="Fg3-PU-2Vf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dVa-lU-p0p"/>
@@ -55,6 +75,11 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="badgeLabel" destination="YHm-Dd-rWC" id="IvX-6n-Pzm"/>
+                <outlet property="badgeView" destination="vhC-WF-Mhs" id="ARg-r4-ByZ"/>
+                <outlet property="badgeViewCenterX" destination="5nj-CY-7XU" id="GVH-g5-KPg"/>
+                <outlet property="badgeViewCenterY" destination="EcH-Zb-yFI" id="ryg-xw-arb"/>
+                <outlet property="badgeViewWidth" destination="r4B-pH-3Oj" id="jT0-FY-LjQ"/>
                 <outlet property="button" destination="Fg3-PU-2Vf" id="tff-zc-UWb"/>
                 <outlet property="imageAndLabelHeight" destination="2QE-fk-FGW" id="3fz-wF-959"/>
                 <outlet property="imageAndLabelVerticalSpace" destination="ITj-2b-q4v" id="yeg-js-Krj"/>
@@ -65,6 +90,6 @@
         </view>
     </objects>
     <resources>
-        <image name="receivedTaskIcon" width="24.5" height="23"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

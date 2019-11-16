@@ -9,5 +9,14 @@ public class ButtonWithImageAndLabelView: BaseView {
   @IBOutlet public var imageView: UIImageView!
   @IBOutlet public var label: UILabel!
   @IBOutlet public var imageAndLabelHeight: NSLayoutConstraint!
-  @IBOutlet weak var imageAndLabelVerticalSpace: NSLayoutConstraint!
+  @IBOutlet public weak var imageAndLabelVerticalSpace: NSLayoutConstraint!
+  @IBOutlet public weak var badgeView: UIView!
+  @IBOutlet public weak var badgeLabel: UILabel!
+
+  // badgeViewWidth == badgeViewHeight
+  @IBOutlet public weak var badgeViewWidth: NSLayoutConstraint!
+  
+  @IBOutlet public weak var badgeViewCenterX: NSLayoutConstraint!
+  
+  @IBOutlet public weak var badgeViewCenterY: NSLayoutConstraint!
 }
