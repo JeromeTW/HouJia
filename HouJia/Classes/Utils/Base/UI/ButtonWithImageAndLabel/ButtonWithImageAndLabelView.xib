@@ -77,8 +77,8 @@
             <connections>
                 <outlet property="badgeLabel" destination="YHm-Dd-rWC" id="IvX-6n-Pzm"/>
                 <outlet property="badgeView" destination="vhC-WF-Mhs" id="ARg-r4-ByZ"/>
-                <outlet property="badgeViewCenterX" destination="5nj-CY-7XU" id="GVH-g5-KPg"/>
-                <outlet property="badgeViewCenterY" destination="EcH-Zb-yFI" id="ryg-xw-arb"/>
+                <outlet property="badgeViewCenterX" destination="EaT-9E-1rl" id="XM7-3W-9oi"/>
+                <outlet property="badgeViewCenterY" destination="ShJ-zN-2Pr" id="udj-oS-71y"/>
                 <outlet property="badgeViewWidth" destination="r4B-pH-3Oj" id="jT0-FY-LjQ"/>
                 <outlet property="button" destination="Fg3-PU-2Vf" id="tff-zc-UWb"/>
                 <outlet property="imageAndLabelHeight" destination="2QE-fk-FGW" id="3fz-wF-959"/>
