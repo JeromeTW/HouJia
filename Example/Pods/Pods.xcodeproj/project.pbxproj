@@ -14,6 +14,7 @@
 		025AB3472378E93F00E36403 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025AB3462378E93F00E36403 /* String+.swift */; };
 		026BB5BF237A96180093748B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BB5BE237A96180093748B /* APIError.swift */; };
 		027BC71C237B8F8F00ABB509 /* Flexible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BC71B237B8F8F00ABB509 /* Flexible.swift */; };
+		02CEC718237FD80800E3F787 /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CEC717237FD80800E3F787 /* NSLayoutConstraintExtension.swift */; };
 		049813FE57EEA918CE9246A2F9591F55 /* ButtonWithImageAndLabelView.xib in Sources */ = {isa = PBXBuildFile; fileRef = C68DE34390FEED86D67C4C584CE84A6A /* ButtonWithImageAndLabelView.xib */; };
 		09D383C32F2479790F8112510F5CF30D /* Pods-HouJia_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7713A1DA444C9D7A2CDBB30B104A1F2A /* Pods-HouJia_Example-dummy.m */; };
 		0DE7FBBCA67DB2C44ED1AE7B83964B79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC900BE6DBDB417353D10E05333DAC3 /* Foundation.framework */; };
@@ -168,6 +169,7 @@
 		025AB3462378E93F00E36403 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		026BB5BE237A96180093748B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		027BC71B237B8F8F00ABB509 /* Flexible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flexible.swift; sourceTree = "<group>"; };
+		02CEC717237FD80800E3F787 /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
 		03F92C1E6F44C8F9A9785129C5BAD5FE /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
 		044D70075FB8DB66D8C32C7D1604C884 /* UIScreenExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScreenExtension.swift; path = Sources/Extensions/UIKit/UIScreenExtension.swift; sourceTree = "<group>"; };
 		055ABC47BD9853EAEDC193C1FD6D5000 /* DeviceGuru.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceGuru.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -512,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				B47BED19BB21C1FADD70B82F1B6E5255 /* CGFloatExtension.swift */,
+				02CEC717237FD80800E3F787 /* NSLayoutConstraintExtension.swift */,
 				42355AC92245A6856DF2DC893A6CCEB8 /* DeviceGuruExtension.swift */,
 				65B80A1DF88801E2B270AE0D9D76CED9 /* exporteImport.swift */,
 				0D1B100DEB9E7E346F83373A3CAD1564 /* StoryboardExtension.swift */,
@@ -1051,6 +1054,7 @@
 				ACC021454A5F6C7AA361178D4CB91249 /* CoreDataConnect.swift in Sources */,
 				8B891CCC8F9DB4F548432EDDB884EBFD /* DeviceGuruExtension.swift in Sources */,
 				CD4D439D72860311E826935A54517A97 /* ExampleCoordinator.swift in Sources */,
+				02CEC718237FD80800E3F787 /* NSLayoutConstraintExtension.swift in Sources */,
 				6FA34B2D949F393EAD725B93602EA36D /* ExampleMainTabBarController.swift in Sources */,
 				72471EF03A1AEED06F8D851B2C7D634A /* exporteImport.swift in Sources */,
 				0F392905E97C2723773CB014B69D5BF6 /* HouJia-dummy.m in Sources */,
