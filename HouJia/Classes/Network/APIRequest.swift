@@ -48,10 +48,10 @@ public struct APIRequest {
     self.body = body
   }
 
-  public init?(url: URL, jsonDictionary: [String: Any]) {
+  public init?(url: URL, jsonDictionary: [String: Any], otherHeaders: [HTTPHeader]? = nil) {
     self.url = url
     self.method = .post
-    self.headers = [HTTPHeader(field: "Content-Type", value: "application/json; charset=utf-8")]
+    self.headers = [HTTPHeader(field: "Content-Type", value: "application/json; charset=utf-8")] + (otherHeaders ?? [])
     do {
       let body = try JSONSerialization.data(withJSONObject: jsonDictionary, options: JSONSerialization.WritingOptions(rawValue: 0))
       self.body = body
