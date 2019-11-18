@@ -1167,6 +1167,7 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-HouJia_Tests/Pods-HouJia_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1198,6 +1199,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyUtils/SwiftyUtils.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG -DTEST";
 				PRODUCT_MODULE_NAME = SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				SDKROOT = iphoneos;
@@ -1231,6 +1233,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyUtils/SwiftyUtils.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_MODULE_NAME = SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				SDKROOT = iphoneos;
@@ -1263,6 +1266,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DeviceGuru/DeviceGuru.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_MODULE_NAME = DeviceGuru;
 				PRODUCT_NAME = DeviceGuru;
 				SDKROOT = iphoneos;
@@ -1356,6 +1360,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/HouJia/HouJia.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG -DTEST";
 				PRODUCT_MODULE_NAME = HouJia;
 				PRODUCT_NAME = HouJia;
 				SDKROOT = iphoneos;
@@ -1390,6 +1395,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/HouJia/HouJia.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_MODULE_NAME = HouJia;
 				PRODUCT_NAME = HouJia;
 				SDKROOT = iphoneos;
@@ -1427,6 +1433,7 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-HouJia_Tests/Pods-HouJia_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DDEBUG -DTEST";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1459,6 +1466,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DeviceGuru/DeviceGuru.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_MODULE_NAME = DeviceGuru;
 				PRODUCT_NAME = DeviceGuru;
 				SDKROOT = iphoneos;
@@ -1492,6 +1500,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DeviceGuru/DeviceGuru.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG -DTEST";
 				PRODUCT_MODULE_NAME = DeviceGuru;
 				PRODUCT_NAME = DeviceGuru;
 				SDKROOT = iphoneos;
@@ -1529,6 +1538,7 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-HouJia_Example/Pods-HouJia_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1551,6 +1561,7 @@
 				IBSC_MODULE = DeviceGuru;
 				INFOPLIST_FILE = "Target Support Files/DeviceGuru/ResourceBundle-DeviceGuru-DeviceGuru-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_SWIFT_FLAGS = "-DDEBUG -DTEST";
 				PRODUCT_NAME = DeviceGuru;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1569,6 +1580,7 @@
 				IBSC_MODULE = DeviceGuru;
 				INFOPLIST_FILE = "Target Support Files/DeviceGuru/ResourceBundle-DeviceGuru-DeviceGuru-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = DeviceGuru;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1597,6 +1609,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyUtils/SwiftyUtils.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_MODULE_NAME = SwiftyUtils;
 				PRODUCT_NAME = SwiftyUtils;
 				SDKROOT = iphoneos;
@@ -1694,6 +1707,7 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-HouJia_Example/Pods-HouJia_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DDEBUG -DTEST";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1730,6 +1744,7 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-HouJia_Tests/Pods-HouJia_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1751,6 +1766,7 @@
 				IBSC_MODULE = DeviceGuru;
 				INFOPLIST_FILE = "Target Support Files/DeviceGuru/ResourceBundle-DeviceGuru-DeviceGuru-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = DeviceGuru;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1847,6 +1863,7 @@
 				MODULEMAP_FILE = "Target Support Files/Pods-HouJia_Example/Pods-HouJia_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1879,6 +1896,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/HouJia/HouJia.modulemap";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_MODULE_NAME = HouJia;
 				PRODUCT_NAME = HouJia;
 				SDKROOT = iphoneos;

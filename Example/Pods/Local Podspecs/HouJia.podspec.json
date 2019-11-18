@@ -20,9 +20,6 @@
   },
   "swift_versions": "5.0",
   "source_files": "HouJia/Classes/**/*",
-  "xcconfig": {
-    "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) COCOAPODS=1 DEBUG=1"
-  },
   "dependencies": {
     "DeviceGuru": [
 

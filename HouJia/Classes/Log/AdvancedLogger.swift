@@ -5,9 +5,7 @@
 import DeviceGuru
 import UIKit
 
-#if !TEST
-  public var logTextView = LogTextView()
-#endif
+public var logTextView = LogTextView()
 
 public class AdvancedLogger: BaseLogger {
   override func show(_ logString: String) {
