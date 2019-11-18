@@ -1,6 +1,6 @@
 {
   "name": "HouJia",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "summary": "A short description of HouJia.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/JeromeTW/HouJia",
@@ -13,12 +13,16 @@
   },
   "source": {
     "git": "https://github.com/JeromeTW/HouJia.git",
-    "tag": "0.0.1"
+    "tag": "0.0.3"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
+  "swift_versions": "5.0",
   "source_files": "HouJia/Classes/**/*",
+  "xcconfig": {
+    "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) COCOAPODS=1 DEBUG=1"
+  },
   "dependencies": {
     "DeviceGuru": [
 
@@ -26,5 +30,6 @@
     "SwiftyUtils": [
 
     ]
-  }
+  },
+  "swift_version": "5.0"
 }

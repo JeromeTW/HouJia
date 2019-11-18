@@ -5,7 +5,5 @@ target 'HouJia_Example' do
 
   target 'HouJia_Tests' do
     inherit! :search_paths
-
-    
   end
 end
