@@ -4,7 +4,7 @@
 
 import UIKit
 
-// Brunch dev, 1
+// Brunch dev, 2
 open class BaseView: UIView {
   required public init?(coder: NSCoder) {
     logC("init?(coder: NSCoder)")
