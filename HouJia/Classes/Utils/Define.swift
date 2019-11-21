@@ -7,4 +7,4 @@
 
 import UIKit
 
-typealias BaseHanler = () -> Void
+public typealias BaseHanler = () -> Void
