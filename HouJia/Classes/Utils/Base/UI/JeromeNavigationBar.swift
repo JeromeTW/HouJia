@@ -4,8 +4,6 @@
 
 import UIKit
 
-public class JeromeNavigationBar: UIView {}
-
 extension UIViewController {
   public func addJeromeNavigationBar() {}
 }
