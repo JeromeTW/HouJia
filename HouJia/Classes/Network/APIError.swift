@@ -36,15 +36,11 @@ extension APIError: LocalizedError {
     case .noData:
       return "伺服器回傳資料為空"
     
-    case .unexpectedJSON(let httpStatusCode, let json):
-      return "伺服器回傳非預期的 JSON 資料 \(httpStatusCode), \(json)"
+    case .unexpectedJSON(let httpStatusCode, _):
+      return "伺服器回傳非預期的 JSON 資料 \(httpStatusCode)"
       
-    case .unexpectedError(let httpStatusCode, let data):
-      if let dataString = String(data: data, encoding: .utf8) {
-        return "HTTP Response 發生未預期的錯誤 \(httpStatusCode), \(dataString)"
-      } else {
-        return "HTTP Response 發生未預期的錯誤 \(httpStatusCode)"
-      }
+    case .unexpectedError(let httpStatusCode, _):
+      return "HTTP Response 發生未預期的錯誤 \(httpStatusCode)"
       
     case .unknown(let error):
       return "發生未預期的錯誤 Error: \(error.localizedDescription)"
