@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		023AA4E423860E72006C3307 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA4E323860E72006C3307 /* Define.swift */; };
+		023AA4F923878975006C3307 /* UIWindowTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA4F823878975006C3307 /* UIWindowTransitions.swift */; };
+		023AA4FB238789D5006C3307 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA4FA238789D5006C3307 /* UIViewExtension.swift */; };
+		023AA4FD23878A08006C3307 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA4FC23878A07006C3307 /* UITableViewCellExtension.swift */; };
+		023AA4FF23878A54006C3307 /* URL+GetParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA4FE23878A54006C3307 /* URL+GetParameters.swift */; };
+		023AA50323878AA9006C3307 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA50223878AA9006C3307 /* UILabelExtension.swift */; };
+		023AA50523878B5F006C3307 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA50423878B5E006C3307 /* UITableViewExtension.swift */; };
+		023AA50723878B93006C3307 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA50623878B93006C3307 /* UIImage+.swift */; };
 		03099F27AC101AFEF249168691680853 /* CGFloatLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A8CA903216FC177235290F76AF24F3 /* CGFloatLiteral.swift */; };
 		03C2CDB6DDAEE7A3F1244BC164283FFD /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5266828F0FDF08AEAF29F3412805ABF /* UIViewController+Alerts.swift */; };
 		03D6DE3219102A66D9FDDEEF6902FCD4 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CE7792BFA370E9F6E50AA38308E315 /* UIAlertControllerExtension.swift */; };
@@ -166,6 +173,13 @@
 /* Begin PBXFileReference section */
 		01C943DD32D843DDCB50680B73E98B4C /* DeviceGuru-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DeviceGuru-Info.plist"; sourceTree = "<group>"; };
 		023AA4E323860E72006C3307 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		023AA4F823878975006C3307 /* UIWindowTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowTransitions.swift; sourceTree = "<group>"; };
+		023AA4FA238789D5006C3307 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		023AA4FC23878A07006C3307 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		023AA4FE23878A54006C3307 /* URL+GetParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+GetParameters.swift"; sourceTree = "<group>"; };
+		023AA50223878AA9006C3307 /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		023AA50423878B5E006C3307 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		023AA50623878B93006C3307 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		03F92C1E6F44C8F9A9785129C5BAD5FE /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
 		044D70075FB8DB66D8C32C7D1604C884 /* UIScreenExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScreenExtension.swift; path = Sources/Extensions/UIKit/UIScreenExtension.swift; sourceTree = "<group>"; };
 		055ABC47BD9853EAEDC193C1FD6D5000 /* DeviceGuru.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceGuru.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -514,6 +528,15 @@
 				607CD6D174BE8EA8E1C611CD820A451F /* JeromeNavigationBar.swift */,
 				8839F2BBFCA5FFD3C7B78C96CCCDD74D /* JeromeNavigationBarStatusBarBaseVC.xib */,
 				FF06DC930BF0576D12E903ADA466575A /* UIButtonExtension.swift */,
+				97513601A9489B1406806943792C358D /* UITextFieldExtension.swift */,
+				C5266828F0FDF08AEAF29F3412805ABF /* UIViewController+Alerts.swift */,
+				57C8113886704A4FF980EAA6DC7D2694 /* UIViewControllerExtension.swift */,
+				023AA4F823878975006C3307 /* UIWindowTransitions.swift */,
+				023AA4FA238789D5006C3307 /* UIViewExtension.swift */,
+				023AA50423878B5E006C3307 /* UITableViewExtension.swift */,
+				023AA4FC23878A07006C3307 /* UITableViewCellExtension.swift */,
+				023AA50223878AA9006C3307 /* UILabelExtension.swift */,
+				023AA50623878B93006C3307 /* UIImage+.swift */,
 				1D2F4591A15C2D374EDCC9644EA83866 /* ButtonWithImageAndLabel */,
 				C8CB085FCE3D422961F8B797C98B8D1C /* LoginTextFieldView */,
 			);
@@ -622,9 +645,7 @@
 				E7C22FC5151B14B0BC3D648115516DD1 /* NSLayoutConstraintExtension.swift */,
 				6B3204F00F975E72D30CA8FDE73C341B /* StoryboardExtension.swift */,
 				7897004867037F79FF0A675EA5499062 /* String+.swift */,
-				97513601A9489B1406806943792C358D /* UITextFieldExtension.swift */,
-				C5266828F0FDF08AEAF29F3412805ABF /* UIViewController+Alerts.swift */,
-				57C8113886704A4FF980EAA6DC7D2694 /* UIViewControllerExtension.swift */,
+				023AA4FE23878A54006C3307 /* URL+GetParameters.swift */,
 				7D135C0141C47BB51C5CB1B6AECDC3F1 /* Base */,
 				023AA4E323860E72006C3307 /* Define.swift */,
 			);
@@ -1045,8 +1066,10 @@
 				0C853A150209674D9B448C690938921D /* AdvancedLogger.swift in Sources */,
 				1F55D01815AB287BDC66E32396C45D17 /* APIError.swift in Sources */,
 				7C28194F4F6EBBE68B454584D16CC022 /* APIRequest.swift in Sources */,
+				023AA50523878B5F006C3307 /* UITableViewExtension.swift in Sources */,
 				E630DE4B237B856245A6128FC4322DB4 /* AsynchronousOperation.swift in Sources */,
 				BDEC97F5B548606A56A0B39A0266D6CA /* BaseLogger.swift in Sources */,
+				023AA4FD23878A08006C3307 /* UITableViewCellExtension.swift in Sources */,
 				9935927E6BE2B91450B116D102C94524 /* BaseView.swift in Sources */,
 				FE320BBAEBFCE2593385D7E800369428 /* BaseViewController.swift in Sources */,
 				B4CBE06573EFAF1F84AA543248E77515 /* ButtonWithImageAndLabelSuperView.swift in Sources */,
@@ -1057,24 +1080,29 @@
 				08C144C0B94F1818BEFA5A51508F6D37 /* Coordinator.swift in Sources */,
 				2EFA0970736CC552E801D40CA4C5E22C /* CoreDataConnect.swift in Sources */,
 				3AED040F12D7E73886E47CDCEDB41A82 /* DeviceGuruExtension.swift in Sources */,
+				023AA4FF23878A54006C3307 /* URL+GetParameters.swift in Sources */,
 				896B68F8DAFF41E10D207DC61938150D /* ExampleCoordinator.swift in Sources */,
 				4854D31C887ECEE0D886823D602FD9CE /* ExampleMainTabBarController.swift in Sources */,
 				9B6CED640C14AC60347548351306EE57 /* exporteImport.swift in Sources */,
+				023AA4FB238789D5006C3307 /* UIViewExtension.swift in Sources */,
 				023AA4E423860E72006C3307 /* Define.swift in Sources */,
 				99460BFB713108A36086E68221E48603 /* Flexible.swift in Sources */,
 				EFAF7859D8DF55971210FF203C4F3912 /* HouJia-dummy.m in Sources */,
 				3608F4E78AF25A14FDE5849B3E4B1E9C /* ImageLoader.swift in Sources */,
 				8005EBF31D4D5B014F7EEE0384272675 /* JeromeNavigationBar.swift in Sources */,
+				023AA50323878AA9006C3307 /* UILabelExtension.swift in Sources */,
 				BA5D0932B636606DAA04207424AE2FD2 /* JeromeNavigationBarStatusBarBaseVC.xib in Sources */,
 				AC0368A37D3CF476665A432335A54659 /* LoginTextFieldSuperView.swift in Sources */,
 				ED885B7BE53F4F42B0FBC0FCF6A25FF2 /* LoginTextFieldView.swift in Sources */,
 				0570E516CA635CF5F5B07AD8DC31BD6F /* LoginTextFieldView.xib in Sources */,
 				C67ED7B8CE999D4F66A8F633E504DE0D /* LogTextView.swift in Sources */,
 				293F0ACFB2AF21A9C95091114D7B1F40 /* NetworkRequestOperation.swift in Sources */,
+				023AA50723878B93006C3307 /* UIImage+.swift in Sources */,
 				821E9197B0C4EF037195542E7EA31C1C /* NSLayoutConstraintExtension.swift in Sources */,
 				4655B811ED18FBB5549D9F7485D43486 /* NSPersistentContainerExtension.swift in Sources */,
 				FC239CFDDE15E5E507BE0E5C66F0DD70 /* Observable.swift in Sources */,
 				57F7845E8571CDD1BEF206A481C943B1 /* PersistentContainerManager.swift in Sources */,
+				023AA4F923878975006C3307 /* UIWindowTransitions.swift in Sources */,
 				23B710BC4F2184AF42A84F2FDDE7E042 /* StoryboardExtension.swift in Sources */,
 				646058153811D98154D8887DCED178AE /* String+.swift in Sources */,
 				210B46A136ED5DC7E34587F701FEDAF1 /* UIButtonExtension.swift in Sources */,
