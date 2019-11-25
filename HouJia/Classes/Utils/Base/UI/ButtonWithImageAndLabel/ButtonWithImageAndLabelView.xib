@@ -24,7 +24,7 @@
                             <rect key="frame" x="0.0" y="-1" width="200" height="180.5"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCK-Ia-ZfH">
-                            <rect key="frame" x="0.0" y="179.5" width="200" height="20.5"/>
+                            <rect key="frame" x="79" y="179.5" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -32,11 +32,10 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="KCK-Ia-ZfH" firstAttribute="leading" secondItem="dqz-bP-iJo" secondAttribute="leading" id="5fJ-uZ-n9Z"/>
+                        <constraint firstItem="KCK-Ia-ZfH" firstAttribute="centerX" secondItem="dqz-bP-iJo" secondAttribute="centerX" id="FfP-Xi-JD2"/>
                         <constraint firstItem="KCK-Ia-ZfH" firstAttribute="top" secondItem="jls-cu-CxL" secondAttribute="bottom" id="ITj-2b-q4v"/>
                         <constraint firstAttribute="trailing" secondItem="jls-cu-CxL" secondAttribute="trailing" id="R4Y-ax-bv8"/>
                         <constraint firstAttribute="bottom" secondItem="KCK-Ia-ZfH" secondAttribute="bottom" id="YXC-j6-CsN"/>
-                        <constraint firstAttribute="trailing" secondItem="KCK-Ia-ZfH" secondAttribute="trailing" id="bqH-Bn-IeL"/>
                         <constraint firstItem="jls-cu-CxL" firstAttribute="top" secondItem="dqz-bP-iJo" secondAttribute="top" id="deG-gL-33y"/>
                         <constraint firstItem="jls-cu-CxL" firstAttribute="leading" secondItem="dqz-bP-iJo" secondAttribute="leading" id="zgB-CN-egD"/>
                     </constraints>
