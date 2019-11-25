@@ -8,7 +8,6 @@ public class ButtonWithImageAndLabelView: BaseView {
   @IBOutlet public var button: UIButton!
   @IBOutlet public var imageView: UIImageView!
   @IBOutlet public var label: UILabel!
-  @IBOutlet public var imageAndLabelHeight: NSLayoutConstraint!
   @IBOutlet public weak var imageAndLabelVerticalSpace: NSLayoutConstraint!
   @IBOutlet public weak var badgeView: UIView!
   @IBOutlet public weak var badgeLabel: UILabel!

@@ -26,12 +26,6 @@ class ButtonWithImageAndLabelTests: XCTestCase {
     XCTAssert(superview.buttonWithImageAndLabelView.imageView.image == image)
   }
 
-  func test_LoginTextFieldView_imageAndLabelHeight() {
-    let imageAndLabelHeight: CGFloat = 66
-    superview.imageAndLabelHeight = imageAndLabelHeight
-    XCTAssert(superview.buttonWithImageAndLabelView.imageAndLabelHeight.constant == imageAndLabelHeight)
-  }
-
   func test_LoginTextFieldView_font() {
     let font = UIFont.systemFont(ofSize: 20)
     superview.font = font

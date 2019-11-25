@@ -18,12 +18,6 @@ import UIKit
     }
   }
 
-  public var imageAndLabelHeight: CGFloat = 55 {
-    didSet {
-      buttonWithImageAndLabelView.imageAndLabelHeight.constant = imageAndLabelHeight
-    }
-  }
-
   public var font: UIFont = UIFont.systemFont(ofSize: 12) {
     didSet {
       buttonWithImageAndLabelView.label.font = font
