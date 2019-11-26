@@ -8,6 +8,8 @@ class ExampleCoordinator: Coordinator {
   var navigationController: CoordinatedNavigationController
   // TODO: use your storyboard
   let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+  weak var parentCoordinator: Coordinator?
+  var childCoordinators = [Coordinator]()
 
   init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController()) {
     self.navigationController = navigationController
