@@ -7,4 +7,4 @@
 
 import UIKit
 
-public typealias BaseHanler = () -> Void
+public typealias BaseHandler = () -> Void
