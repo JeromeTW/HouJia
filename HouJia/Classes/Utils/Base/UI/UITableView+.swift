@@ -18,4 +18,13 @@ extension UITableView {
       }
     }
   }
+  
+  public func showFooterIndicator() {
+    let spinner = UIActivityIndicatorView(style: .gray)
+    spinner.startAnimating()
+    spinner.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 44)
+    
+    tableFooterView = spinner
+    tableFooterView?.isHidden = false
+  }
 }

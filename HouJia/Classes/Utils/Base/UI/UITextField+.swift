@@ -26,4 +26,11 @@ extension UITextField {
   @objc func tapCancel() {
     resignFirstResponder()
   }
+  
+  public var textIsNotEmpty: Bool {
+    guard let notNilText = text, notNilText.isEmpty == false else {
+      return false
+    }
+    return true
+  }
 }
