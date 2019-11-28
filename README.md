@@ -5,11 +5,23 @@
 [![License](https://img.shields.io/cocoapods/l/HouJia.svg?style=flat)](https://cocoapods.org/pods/HouJia)
 [![Platform](https://img.shields.io/cocoapods/p/HouJia.svg?style=flat)](https://cocoapods.org/pods/HouJia)
 
+## Introduction
+This project includes many framework I usually used. There some important feature:
+
+* Coordinator
+* Core Data
+* Images
+* Network
+* Log
+* Utils
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+* iOS 11+
+* Swift 5+
 
 ## Installation
 
@@ -22,7 +34,7 @@ pod 'HouJia'
 
 ## Author
 
-jerome.developer.tw@gmail.com, jerome.developer.tw@gmail.com
+jerome.developer.tw@gmail.com
 
 ## License
 
