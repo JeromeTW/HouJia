@@ -13,9 +13,6 @@ open class BaseViewController: UIViewController {
 
   override open func loadView() {
     logC("\(className) loadView")
-    let vc = UIViewController()
-    print(vc.className) // UIViewController
-    print(UIViewController.className) // UIViewController
     super.loadView()
   }
 
