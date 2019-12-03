@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     #else
       logT(issue: "!!!!!!", message: "THIS IS NORMAL")
     #endif
+    logE(APIError.noData)
     return true
   }
   
