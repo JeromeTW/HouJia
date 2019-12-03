@@ -37,7 +37,7 @@ class ViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    showAlertController(withTitle: "Title", message: "message", textFieldsData: [UIViewController.TextFieldData(text: nil, placeholder: nil)], leftTitle: "Left", leftHandler: nil, rightTitle: "Right") {
+    showAlertController(withTitle: "Title", message: "message", textFieldsData: [UIViewController.TextFieldData(text: nil, placeholder: nil)], leftTitle: "Left", leftHandler: nil, rightTitle: "Right") { textfields in 
       print("Right")
     }
   }

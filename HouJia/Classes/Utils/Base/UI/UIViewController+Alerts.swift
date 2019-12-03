@@ -78,7 +78,7 @@ extension UIViewController {
                            leftTitle: String,
                            leftHandler: TextFieldHandler?,
                            rightTitle: String,
-                           rightHandler: VoidHandler?) {
+                           rightHandler: TextFieldHandler?) {
     DispatchQueue.main.async {
       let alert = UIAlertController(title: title,
                                     message: message,
@@ -99,7 +99,7 @@ extension UIViewController {
       }
 
       let right = UIAlertAction(title: rightTitle, style: .default) { _ in
-        rightHandler?()
+        rightHandler?(textfields)
       }
 
       alert.addAction(left)
