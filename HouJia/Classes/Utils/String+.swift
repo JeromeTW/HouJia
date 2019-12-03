@@ -26,6 +26,24 @@ extension String {
     copyString.insert(contentsOf: string, at: tempIndex)
     return copyString
   }
+  
+  public var isLettersOnly: Bool {
+    let characterSet = CharacterSet.letters
+    if rangeOfCharacter(from: characterSet.inverted) != nil {
+        return false
+    } else {
+      return true
+    }
+  }
+  
+  public var isAlphaNumeric: Bool {
+    let alphaNumericSet = CharacterSet.alphanumerics
+    if rangeOfCharacter(from: alphaNumericSet.inverted) != nil {
+        return false
+    } else {
+      return true
+    }
+  }
 }
 
 // MARK: - Regex
