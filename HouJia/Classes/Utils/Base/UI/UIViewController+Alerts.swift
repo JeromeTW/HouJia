@@ -71,17 +71,14 @@ extension UIViewController {
   ///   - message: alert message.
   ///   - textColor: text color.
   ///   - textFieldsData: textFieldsData array.
-  ///   - okTitle: ok button title.
-  ///   - cancelTitle: cancel button title.
-  ///   - cancelHandler: ok button handler.
-  ///   - okHandler: cancel button handler.
   public func showAlertController(withTitle title: String?,
                            message: String?,
                            textColor: UIColor? = nil,
-                           textFieldsData: [TextFieldData], cancelTitle: String,
-                           cancelHandler: VoidHandler?,
-                           okTitle: String,
-                           okHandler: TextFieldHandler?) {
+                           textFieldsData: [TextFieldData],
+                           leftTitle: String,
+                           leftHandler: TextFieldHandler?,
+                           rightTitle: String,
+                           rightHandler: VoidHandler?) {
     DispatchQueue.main.async {
       let alert = UIAlertController(title: title,
                                     message: message,
@@ -97,16 +94,16 @@ extension UIViewController {
         }
       }
 
-      let ok = UIAlertAction(title: okTitle, style: .default) { _ in
-        okHandler?(textfields)
+      let left = UIAlertAction(title: leftTitle, style: .default) { _ in
+        leftHandler?(textfields)
       }
 
-      let cancel = UIAlertAction(title: cancelTitle, style: .default) { _ in
-        cancelHandler?()
+      let right = UIAlertAction(title: rightTitle, style: .default) { _ in
+        rightHandler?()
       }
 
-      alert.addAction(ok)
-      alert.addAction(cancel)
+      alert.addAction(left)
+      alert.addAction(right)
 
       if let textColor = textColor {
         alert.view.tintColor = textColor

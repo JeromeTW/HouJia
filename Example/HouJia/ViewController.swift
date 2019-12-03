@@ -33,15 +33,13 @@ class ViewController: UIViewController {
     badgeLabel.text = "99+"
     badgeLabel.font = UIFont.boldSystemFont(ofSize: 12)
     badgeLabel.tintColor = .white
-    
-    
-    
-    
   }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    showAlertController(withTitle: "Title", message: "message", textFieldsData: [UIViewController.TextFieldData(text: nil, placeholder: nil)], leftTitle: "Left", leftHandler: nil, rightTitle: "Right") {
+      print("Right")
     }
-
+  }
 }
 
