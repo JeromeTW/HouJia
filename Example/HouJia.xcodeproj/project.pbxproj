@@ -20,6 +20,7 @@
 		02CE535D2376CCC500BBA9E8 /* ImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE53592376CCC400BBA9E8 /* ImageLoaderTests.swift */; };
 		02CE535E2376CCC500BBA9E8 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE535A2376CCC400BBA9E8 /* NetworkTests.swift */; };
 		02CE535F2376CCC500BBA9E8 /* LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CE535B2376CCC500BBA9E8 /* LoggerTests.swift */; };
+		02E0DB7A2399F71100F747D8 /* TextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0DB792399F71100F747D8 /* TextViewTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		02CE53592376CCC400BBA9E8 /* ImageLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoaderTests.swift; sourceTree = "<group>"; };
 		02CE535A2376CCC400BBA9E8 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		02CE535B2376CCC500BBA9E8 /* LoggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggerTests.swift; sourceTree = "<group>"; };
+		02E0DB792399F71100F747D8 /* TextViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewTests.swift; sourceTree = "<group>"; };
 		161E2C5E0835BE74D0FAB589 /* Pods_HouJia_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouJia_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		167952101BA6BAEB286ED88D /* Pods-HouJia_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HouJia_Tests.release.xcconfig"; path = "Target Support Files/Pods-HouJia_Tests/Pods-HouJia_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2ADE0B9F5D5A75FEAA8A5A41 /* HouJia.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HouJia.podspec; path = ../HouJia.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -172,6 +174,7 @@
 				026BB5C3237AA4750093748B /* APITests.swift */,
 				027BC71F237BE71B00ABB509 /* DecodeTests.swift */,
 				027BC71D237BA5B700ABB509 /* FlexibleObjectTests.swift */,
+				02E0DB792399F71100F747D8 /* TextViewTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -389,6 +392,7 @@
 				02CE534123765A0600BBA9E8 /* ImportModules.swift in Sources */,
 				026BB5C4237AA4750093748B /* APITests.swift in Sources */,
 				027BC71E237BA5B700ABB509 /* FlexibleObjectTests.swift in Sources */,
+				02E0DB7A2399F71100F747D8 /* TextViewTests.swift in Sources */,
 				02CE535F2376CCC500BBA9E8 /* LoggerTests.swift in Sources */,
 				02CE535E2376CCC500BBA9E8 /* NetworkTests.swift in Sources */,
 				02CE535D2376CCC500BBA9E8 /* ImageLoaderTests.swift in Sources */,
