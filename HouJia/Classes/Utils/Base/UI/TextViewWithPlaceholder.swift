@@ -46,7 +46,7 @@ import UIKit
     return super.resignFirstResponder()
   }
   
-  private func showPlaceholderText() {
+  public func showPlaceholderText() {
     showingPlaceholder = true
     textColor = placeholderTextColor
     text = placeholderText
