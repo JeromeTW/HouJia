@@ -5,6 +5,10 @@
 [![License](https://img.shields.io/cocoapods/l/HouJia.svg?style=flat)](https://cocoapods.org/pods/HouJia)
 [![Platform](https://img.shields.io/cocoapods/p/HouJia.svg?style=flat)](https://cocoapods.org/pods/HouJia)
 
+## About the Name
+台語 “好食” 的音譯，希望大家都喜歡吃😊
+Transliteration of "good taste" in Taiwanese, I hope everyone likes to eat
+
 ## Introduction
 This project includes many framework I usually used. There some important feature:
 
