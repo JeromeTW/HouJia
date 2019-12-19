@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020F501B23AB0D8D00CBE964 /* CGRect+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020F501A23AB0D8D00CBE964 /* CGRect+.swift */; };
 		023AA4E423860E72006C3307 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA4E323860E72006C3307 /* Define.swift */; };
 		023AA4F923878975006C3307 /* UIWindowTransitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA4F823878975006C3307 /* UIWindowTransitions.swift */; };
 		023AA4FB238789D5006C3307 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AA4FA238789D5006C3307 /* UIViewExtension.swift */; };
@@ -177,6 +178,7 @@
 
 /* Begin PBXFileReference section */
 		01C943DD32D843DDCB50680B73E98B4C /* DeviceGuru-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DeviceGuru-Info.plist"; sourceTree = "<group>"; };
+		020F501A23AB0D8D00CBE964 /* CGRect+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+.swift"; sourceTree = "<group>"; };
 		023AA4E323860E72006C3307 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
 		023AA4F823878975006C3307 /* UIWindowTransitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowTransitions.swift; sourceTree = "<group>"; };
 		023AA4FA238789D5006C3307 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 				6B3204F00F975E72D30CA8FDE73C341B /* Storyboard+.swift */,
 				7897004867037F79FF0A675EA5499062 /* String+.swift */,
 				023AA4FE23878A54006C3307 /* URL+.swift */,
+				020F501A23AB0D8D00CBE964 /* CGRect+.swift */,
 				7D135C0141C47BB51C5CB1B6AECDC3F1 /* Base */,
 				023AA4E323860E72006C3307 /* Define.swift */,
 				0254098D23A0E80600332A40 /* GlobalFunctions.swift */,
@@ -1101,6 +1104,7 @@
 				02849F0B238CB51B00275067 /* UIView+.swift in Sources */,
 				B6C2FE6720C2D4795E889896F658B4E0 /* CGFloat+.swift in Sources */,
 				2DFF6C5F407E907F31E1D9D9428EEB23 /* CoordinatedNavigationController.swift in Sources */,
+				020F501B23AB0D8D00CBE964 /* CGRect+.swift in Sources */,
 				08C144C0B94F1818BEFA5A51508F6D37 /* Coordinator.swift in Sources */,
 				2EFA0970736CC552E801D40CA4C5E22C /* CoreDataConnect.swift in Sources */,
 				3AED040F12D7E73886E47CDCEDB41A82 /* DeviceGuru+.swift in Sources */,

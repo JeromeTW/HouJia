@@ -12,3 +12,13 @@ public func assertNotNil(_ items: Optional<Any>...) {
     assert(item != nil)
   }
 }
+
+public func getDocumentsDirectory() -> URL {
+  let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+  let documentsDirectory = paths.first
+  return documentsDirectory!
+}
+
+public func getTemporaryDirectory() -> URL {
+  return URL(fileURLWithPath: NSTemporaryDirectory())
+}
