@@ -1,6 +1,6 @@
 PODS:
   - DeviceGuru (6.0.0)
-  - HouJia (0.0.3):
+  - HouJia (0.0.4):
     - DeviceGuru
     - SwiftyUtils
   - SwiftyUtils (4.0.0)
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DeviceGuru: af478ea9bff7614d85198b7516ea7657153c65bb
-  HouJia: bffd7ad58b6ffffd6473e78922f799e9938f845b
+  HouJia: 239a8c4bbadfc252aa9fe46180eba8b95e60522e
   SwiftyUtils: e2c0b1fd674684e1083c894f6a71a64bb9617402
 
-PODFILE CHECKSUM: b1248114cd9fbf31b9622391d855d5aab99038b7
+PODFILE CHECKSUM: 8eff4156524b9eaf7c272cd69b81ac316cc2cab7
 
 COCOAPODS: 1.8.4
