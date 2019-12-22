@@ -47,8 +47,9 @@ public class ImageLoader: NSObject {
     return queue
   }()
 
-  public func imageByURL(_ url: URL, completionHandler: @escaping (_ image: UIImage?, _ url: URL) -> Void) {
+  public func imageByAPIRequest(_ request: APIRequest, completionHandler: @escaping (_ image: UIImage?, _ url: URL) -> Void) {
     // get image from cache
+    let url = request.url
     if let imageFromCache = imageCache.object(forKey: url.absoluteString as NSString) {
       completionHandler(imageFromCache, url)
       return
@@ -59,7 +60,6 @@ public class ImageLoader: NSObject {
 //        repeatRequiresHandler(url: url)
       }
 
-      let request = APIRequest(url: url)
       func mainThreadCompletionHandler(image innerImage: UIImage?, _ url: URL) {
         DispatchQueue.main.async {
           completionHandler(innerImage, url)

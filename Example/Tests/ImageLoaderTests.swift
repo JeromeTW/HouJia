@@ -20,14 +20,15 @@ class ImageLoaderTests: XCTestCase {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
   }
 
-  func test_ImageLoader_imageByURL_when_URLExistBefore_doesNotAskQueueShootTwice() { // SypQueue
+  func test_ImageLoader_imageByAPIRequest_when_URLExistBefore_doesNotAskQueueShootTwice() { // SypQueue
     let exp = expectation(description: "Download the image")
     let spyQueue = SypQueue()
     let imageLoader = ImageLoader.shared
 
     let successfulURL = URL(string: "https://i.ytimg.com/vi/z_xrgqTnM5E/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLBTL27i7gGtKmOqugtYG1hhdl8k-Q")!
+    let request = APIRequest(url: successfulURL)
     imageLoader.queue = spyQueue
-    imageLoader.imageByURL(successfulURL) { image, _ in
+    imageLoader.imageByAPIRequest(request) { image, _ in
       if image != nil {
         logC("testImageLoader-1")
         exp.fulfill()
@@ -36,13 +37,13 @@ class ImageLoaderTests: XCTestCase {
     wait(for: [exp], timeout: 5)
   }
 
-  func test_ImageLoader_imageByURL_with_wrongURL() {
+  func test_ImageLoader_APIRequest_with_wrongURL() {
     let exp = expectation(description: "Wrong URL")
     let imageLoader = ImageLoader.shared
 
     let wrongURL = URL(string: "https://asdasdasdada")!
-
-    imageLoader.imageByURL(wrongURL) { image, _ in
+    let request = APIRequest(url: wrongURL)
+    imageLoader.imageByAPIRequest(request) { image, _ in
       XCTAssert(image == nil)
       exp.fulfill()
     }
