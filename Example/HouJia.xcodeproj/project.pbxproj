@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020962F023AF662600DBC3B4 /* APIObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020962EF23AF662500DBC3B4 /* APIObjects.swift */; };
+		020962F123AF668200DBC3B4 /* APIObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020962EF23AF662500DBC3B4 /* APIObjects.swift */; };
 		02502D892377877C001FF4F4 /* ButtonWithImageAndLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02502D872377877C001FF4F4 /* ButtonWithImageAndLabelTests.swift */; };
 		02502D8A2377877C001FF4F4 /* LoginTextFieldViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02502D882377877C001FF4F4 /* LoginTextFieldViewTests.swift */; };
 		026BB5C1237AA3100093748B /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026BB5C0237AA3100093748B /* NetworkController.swift */; };
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020962EF23AF662500DBC3B4 /* APIObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIObjects.swift; sourceTree = "<group>"; };
 		02502D872377877C001FF4F4 /* ButtonWithImageAndLabelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonWithImageAndLabelTests.swift; sourceTree = "<group>"; };
 		02502D882377877C001FF4F4 /* LoginTextFieldViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTextFieldViewTests.swift; sourceTree = "<group>"; };
 		026BB5C0237AA3100093748B /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
@@ -145,6 +148,7 @@
 				02CE533F23765A0600BBA9E8 /* ImportModules.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				020962EF23AF662500DBC3B4 /* APIObjects.swift */,
 				026BB5C0237AA3100093748B /* NetworkController.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -379,6 +383,7 @@
 				026BB5C1237AA3100093748B /* NetworkController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				02CE534023765A0600BBA9E8 /* ImportModules.swift in Sources */,
+				020962F023AF662600DBC3B4 /* APIObjects.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +403,7 @@
 				02CE535D2376CCC500BBA9E8 /* ImageLoaderTests.swift in Sources */,
 				02502D892377877C001FF4F4 /* ButtonWithImageAndLabelTests.swift in Sources */,
 				02502D8A2377877C001FF4F4 /* LoginTextFieldViewTests.swift in Sources */,
+				020962F123AF668200DBC3B4 /* APIObjects.swift in Sources */,
 				02CE535C2376CCC500BBA9E8 /* CoreDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
