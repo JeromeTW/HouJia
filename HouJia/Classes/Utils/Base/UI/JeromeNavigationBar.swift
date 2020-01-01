@@ -22,12 +22,13 @@ public protocol HasJeromeNavigationBar: UIViewController {
   var navagationViewHeightConstraint: NSLayoutConstraint! { get set }
   var safeAreaBottomViewHeightConstraint: NSLayoutConstraint! { get set }
   var observer: NSObjectProtocol? { get set }
+  var shouldSetTopViewToDefaultStyle: Bool { get set }
 
   func setupHasJeromeNavigationBarVC()
   func setupSatusBarFrameChangedObserver()
   func setupSafeAreaBottomViewHeight()
   func removeSatusBarHeightChangedObserver()
-  func updateTopView()
+  func setTopViewToDefaultStyle() // 設定成跟系統類似的 Style
 }
 
 extension HasJeromeNavigationBar {
@@ -51,18 +52,20 @@ extension HasJeromeNavigationBar {
   }
   
   public func setupSatusBarFrameChangedObserver() {
-    updateTopView()
+    let statusHeight = UIApplication.shared.statusBarFrame.size.height
+    statusViewHeightConstraint.constant = statusHeight
+    navagationViewHeightConstraint.constant = CGFloat.navagationViewHeight
     observer = NotificationCenter.default.addObserver(forName: UIApplication.willChangeStatusBarFrameNotification, object: nil, queue: nil) { [weak self] _ in
-      DispatchQueue.main.async {
-        guard let self = self else {
-          return
+      guard let self = self else { return }
+      if self.shouldSetTopViewToDefaultStyle {
+        DispatchQueue.main.async {
+          self.setTopViewToDefaultStyle()
         }
-        self.updateTopView()
       }
     }
   }
 
-  public func updateTopView() {
+  public func setTopViewToDefaultStyle() {
     topView.backgroundColor = .clear
     let defaultNavigationBarColor = UIColor(red: 0.969, green: 0.969, blue: 0.969, alpha: 0.5)
 
@@ -78,10 +81,6 @@ extension HasJeromeNavigationBar {
     toolbar2.setShadowImage(UIImage(), forToolbarPosition: .any)
     statusView.backgroundColor = defaultNavigationBarColor
     statusView.insertSubview(toolbar2, at: 0)
-
-    let statusHeight = UIApplication.shared.statusBarFrame.size.height
-    statusViewHeightConstraint.constant = statusHeight
-    navagationViewHeightConstraint.constant = CGFloat.navagationViewHeight
   }
 
   public func removeSatusBarHeightChangedObserver() {
