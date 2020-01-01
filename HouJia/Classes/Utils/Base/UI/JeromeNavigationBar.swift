@@ -22,9 +22,9 @@ public protocol HasJeromeNavigationBar: UIViewController {
   var navagationViewHeightConstraint: NSLayoutConstraint! { get set }
   var safeAreaBottomViewHeightConstraint: NSLayoutConstraint! { get set }
   var observer: NSObjectProtocol? { get set }
-  var shouldSetTopViewToDefaultStyle: Bool { get set }
+  var shouldSetTopViewToDefaultStyle: Bool! { get set }
 
-  func setupHasJeromeNavigationBarVC()
+  func setupHasJeromeNavigationBarVC(shouldSetTopViewToDefaultStyle: Bool)
   func setupSatusBarFrameChangedObserver()
   func setupSafeAreaBottomViewHeight()
   func removeSatusBarHeightChangedObserver()
@@ -32,7 +32,8 @@ public protocol HasJeromeNavigationBar: UIViewController {
 }
 
 extension HasJeromeNavigationBar {
-  public func setupHasJeromeNavigationBarVC() {
+  public func setupHasJeromeNavigationBarVC(shouldSetTopViewToDefaultStyle: Bool) {
+    self.shouldSetTopViewToDefaultStyle = shouldSetTopViewToDefaultStyle
     setupSafeAreaBottomViewHeight()
     setupSatusBarFrameChangedObserver()
   }
