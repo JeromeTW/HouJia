@@ -19,14 +19,36 @@ public protocol HasJeromeNavigationBar: UIViewController {
   var navagationView: UIView! { get set }
   var statusViewHeightConstraint: NSLayoutConstraint! { get set }
   var navagationViewHeightConstraint: NSLayoutConstraint! { get set }
+  var safeAreaBottomViewHeightConstraint: NSLayoutConstraint! { get set }
   var observer: NSObjectProtocol? { get set }
 
+  func setupHasJeromeNavigationBarVC()
   func setupSatusBarFrameChangedObserver()
+  func setupSafeAreaBottomViewHeight()
   func removeSatusBarHeightChangedObserver()
   func updateTopView()
 }
 
 extension HasJeromeNavigationBar {
+  public func setupHasJeromeNavigationBarVC() {
+    setupSafeAreaBottomViewHeight()
+    setupSatusBarFrameChangedObserver()
+  }
+  
+  public func setupSafeAreaBottomViewHeight() {
+    if #available(iOS 11.0, *) {
+      let window = UIApplication.shared.keyWindow
+//      let topPadding = window?.safeAreaInsets.top
+      guard let bottomPadding = window?.safeAreaInsets.bottom else {
+        assertionFailure()
+        return
+      }
+      safeAreaBottomViewHeightConstraint.constant = bottomPadding
+    } else {
+      safeAreaBottomViewHeightConstraint.constant = 0
+    }
+  }
+  
   public func setupSatusBarFrameChangedObserver() {
     updateTopView()
     observer = NotificationCenter.default.addObserver(forName: UIApplication.willChangeStatusBarFrameNotification, object: nil, queue: nil) { [weak self] _ in

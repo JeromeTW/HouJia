@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +15,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2S5-BZ-m7X" userLabel="Safe Area Bottom View">
+                        <rect key="frame" x="0.0" y="862" width="414" height="34"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="nhO-Tu-rqX"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dge-gD-5ww" userLabel="Content View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -54,10 +59,14 @@
                 <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="0Ea-l6-p0D" firstAttribute="trailing" secondItem="dge-gD-5ww" secondAttribute="trailing" id="0Iq-yo-r1k"/>
+                    <constraint firstAttribute="trailing" secondItem="2S5-BZ-m7X" secondAttribute="trailing" id="DQW-aW-VPd"/>
                     <constraint firstItem="dge-gD-5ww" firstAttribute="top" secondItem="M7Y-ar-A8l" secondAttribute="top" id="ToP-cN-ln7"/>
                     <constraint firstItem="cjh-2c-cQG" firstAttribute="top" secondItem="M7Y-ar-A8l" secondAttribute="top" id="ZNa-LD-P2Q"/>
+                    <constraint firstItem="2S5-BZ-m7X" firstAttribute="top" secondItem="dge-gD-5ww" secondAttribute="bottom" id="cv5-cq-0rJ"/>
+                    <constraint firstItem="2S5-BZ-m7X" firstAttribute="leading" secondItem="M7Y-ar-A8l" secondAttribute="leading" id="gHc-eE-mj8"/>
                     <constraint firstAttribute="trailing" secondItem="cjh-2c-cQG" secondAttribute="trailing" id="lFH-Ee-EX6"/>
                     <constraint firstItem="dge-gD-5ww" firstAttribute="leading" secondItem="0Ea-l6-p0D" secondAttribute="leading" id="n9c-aq-fT1"/>
+                    <constraint firstAttribute="bottom" secondItem="2S5-BZ-m7X" secondAttribute="bottom" id="pd3-qV-OdS"/>
                     <constraint firstItem="0Ea-l6-p0D" firstAttribute="bottom" secondItem="dge-gD-5ww" secondAttribute="bottom" id="tY0-zd-CfD"/>
                     <constraint firstItem="cjh-2c-cQG" firstAttribute="leading" secondItem="M7Y-ar-A8l" secondAttribute="leading" id="v5l-v8-aOT"/>
                 </constraints>
