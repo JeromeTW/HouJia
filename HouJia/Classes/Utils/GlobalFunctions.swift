@@ -32,6 +32,13 @@ public struct PostFileInfo {
   var fileName: String
   var data: Data
   var dataType: String
+  
+  public init(filePathKey: String, fileName: String, data: Data, dataType: String) {
+    self.filePathKey = filePathKey
+    self.fileName = fileName
+    self.data = data
+    self.dataType = dataType
+  }
 }
 
 public func createBodyWithParameters(_ parameters: [String: String]?, postFileInfo: PostFileInfo?, boundary: String) -> Data {
