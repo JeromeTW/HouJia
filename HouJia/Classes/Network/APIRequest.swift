@@ -65,9 +65,11 @@ public struct APIRequest {
 public struct APIResponse {
   public let statusCode: Int
   public let data: Data
+  public let httpResponse: HTTPURLResponse
   
-  public init(statusCode: Int, body: Data) {
+  public init(statusCode: Int, body: Data, httpResponse: HTTPURLResponse) {
     self.statusCode = statusCode
     self.data = body
+    self.httpResponse = httpResponse
   }
 }

@@ -52,7 +52,7 @@ public class NetworkRequestOperation: AsynchronousOperation {
         return
       }
       
-      completionHandler(.success(APIResponse(statusCode: httpResponse.statusCode, body: noEmptyData)))
+      completionHandler(.success(APIResponse(statusCode: httpResponse.statusCode, body: noEmptyData, httpResponse: httpResponse)))
     }
   }
 
