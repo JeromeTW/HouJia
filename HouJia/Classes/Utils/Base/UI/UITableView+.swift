@@ -19,10 +19,15 @@ extension UITableView {
     }
   }
   
-  public func showFooterIndicator() {
+  public func showFooterIndicator(style: UIActivityIndicatorView.Style = .gray, color: UIColor? = nil, scale: CGFloat = 1, paddingY: CGFloat = 0) {
     let spinner = UIActivityIndicatorView(style: .gray)
+    if let color = color {
+      spinner.color = color
+    }
+    spinner.scale(scale)
     spinner.startAnimating()
-    spinner.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 44)
+    spinner.frame = CGRect(x: 0, y: paddingY, width: bounds.width, height: spinner.newHeight + paddingY * 2)
+    print("spinner.newHeight:\(spinner.newHeight), spinner.newWidth:\(spinner.newWidth)")
     
     tableFooterView = spinner
     tableFooterView?.isHidden = false
