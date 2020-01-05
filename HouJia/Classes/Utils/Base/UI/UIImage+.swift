@@ -36,7 +36,7 @@ extension UIImage {
     return newImage
   }
 
-  public func resizeWithWidthHeight(_ newSize: CGSize) -> UIImage? {
+  public func scaleBasedOnShorterEdges(_ newSize: CGSize) -> UIImage? {
     var scale: CGFloat!
     if self.size.height > self.size.width {
       scale = newSize.width / self.size.width
@@ -47,11 +47,7 @@ extension UIImage {
     let newWidth = self.size.width * scale
     let size = CGSize(width: newWidth, height: newHeight)
 
-    UIGraphicsBeginImageContextWithOptions(size, false, 3.0)
-    draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-    let newImage = UIGraphicsGetImageFromCurrentImageContext()
-    UIGraphicsEndImageContext()
-    return newImage
+    return resize(size)
   }
 
   public func compressPhoto() -> Data! {
