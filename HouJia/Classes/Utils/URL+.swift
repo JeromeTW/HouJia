@@ -20,21 +20,27 @@ extension URL {
     }
   }
   
-  public func videoSnapshot() -> UIImage? {
-    let vidURL = URL(fileURLWithPath: absoluteString)
-    let asset = AVURLAsset(url: vidURL)
-    let generator = AVAssetImageGenerator(asset: asset)
-    generator.appliesPreferredTrackTransform = true
-    
-    let timestamp = CMTime(seconds: 1, preferredTimescale: 60)
-    
+  public func generateVideoThumbnail() -> UIImage? {
     do {
-      let imageRef = try generator.copyCGImage(at: timestamp, actualTime: nil)
-      return UIImage(cgImage: imageRef)
+      let asset = AVURLAsset(url: self, options: nil)
+      let imgGenerator = AVAssetImageGenerator(asset: asset)
+      imgGenerator.appliesPreferredTrackTransform = true
+      let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(value: 0, timescale: 1), actualTime: nil)
+      let thumbnail = UIImage(cgImage: cgImage)
+      return thumbnail
+    } catch let error {
+      logE(error)
+      return nil
     }
-    catch let error as NSError
-    {
-      print("Image generation failed with error \(error)")
+  }
+  
+  public func getAudioDuration() -> Double? {
+    do {
+      let audioPlayer = try AVAudioPlayer(contentsOf: self)
+      return audioPlayer.duration
+    } catch {
+      logE(error)
+      assertionFailure("Failed crating audio player: \(error).")
       return nil
     }
   }

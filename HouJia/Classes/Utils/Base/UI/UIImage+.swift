@@ -36,13 +36,12 @@ extension UIImage {
     return newImage
   }
 
-  public func scaleBasedOnShorterEdges(_ newSize: CGSize) -> UIImage? {
+  public func scaleBasedOnSmallRadioEdges(_ newSize: CGSize) -> UIImage? {
     var scale: CGFloat!
-    if self.size.height > self.size.width {
-      scale = newSize.width / self.size.width
-    } else {
-      scale = newSize.height / self.size.height
-    }
+    
+    let heightScale = newSize.height / self.size.height
+    let widthScale = newSize.width / self.size.width
+    scale = min(heightScale, widthScale)
     let newHeight = self.size.height * scale
     let newWidth = self.size.width * scale
     let size = CGSize(width: newWidth, height: newHeight)
