@@ -14,6 +14,9 @@ protocol Flexible: Decodable, CustomStringConvertible {
 }
 
 public class IntFlexible: NSObject, Flexible {
+  public override func isEqual(_ object: Any?) -> Bool {
+    return value == (object as? IntFlexible)?.value
+  }
   
   public var value: Int
   
@@ -66,6 +69,10 @@ public class IntFlexible: NSObject, Flexible {
 }
 
 public class DoubleFlexible: NSObject, Flexible {
+  public override func isEqual(_ object: Any?) -> Bool {
+    return value == (object as? DoubleFlexible)?.value
+  }
+  
   public override var description: String {
     return "\(value)"
   }
@@ -121,6 +128,10 @@ public class DoubleFlexible: NSObject, Flexible {
 }
 
 public class BoolFlexible: NSObject, Flexible {
+  public override func isEqual(_ object: Any?) -> Bool {
+    return value == (object as? BoolFlexible)?.value
+  }
+  
   public override var description: String {
     return "\(value)"
   }
@@ -178,6 +189,10 @@ public class BoolFlexible: NSObject, Flexible {
 }
 
 public class StringFlexible: NSObject, Flexible {
+  public override func isEqual(_ object: Any?) -> Bool {
+    return value == (object as? StringFlexible)?.value
+  }
+  
   public override var description: String {
     return value
   }
