@@ -15,6 +15,7 @@ import UIKit
         return "" // When showing the placeholder, there's no real text to return
       } else { return super.text }
     }
+    // NOTE: 不要直接用 textView.text = "", 改用 showNormalText(text: "")
     set { super.text = newValue }
   }
   @IBInspectable public var placeholderText: String = ""
