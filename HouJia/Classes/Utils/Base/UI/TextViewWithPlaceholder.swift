@@ -55,6 +55,10 @@ import UIKit
   }
   
   public func showNormalText(text: String) {
+    guard text != "" else {
+      showPlaceholderText()
+      return
+    }
     showingPlaceholder = false
     textColor = normalTextColor
     self.text = text
