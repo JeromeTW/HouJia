@@ -6,7 +6,7 @@ import UIKit
 
 open class BaseViewController: UIViewController {
   // MARK: - ViewController lifecycle
-
+  public var isViewDidLoad = false
   deinit {
     logC("\(self.className) deinit")
   }
@@ -19,6 +19,7 @@ open class BaseViewController: UIViewController {
   override open func viewDidLoad() {
     logC("\(className) viewDidLoad")
     super.viewDidLoad()
+    isViewDidLoad = true
   }
 
   override open func viewWillAppear(_ animated: Bool) {

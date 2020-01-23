@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
 
   @IBOutlet var tableView: UITableView! {
     didSet {
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    logC("isViewDidLoad:\(isViewDidLoad)")
 //    showAlertController(withTitle: "Title", message: "message", textFieldsData: [UIViewController.TextFieldData(text: nil, placeholder: nil)], leftTitle: "Left", leftHandler: nil, rightTitle: "Right") { textfields in
 //      print("Right")
 //    }
