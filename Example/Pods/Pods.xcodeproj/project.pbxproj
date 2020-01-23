@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		025B0D3323C2162000E98A27 /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B0D3223C2161F00E98A27 /* UISearchBar+.swift */; };
+		02BF4EA723D9CBA500039BFD /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF4EA623D9CBA500039BFD /* PaddingLabel.swift */; };
+		02BF4EAB23D9CDFF00039BFD /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF4EAA23D9CDFE00039BFD /* ImageScrollView.swift */; };
 		0371CC4AF922909AEDB649737A93D1A0 /* JeromeNavigationBarStatusBarBaseVC.xib in Sources */ = {isa = PBXBuildFile; fileRef = D3668327DBC9143A1525771536E6210A /* JeromeNavigationBarStatusBarBaseVC.xib */; };
 		040701CEC986437356D0BCD05E640330 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC47B7F0ED5DA1FA77720F33321E2D1 /* BaseLogger.swift */; };
 		047335B0B9CAD48445BBB7B63BC98753 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783D575ECB04B38272950EFD119990C /* UIButton+.swift */; };
@@ -181,6 +183,8 @@
 		002985BC271006856732E954075778CA /* BaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		01C943DD32D843DDCB50680B73E98B4C /* DeviceGuru-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DeviceGuru-Info.plist"; sourceTree = "<group>"; };
 		025B0D3223C2161F00E98A27 /* UISearchBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+.swift"; sourceTree = "<group>"; };
+		02BF4EA623D9CBA500039BFD /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		02BF4EAA23D9CDFE00039BFD /* ImageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		02E82279B613F76EAEBC722EC8EF3F1A /* UIWindowTransitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIWindowTransitions.swift; sourceTree = "<group>"; };
 		03F92C1E6F44C8F9A9785129C5BAD5FE /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
 		044D70075FB8DB66D8C32C7D1604C884 /* UIScreenExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScreenExtension.swift; path = Sources/Extensions/UIKit/UIScreenExtension.swift; sourceTree = "<group>"; };
@@ -744,6 +748,8 @@
 				1457CF5D46D91C8BD28B16062389CDEF /* UIViewExtension.swift */,
 				02E82279B613F76EAEBC722EC8EF3F1A /* UIWindowTransitions.swift */,
 				025B0D3223C2161F00E98A27 /* UISearchBar+.swift */,
+				02BF4EA623D9CBA500039BFD /* PaddingLabel.swift */,
+				02BF4EAA23D9CDFE00039BFD /* ImageScrollView.swift */,
 				18027B249AC8AA2737AD3E0515710E29 /* ButtonWithImageAndLabel */,
 				382C3B727663F9D22E1647AE80B6C25D /* LoginTextFieldView */,
 			);
@@ -1079,8 +1085,10 @@
 				DA66A97B8A4FE9186F5820C08FD8605C /* Flexible.swift in Sources */,
 				C74983C6DC35E0788960FD0FED8CDE3B /* GlobalFunctions.swift in Sources */,
 				D49D06CB7F691890CA7E90536220E6C2 /* HouJia-dummy.m in Sources */,
+				02BF4EA723D9CBA500039BFD /* PaddingLabel.swift in Sources */,
 				E17E8348817BB116DF2700D117D26AF2 /* ImageLoader.swift in Sources */,
 				B586DB9D8D163EB98882D8F2B000E3A3 /* JeromeNavigationBar.swift in Sources */,
+				02BF4EAB23D9CDFF00039BFD /* ImageScrollView.swift in Sources */,
 				0371CC4AF922909AEDB649737A93D1A0 /* JeromeNavigationBarStatusBarBaseVC.xib in Sources */,
 				9AF5E4CA9F33C38BCEC5E5BAACDB6A9B /* LoginTextFieldSuperView.swift in Sources */,
 				B514A7712AF272CF04775505DC59FF28 /* LoginTextFieldView.swift in Sources */,

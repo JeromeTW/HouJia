@@ -5,6 +5,7 @@
 //  Created by JEROME on 2019/12/11.
 //
 
+import AVKit
 import Foundation
 
 public func assertNotNil(_ items: Optional<Any>...) {
@@ -62,4 +63,73 @@ public func createBodyWithParameters(_ parameters: [String: String]?, postFileIn
 
   body.append("--\(boundary)--\r\n".data(using: String.Encoding.utf8, allowLossyConversion: true)!)
   return body as Data
+}
+
+public func encodeVideoToMP4(videoUrl: URL, outputUrl: URL? = nil, resultAsyncBackgroundThreadHandler: @escaping (URL?) -> Void ) {
+  
+  var finalOutputUrl: URL? = outputUrl
+  
+  if finalOutputUrl == nil {
+    var url = videoUrl
+    url.deletePathExtension()
+    url.appendPathExtension(".mp4")
+    finalOutputUrl = url
+  }
+  
+  if FileManager.default.fileExists(atPath: finalOutputUrl!.path) {
+    print("Converted file already exists \(finalOutputUrl!.path)")
+    resultAsyncBackgroundThreadHandler(finalOutputUrl)
+    return
+  }
+  
+  let asset = AVURLAsset(url: videoUrl)
+  if let exportSession = AVAssetExportSession(asset: asset, presetName: AVAssetExportPresetPassthrough) {
+    exportSession.outputURL = finalOutputUrl!
+    exportSession.outputFileType = AVFileType.mp4
+    let start = CMTimeMakeWithSeconds(0.0, preferredTimescale: 0)
+    let range = CMTimeRangeMake(start: start, duration: asset.duration)
+    exportSession.timeRange = range
+    exportSession.shouldOptimizeForNetworkUse = true
+    exportSession.exportAsynchronously() {
+      
+      switch exportSession.status {
+      case .failed:
+        print("Export failed: \(exportSession.error != nil ? exportSession.error!.localizedDescription : "No Error Info")")
+      case .cancelled:
+        print("Export canceled")
+      case .completed:
+        resultAsyncBackgroundThreadHandler(finalOutputUrl!)
+      default:
+        break
+      }
+    }
+  } else {
+    resultAsyncBackgroundThreadHandler(nil)
+  }
+}
+
+public func setViews(isHidden hidden: Bool, _ views: UIView...) {
+  for view in views {
+    view.isHidden = hidden
+  }
+}
+
+public func setControls(isEnable enable: Bool, _ controls: UIControl...) {
+  for control in controls {
+    control.isEnabled = enable
+  }
+}
+
+public func createNotification() {
+  
+  let content = UNMutableNotificationContent()
+  content.title = "我是標題 title"
+  content.subtitle = "我是子標題 subtitle"
+  content.body = "我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body我是 Body"
+  content.badge = 1
+  content.sound = UNNotificationSound.default
+  
+  let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+  let request = UNNotificationRequest(identifier: "notification1", content: content, trigger: trigger)
+  UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
 }
