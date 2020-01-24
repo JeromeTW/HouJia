@@ -7,6 +7,7 @@
 
 import AVKit
 import Foundation
+import MobileCoreServices
 
 public func assertNotNil(_ items: Optional<Any>...) {
   for item in items {
@@ -132,4 +133,21 @@ public func createNotification() {
   let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
   let request = UNNotificationRequest(identifier: "notification1", content: content, trigger: trigger)
   UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+}
+
+public func getContentType(_ url: URL) -> String {
+  let extensionCFString: CFString = url.pathExtension as CFString
+  let UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, extensionCFString, nil)?.takeRetainedValue()
+
+  if UTI == nil {
+    return ""
+  }
+
+  let mimeType = UTTypeCopyPreferredTagWithClass(UTI!, kUTTagClassMIMEType)?.takeRetainedValue()
+
+  if mimeType == nil {
+    return ""
+  }
+
+  return "\(mimeType!)"
 }

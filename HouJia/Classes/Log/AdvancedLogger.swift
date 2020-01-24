@@ -4,10 +4,19 @@
 
 import DeviceGuru
 import UIKit
+import SSZipArchive
 
 public var logTextView = LogTextView()
 
 public class AdvancedLogger: BaseLogger {
+  lazy var queue: SypQueue = {
+    var queue = SypQueue()
+    queue.name = "LogUploader"
+    queue.maxConcurrentOperationCount = 4
+    queue.qualityOfService = QualityOfService.userInitiated
+    return queue
+  }()
+  
   override func show(_ logString: String) {
     logTextView.logText += "\n\(logString)"
   }
@@ -20,6 +29,66 @@ public class AdvancedLogger: BaseLogger {
         fatalError()
       } else {
         print("⭐️❌: ERROR!!!")
+      }
+    }
+  }
+  
+  public func sendMessageToSlack(slackURL: URL, text: String) {
+    let jsonDic: [String: Any] = [
+      "text": text
+    ]
+    guard let request = APIRequest(url: slackURL, jsonDictionary: jsonDic) else {
+      assertionFailure()
+      return
+    }
+    let operation = NetworkRequestOperation(request: request) { [weak self] result in
+      guard let self = self else {
+        assertionFailure()
+        return
+      }
+      switch result {
+      case let .success(response):
+        logC("SEND SECCESS")
+      case let .failure(error):
+        logC("SEND Fail")
+      }
+    }
+    queue.addOperation(operation)
+  }
+  
+  public func uploadLogFileToSlack(fileName: String, zipPassword: String, slackURL: URL) {
+    let fileManager = FileManager.default
+    if let zipURL = fileManager.makeZipFile(with: fileName, password: zipPassword) {
+      do {
+        let data = try Data(contentsOf: zipURL)
+        let boundary = generateBoundaryString()
+        let postFileInfo = PostFileInfo(filePathKey: "file", fileName: fileName, data: data, dataType: getContentType(zipURL))
+        let body = createBodyWithParameters(nil, postFileInfo: postFileInfo, boundary: boundary)
+        let request = APIRequest(url: slackURL, method: .post, headers: [HTTPHeader(field: "Content-Type", value: "multipart/form-data; boundary=\(boundary)")], body: body)
+        let tempURL = request.url
+        logC("🚀: \(tempURL.absoluteString)")
+        let operation = NetworkRequestOperation(request: request) { [weak self] result in
+          guard let self = self else {
+            assertionFailure()
+            return
+          }
+          defer {
+            do {
+              try fileManager.removeItem(at: zipURL)
+            } catch {
+              logE(error)
+            }
+          }
+          switch result {
+          case let .success(response):
+            logC("UPLOAD SECCESS")
+          case let .failure(error):
+            logC("UPLOAD SECCESS")
+          }
+        }
+        queue.addOperation(operation)
+      } catch {
+        logE(error)
       }
     }
   }
@@ -57,6 +126,32 @@ extension FileManager {
       } catch {
         throw error
       }
+    }
+  }
+  
+  public func makeZipFile(with fileName: String, password: String) -> URL? {
+    guard let cachesDirectory = cachesDirectory else { return nil }
+    do {
+      let fileURLs = try contentsOfDirectory(at: cachesDirectory, includingPropertiesForKeys: nil)
+
+      let filterURLs = fileURLs.filter({ (url) -> Bool in
+        url.pathExtension == "log"
+      })
+
+      let paths = filterURLs.map({ (url) -> String in
+        url.path
+      })
+
+      guard paths.isEmpty == false else {
+        return nil
+      }
+      let zipFileName = "\(fileName).zip"
+      let zipURL = cachesDirectory.appendingPathComponent(zipFileName)
+      SSZipArchive.createZipFile(atPath: zipURL.path, withFilesAtPaths: paths, withPassword: password)
+      return zipURL
+    } catch {
+      logE(error)
+      return nil
     }
   }
 }
