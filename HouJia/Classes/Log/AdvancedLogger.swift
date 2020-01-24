@@ -50,13 +50,25 @@ public class AdvancedLogger: BaseLogger {
       case let .success(response):
         logC("SEND SECCESS")
       case let .failure(error):
+        logE(error)
         logC("SEND Fail")
       }
     }
     queue.addOperation(operation)
   }
   
-  public func uploadLogFileToSlack(fileName: String, zipPassword: String, slackURL: URL) {
+  public func uploadLogFileToSlack(fileName: String, zipPassword: String, slackToken: String, comment: String) {
+    let url = URL(string: "https://slack.com/api/files.upload")!
+    let parameters: [AnyHashable: Any] = [
+        "token": slackToken,
+        "channels": "log_upload",
+        "pretty": 1,
+        "initial_comment": comment
+    ]
+    guard let newURL = url.add(parameters: parameters) else {
+      assertionFailure()
+      return
+    }
     let fileManager = FileManager.default
     if let zipURL = fileManager.makeZipFile(with: fileName, password: zipPassword) {
       do {
@@ -64,7 +76,7 @@ public class AdvancedLogger: BaseLogger {
         let boundary = generateBoundaryString()
         let postFileInfo = PostFileInfo(filePathKey: "file", fileName: fileName, data: data, dataType: getContentType(zipURL))
         let body = createBodyWithParameters(nil, postFileInfo: postFileInfo, boundary: boundary)
-        let request = APIRequest(url: slackURL, method: .post, headers: [HTTPHeader(field: "Content-Type", value: "multipart/form-data; boundary=\(boundary)")], body: body)
+        let request = APIRequest(url: newURL, method: .post, headers: [HTTPHeader(field: "Content-Type", value: "multipart/form-data; boundary=\(boundary)")], body: body)
         let tempURL = request.url
         logC("🚀: \(tempURL.absoluteString)")
         let operation = NetworkRequestOperation(request: request) { [weak self] result in
@@ -83,7 +95,8 @@ public class AdvancedLogger: BaseLogger {
           case let .success(response):
             logC("UPLOAD SECCESS")
           case let .failure(error):
-            logC("UPLOAD SECCESS")
+            logE(error)
+            logC("UPLOAD Fail")
           }
         }
         queue.addOperation(operation)

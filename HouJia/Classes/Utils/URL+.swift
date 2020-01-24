@@ -44,4 +44,14 @@ extension URL {
       return nil
     }
   }
+  
+  public func add(parameters: [AnyHashable: Any]) -> URL? {
+    var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: false)
+    let queryItems = parameters.map{
+        return URLQueryItem(name: "\($0)", value: "\($1)")
+    }
+
+    urlComponents?.queryItems = queryItems
+    return urlComponents?.url
+  }
 }
