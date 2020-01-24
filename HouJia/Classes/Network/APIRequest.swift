@@ -9,7 +9,7 @@ public enum HTTPMethod: String {
   case post = "POST"
 }
 
-public struct HTTPHeader {
+public struct HTTPHeader: Hashable {
   let field: String
   let value: String
   
@@ -19,7 +19,18 @@ public struct HTTPHeader {
   }
 }
 
-public struct APIRequest {
+public struct APIRequest: Hashable {
+  public static func == (lhs: APIRequest, rhs: APIRequest) -> Bool {
+    return lhs.url == rhs.url && lhs.body == rhs.body && lhs.method == rhs.method && lhs.headers == rhs.headers
+  }
+  
+  public func hash(into hasher: inout Hasher) {
+    hasher.combine(url)
+    hasher.combine(method)
+    hasher.combine(headers)
+    hasher.combine(body)
+  }
+  
   public var url: URL
   public var method: HTTPMethod
   public var headers: [HTTPHeader]?
