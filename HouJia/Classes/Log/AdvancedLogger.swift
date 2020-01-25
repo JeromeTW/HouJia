@@ -57,11 +57,12 @@ public class AdvancedLogger: BaseLogger {
     queue.addOperation(operation)
   }
   
-  public func uploadLogFileToSlack(fileName: String, zipPassword: String, slackToken: String, comment: String) {
+  // NOTE: Channels can be "JJJJJJJJ" or "JJJJJJJJ,CCCCCCCC"
+  public func uploadLogFileToSlack(fileName: String, zipPassword: String, slackToken: String, channels: String, comment: String) {
     let url = URL(string: "https://slack.com/api/files.upload")!
     let parameters: [AnyHashable: Any] = [
         "token": slackToken,
-        "channels": "log_upload",
+        "channels": channels,
         "pretty": 1,
         "initial_comment": comment
     ]
