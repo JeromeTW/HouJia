@@ -75,7 +75,7 @@ public class AdvancedLogger: BaseLogger {
       do {
         let data = try Data(contentsOf: zipURL)
         let boundary = generateBoundaryString()
-        let postFileInfo = PostFileInfo(filePathKey: "file", fileName: fileName, data: data, dataType: getContentType(zipURL))
+        let postFileInfo = PostFileInfo(filePathKey: "file", fileName: "\(fileName).zip", data: data, dataType: getContentType(zipURL))
         let body = createBodyWithParameters(nil, postFileInfo: postFileInfo, boundary: boundary)
         let request = APIRequest(url: newURL, method: .post, headers: [HTTPHeader(field: "Content-Type", value: "multipart/form-data; boundary=\(boundary)")], body: body)
         let tempURL = request.url
