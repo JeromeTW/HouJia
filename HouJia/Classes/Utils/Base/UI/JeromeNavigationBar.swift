@@ -17,6 +17,7 @@ public protocol HasJeromeNavigationBar: UIViewController {
   var topView: UIView! { get set }
   var statusView: UIView! { get set }
   var navagationView: UIView! { get set }
+  var contentView: UIView! { get set }
   var safeAreaBottomView: UIView! { get set }
   var statusViewHeightConstraint: NSLayoutConstraint! { get set }
   var navagationViewHeightConstraint: NSLayoutConstraint! { get set }
