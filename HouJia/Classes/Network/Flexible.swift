@@ -229,7 +229,11 @@ public class StringFlexible: NSObject, Flexible {
             self.init(String(doubleValue))
           } catch {
             logF("\(type(of: self).className) decoder failed -2")
-            self.init("-2")
+            #if DEBUG
+              self.init("-2")
+            #else
+              self.init("")
+            #endif
           }
         }
       }
