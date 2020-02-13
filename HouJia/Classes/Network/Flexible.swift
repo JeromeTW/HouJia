@@ -20,6 +20,10 @@ public class IntFlexible: NSObject, Flexible {
   
   public var value: Int
   
+  public override var description: String {
+    return "\(value)"
+  }
+  
   required public init(_ value: Int) {
     self.value = value
   }
