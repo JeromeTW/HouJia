@@ -10,6 +10,39 @@ import Foundation
 import UIKit
 
 extension UIImage {
+  public func resizeByLongestSide(length: CGFloat) -> UIImage {
+    let width = size.width
+    let height = size.height
+    let scale = width / height
+    
+    var sizeChange: CGSize!
+    
+    if width <= length && height <= length {
+      return self
+    } else {
+      if width >= height {
+        let changedWidth = length
+        let changedheight = changedWidth / scale
+        sizeChange = CGSize(width: changedWidth, height: changedheight)
+      } else {
+        let changedheight = length
+        let changedWidth = changedheight * scale
+        sizeChange = CGSize(width: changedWidth, height: changedheight)
+      }
+      logT(issue: "sizeChange", message: "sizeChange:\(sizeChange)")
+      UIGraphicsBeginImageContext(sizeChange)
+
+      // draw resized image on Context
+      draw(in: CGRect(x: 0, y: 0, width: sizeChange.width, height: sizeChange.height))
+
+      // create UIImage
+      let resizedImg = UIGraphicsGetImageFromCurrentImageContext()
+      UIGraphicsEndImageContext()
+
+      return resizedImg!
+    }
+  }
+  
   public func resize(_ size: CGSize) -> UIImage? {
     UIGraphicsBeginImageContextWithOptions(size, false, 3.0)
     draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))

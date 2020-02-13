@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		023D4C29EE40828821F12D16F8D714C0 /* LoginTextFieldSuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B1ED1535219B28FDF2E7F275436A4 /* LoginTextFieldSuperView.swift */; };
+		02C2882023F5689B0002B54E /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2881F23F5689B0002B54E /* Data+.swift */; };
 		05DE8A3F0768F988E8F360162B620C95 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F734BF4806FDB1FD3509596CE69B15 /* CGPointExtension.swift */; };
 		069746647C6B9F4EF4891790D09302EF /* LogTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3144000DA331AA71CFD2849DD3015A8 /* LogTextView.swift */; };
 		07A2CD08FDDA836168D0FFADBF2A7F6D /* mz_zip.h in Headers */ = {isa = PBXBuildFile; fileRef = F25D5D179EE642DBB0B52564124924A6 /* mz_zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -251,6 +252,7 @@
 
 /* Begin PBXFileReference section */
 		00CC2897B9D6431ED916EB557BDE4319 /* ButtonWithImageAndLabelSuperView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonWithImageAndLabelSuperView.swift; sourceTree = "<group>"; };
+		02C2881F23F5689B0002B54E /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		044414760DEF1047A478A96F4B76F75A /* DeviceGuru-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceGuru-prefix.pch"; sourceTree = "<group>"; };
 		055ABC47BD9853EAEDC193C1FD6D5000 /* DeviceGuru.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceGuru.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		057E1805B676CB574E7E0EAEE8A0E10F /* Pods-HouJia_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HouJia_Example-dummy.m"; sourceTree = "<group>"; };
@@ -900,6 +902,7 @@
 				0BB89D4C13BF490619E6E9D31C925D4F /* Storyboard+.swift */,
 				3D8F90FA5E7CF67E791091A131AFD1DC /* String+.swift */,
 				4CB310F4BB84D2D10CD52D773B6BB29E /* URL+.swift */,
+				02C2881F23F5689B0002B54E /* Data+.swift */,
 				4768F3D6544334EF0551E17C2CDE4911 /* Base */,
 			);
 			name = Utils;
@@ -1478,6 +1481,7 @@
 				A675D4A6DDF6A3D11D1199924F2C62C5 /* UITextView+.swift in Sources */,
 				1DB1A7CF52E38FC7B7A29CD9F68082A0 /* UIView+.swift in Sources */,
 				D260DE0926AE72C0D1F3F7179A63EC5F /* UIViewController+.swift in Sources */,
+				02C2882023F5689B0002B54E /* Data+.swift in Sources */,
 				65D55C2F185993189BF4CB80F91BBDF0 /* UIViewController+Alerts.swift in Sources */,
 				F8853D449C7D5C9706BF3DC4FA93E8B9 /* UIViewExtension.swift in Sources */,
 				F31582186DEE47F46947A4824D87112A /* UIWindowTransitions.swift in Sources */,

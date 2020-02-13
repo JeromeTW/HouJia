@@ -9,6 +9,12 @@ import AVKit
 import Foundation
 import MobileCoreServices
 
+public func synchronized(_ lock: AnyObject, _ closure: () -> Void) {
+  objc_sync_enter(lock)
+  closure()
+  objc_sync_exit(lock)
+}
+
 public func assertNotNil(_ items: Optional<Any>...) {
   for item in items {
     assert(item != nil)
