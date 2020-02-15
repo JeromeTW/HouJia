@@ -21,6 +21,9 @@ public enum APIError: Error {
   /// HTTP Response 其他可能的錯誤
   case unexpectedError(httpStatusCode: Int, data: Data)
   
+  /// 打了重複的 Request
+  case requestIsAlreadyExisted
+  
   /// 其他可能的錯誤
   case unknown(error: Error)
 }
@@ -41,6 +44,9 @@ extension APIError: LocalizedError {
       
     case .unexpectedError(let httpStatusCode, _):
       return "HTTP Response 發生未預期的錯誤 \(httpStatusCode)"
+      
+    case .requestIsAlreadyExisted:
+      return "打了重複的 Request"
       
     case .unknown(let error):
       return "發生未預期的錯誤 Error: \(error.localizedDescription)"
