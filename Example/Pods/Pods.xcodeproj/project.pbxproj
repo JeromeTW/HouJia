@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		023D4C29EE40828821F12D16F8D714C0 /* LoginTextFieldSuperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B1ED1535219B28FDF2E7F275436A4 /* LoginTextFieldSuperView.swift */; };
+		0267E7D9240898D300EDCF03 /* HasSafeAreaBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267E7D8240898D300EDCF03 /* HasSafeAreaBottomView.swift */; };
 		02C2882023F5689B0002B54E /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C2881F23F5689B0002B54E /* Data+.swift */; };
 		05DE8A3F0768F988E8F360162B620C95 /* CGPointExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F734BF4806FDB1FD3509596CE69B15 /* CGPointExtension.swift */; };
 		069746647C6B9F4EF4891790D09302EF /* LogTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3144000DA331AA71CFD2849DD3015A8 /* LogTextView.swift */; };
@@ -252,6 +253,7 @@
 
 /* Begin PBXFileReference section */
 		00CC2897B9D6431ED916EB557BDE4319 /* ButtonWithImageAndLabelSuperView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonWithImageAndLabelSuperView.swift; sourceTree = "<group>"; };
+		0267E7D8240898D300EDCF03 /* HasSafeAreaBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasSafeAreaBottomView.swift; sourceTree = "<group>"; };
 		02C2881F23F5689B0002B54E /* Data+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+.swift"; sourceTree = "<group>"; };
 		044414760DEF1047A478A96F4B76F75A /* DeviceGuru-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceGuru-prefix.pch"; sourceTree = "<group>"; };
 		055ABC47BD9853EAEDC193C1FD6D5000 /* DeviceGuru.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceGuru.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -655,6 +657,7 @@
 				73A01E384BF354E279BAC81B984CA2A7 /* ImageScrollView.swift */,
 				ECC58D23E597BAA2B177E14E8D0CC00C /* JeromeNavigationBar.swift */,
 				275CE021505E7E26100A54E4C0D3CE70 /* JeromeNavigationBarStatusBarBaseVC.xib */,
+				0267E7D8240898D300EDCF03 /* HasSafeAreaBottomView.swift */,
 				E10CCA8866AFCA58007259781946E667 /* PaddingLabel.swift */,
 				C9A40605B5864933B6F52D2CC80C5B70 /* TextViewWithPlaceholder.swift */,
 				C969AABB08CC339A04965FCDBABC469B /* UIButton+.swift */,
@@ -1439,6 +1442,7 @@
 				B474DCC39B0D248BF71D89EE652B5FD1 /* BaseViewController.swift in Sources */,
 				87E22913D2E98EDDDE1ACE7986B2BBB8 /* ButtonWithImageAndLabelSuperView.swift in Sources */,
 				DA8675E08D9493CDAAE747EE9DF9A878 /* ButtonWithImageAndLabelView.swift in Sources */,
+				0267E7D9240898D300EDCF03 /* HasSafeAreaBottomView.swift in Sources */,
 				B9FA3E4055EE30FD319C60F93BB30406 /* ButtonWithImageAndLabelView.xib in Sources */,
 				CF279F396414C71678AB5DBDD81EC951 /* CGFloat+.swift in Sources */,
 				0CD2B32B1C3E64B9695A23D7489ED5B1 /* CGRect+.swift in Sources */,
