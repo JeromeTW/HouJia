@@ -54,5 +54,19 @@ class ViewController: BaseViewController {
 //      print("Right")
 //    }
   }
+  
+  override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransition(to: size, with: coordinator)
+    if #available(iOS 11.0, *) {
+      let window = UIApplication.shared.keyWindow
+      //      let topPadding = window?.safeAreaInsets.top
+      guard let bottomPadding = window?.safeAreaInsets.bottom else {
+        assertionFailure()
+        return
+      }
+      print("bottomPadding: \(bottomPadding)")
+    } else {
+    }
+  }
 }
 
