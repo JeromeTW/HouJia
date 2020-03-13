@@ -9,12 +9,12 @@
 import UIKit
 
 extension UITableView {
-  public func scrollToBottom(animated: Bool = true) {
+  public func scrollToBottom(animated: Bool = true, at: ScrollPosition) {
     let section = numberOfSections
     if section > 0 {
       let row = numberOfRows(inSection: section - 1)
       if row > 0 {
-        scrollToRow(at: IndexPath(row: row - 1, section: section - 1), at: .bottom, animated: animated)
+        scrollToRow(at: IndexPath(row: row - 1, section: section - 1), at: at, animated: animated)
       }
     }
   }
