@@ -14,7 +14,7 @@ public protocol HasHUDVC: UIViewController {
 }
 
 extension HasHUDVC {
-  func showHUD() {
+  public func showHUD() {
     DispatchQueue.main.async {
       [weak self] in
       guard let strongSelf = self else { return }
@@ -32,7 +32,7 @@ extension HasHUDVC {
     }
   }
   
-  func hideHUD() {
+  public func hideHUD() {
     DispatchQueue.main.async {
       [weak self] in
       guard let strongSelf = self else { return }
