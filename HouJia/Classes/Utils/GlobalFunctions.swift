@@ -9,6 +9,19 @@ import AVKit
 import Foundation
 import MobileCoreServices
 
+public func getPreferredLanguage() -> String { // ???: 簡中也是返回 zh-hant
+  let language = Locale.preferredLanguages[0]
+  logT(issue: "Language", message: "Locale.preferredLanguages:\(Locale.preferredLanguages)")
+  logT(issue: "Language", message: "Locale.preferredLanguages[0]:\(language)")
+  logT(issue: "Language", message: "locale \(Bundle.main.preferredLocalizations)")
+  
+  return language
+}
+
+public func printAllAVSpeechSynthesisVoice() {
+  logT(issue: "Language", message: "AVSpeechSynthesisVoice.speechVoices():\(AVSpeechSynthesisVoice.speechVoices())")
+}
+
 public func synchronized(_ lock: AnyObject, _ closure: () -> Void) {
   objc_sync_enter(lock)
   closure()
