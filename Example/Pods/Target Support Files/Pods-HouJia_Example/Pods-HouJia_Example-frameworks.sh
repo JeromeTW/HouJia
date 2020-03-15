@@ -164,6 +164,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFDateHelper/AFDateHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DeviceGuru/DeviceGuru.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/HouJia/HouJia.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
 fi
@@ -171,6 +172,7 @@ if [[ "$CONFIGURATION" == "Test" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFDateHelper/AFDateHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DeviceGuru/DeviceGuru.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/HouJia/HouJia.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
 fi
@@ -178,6 +180,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFDateHelper/AFDateHelper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DeviceGuru/DeviceGuru.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/HouJia/HouJia.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyUtils/SwiftyUtils.framework"
 fi

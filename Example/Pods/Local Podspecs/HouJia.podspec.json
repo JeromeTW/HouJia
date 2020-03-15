@@ -32,6 +32,9 @@
     ],
     "SSZipArchive": [
       "2.2.2"
+    ],
+    "MBProgressHUD": [
+      "1.1.0"
     ]
   },
   "swift_version": "5.0"

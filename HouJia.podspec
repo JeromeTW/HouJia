@@ -45,4 +45,6 @@ TODO: Add long description of the pod here.
   s.dependency 'SwiftyUtils', '5.0.0'
   s.dependency 'AFDateHelper', '4.3.0'
   s.dependency 'SSZipArchive', '2.2.2'
+  s.dependency 'MBProgressHUD', '1.1.0'
+  
 end
