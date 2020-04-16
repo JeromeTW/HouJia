@@ -13,6 +13,7 @@
 		01A072CE6246777E84833304AB699FEF /* Pods-HouJia_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 286F200B334F7E0D633D7689572FD0BA /* Pods-HouJia_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01FE48C60F63F4B61AC5963A7BA7AE2F /* mz_zip_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5206DB4C82A4B74C63D25A487493 /* mz_zip_rw.c */; };
 		020EE18E2B9E17752B21A8C347AFFFEC /* mz_strm_split.c in Sources */ = {isa = PBXBuildFile; fileRef = 4883D842E4FB40BD52D054AED2350C61 /* mz_strm_split.c */; };
+		02E67D8A2447E8C300584E86 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E67D892447E8C300584E86 /* Copying.swift */; };
 		03A51FF14BB87E06ACA5245775211EDA /* mz_compat.c in Sources */ = {isa = PBXBuildFile; fileRef = FE020D74C245F73620B57DF8F34ABDA6 /* mz_compat.c */; };
 		07956D6AC657EC637D99AB2FCAED3E54 /* AdvancedLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCED4BDE380E02D8B7933D2C7D2542 /* AdvancedLogger.swift */; };
 		079C498650C5629EA8D9BC59004106EF /* TimerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BAC4349E5A4A1217B72FB453DA52D1 /* TimerExtension.swift */; };
@@ -279,9 +280,10 @@
 		021427794393EE583F0AEE951FCCE9DA /* UIApplicationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIApplicationExtension.swift; path = Sources/Extensions/UIKit/UIApplicationExtension.swift; sourceTree = "<group>"; };
 		021DE81EA20059B83E09935D9ADA80AC /* DeviceGuru-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeviceGuru-dummy.m"; sourceTree = "<group>"; };
 		02A687EF1980A2EB6D42AF8DDB65C016 /* BaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		02E67D892447E8C300584E86 /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
 		03DCED4BDE380E02D8B7933D2C7D2542 /* AdvancedLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdvancedLogger.swift; sourceTree = "<group>"; };
 		046A57A9C8416561A500F7BFFA5910DB /* SSZipArchive-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-umbrella.h"; sourceTree = "<group>"; };
-		055ABC47BD9853EAEDC193C1FD6D5000 /* DeviceGuru.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DeviceGuru.bundle; path = "DeviceGuru-DeviceGuru.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		055ABC47BD9853EAEDC193C1FD6D5000 /* DeviceGuru.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceGuru.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		057E1805B676CB574E7E0EAEE8A0E10F /* Pods-HouJia_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HouJia_Example-dummy.m"; sourceTree = "<group>"; };
 		05F19A5CB04D6228F3AB0FCE56E75604 /* HouJia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HouJia-dummy.m"; sourceTree = "<group>"; };
 		06215423121DD4B3C75A9418C445DF16 /* DateExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Sources/Extensions/DateExtension.swift; sourceTree = "<group>"; };
@@ -302,7 +304,7 @@
 		13B1D760E37EE0DF94B733239925D393 /* Pods-HouJia_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HouJia_Tests-dummy.m"; sourceTree = "<group>"; };
 		15E056E9B2A89DC1941E4F63230BA99C /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
 		17B495B3638CB88FFCE730FD3E36C35A /* NSPersistentContainerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerExtension.swift; sourceTree = "<group>"; };
-		17DB202C635EF765813270369945757C /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
+		17DB202C635EF765813270369945757C /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
 		1840208897B81FB37EB0211A2BA91E54 /* UIButton+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		1AD68A197F76D2684AAADC86011D6866 /* DictionaryExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtension.swift; path = Sources/Extensions/DictionaryExtension.swift; sourceTree = "<group>"; };
 		1B4E5A450EF10522AEA383B67F8E8C22 /* DeviceGuru-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DeviceGuru-Info.plist"; sourceTree = "<group>"; };
@@ -338,9 +340,9 @@
 		42802F3ED2493C6EDDFCCCA02848DCBF /* Pods-HouJia_Tests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HouJia_Tests.test.xcconfig"; sourceTree = "<group>"; };
 		430496649A74C51248C203499F49669B /* UIViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		43868A4F0D9EF134D474C57508232987 /* UnitTesting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnitTesting.swift; path = Sources/Others/UnitTesting.swift; sourceTree = "<group>"; };
-		46AE95BC29485202CDCF91067D45CD5D /* mz_zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip.c; path = SSZipArchive/minizip/mz_zip.c; sourceTree = "<group>"; };
+		46AE95BC29485202CDCF91067D45CD5D /* mz_zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_zip.c; path = SSZipArchive/minizip/mz_zip.c; sourceTree = "<group>"; };
 		479B335C63EB2449D744C7A8A1ACDF61 /* LoginTextFieldView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginTextFieldView.swift; sourceTree = "<group>"; };
-		4883D842E4FB40BD52D054AED2350C61 /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
+		4883D842E4FB40BD52D054AED2350C61 /* mz_strm_split.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_split.c; path = SSZipArchive/minizip/mz_strm_split.c; sourceTree = "<group>"; };
 		494F070900B1EAFEC0CB174A52A7A282 /* SSZipArchive.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.xcconfig; sourceTree = "<group>"; };
 		49A4C951A24CF5C7B69B10F55C85923F /* DeviceGuru.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeviceGuru.xcconfig; sourceTree = "<group>"; };
 		49C79AFA25BA791D27B06597903F6E07 /* DeviceGuru.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DeviceGuru.modulemap; sourceTree = "<group>"; };
@@ -359,9 +361,9 @@
 		5DF9FA9787FEA8A8190272ADBFDCCD83 /* HouJia-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HouJia-Info.plist"; sourceTree = "<group>"; };
 		5E84A5DBD3F6D819B438FB2C06DD2F32 /* CGRectExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRectExtensions.swift; path = Sources/Extensions/CGRectExtensions.swift; sourceTree = "<group>"; };
 		612B0168F7299402ABEF79E6FB021180 /* SwiftyUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyUtils-prefix.pch"; sourceTree = "<group>"; };
-		64F3714B8A585B0CFEB8136340243793 /* mz_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os_posix.c; path = SSZipArchive/minizip/mz_os_posix.c; sourceTree = "<group>"; };
+		64F3714B8A585B0CFEB8136340243793 /* mz_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_os_posix.c; path = SSZipArchive/minizip/mz_os_posix.c; sourceTree = "<group>"; };
 		65C55EEA9FBC5F8FE39E7F0466318D14 /* Storyboard+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
-		667196774ACB53697743ADC54F84E323 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		667196774ACB53697743ADC54F84E323 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6721298D8403575E0220ADDC19DC6FD3 /* UITabBarItemInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITabBarItemInfo.swift; sourceTree = "<group>"; };
 		679D02D1E6FDF0DFFE12D7C0E4C71EDA /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		68F85A1D31A073B63B846522C1A595D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -378,33 +380,33 @@
 		726F2AD3EDBB44DAECA07CF5E03933AE /* exporteImport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = exporteImport.swift; sourceTree = "<group>"; };
 		72F3692FD675CEB9AECCED47FB17ED79 /* SSZipArchive.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSZipArchive.modulemap; sourceTree = "<group>"; };
 		76C1A07C4E8E214C7E5B24A90C9ABBC8 /* AFDateHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFDateHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77193C0A14EE6B78F8DE6E372A616AD9 /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
-		779892D59213A728DEE1E8DF0C0BC979 /* mz_strm_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_os_posix.c; path = SSZipArchive/minizip/mz_strm_os_posix.c; sourceTree = "<group>"; };
+		77193C0A14EE6B78F8DE6E372A616AD9 /* mz_crypt_apple.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_crypt_apple.c; path = SSZipArchive/minizip/mz_crypt_apple.c; sourceTree = "<group>"; };
+		779892D59213A728DEE1E8DF0C0BC979 /* mz_strm_os_posix.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_os_posix.c; path = SSZipArchive/minizip/mz_strm_os_posix.c; sourceTree = "<group>"; };
 		79EC90F6723FA5AB6EAA9836B53B7F46 /* UISwitchExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UISwitchExtension.swift; path = Sources/Extensions/UIKit/UISwitchExtension.swift; sourceTree = "<group>"; };
 		7A6C351565295FF1A8A8292F22560DC0 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC8A8602BC115B9FD8477EFAEC42E70 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
 		7D003CAE885509C69AB6FC8DAA5F65C2 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		7D5940768035BDBE88C2CC43096FB8AC /* Pods-HouJia_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HouJia_Tests-umbrella.h"; sourceTree = "<group>"; };
 		7EA5B9DF7AAF5048CE366602E2C3706F /* SwiftyUtils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyUtils-Info.plist"; sourceTree = "<group>"; };
-		807C48A06EA383713D6E85222C510520 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		810C488BA840853264BA48585FE7E796 /* Pods_HouJia_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HouJia_Tests.framework; path = "Pods-HouJia_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		807C48A06EA383713D6E85222C510520 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		810C488BA840853264BA48585FE7E796 /* Pods_HouJia_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouJia_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8135A68EEB68B8097CAECE5CE40B84B9 /* AFDateHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFDateHelper-dummy.m"; sourceTree = "<group>"; };
-		81409196CC5FFFC01A800748EFC10D06 /* mz_crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_crypt.c; path = SSZipArchive/minizip/mz_crypt.c; sourceTree = "<group>"; };
+		81409196CC5FFFC01A800748EFC10D06 /* mz_crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_crypt.c; path = SSZipArchive/minizip/mz_crypt.c; sourceTree = "<group>"; };
 		8291977C17E6B940F6B6533EC3B6342E /* CoreDataConnect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
 		83F1518147B986F0B9F264376B86F68F /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSizeExtension.swift; path = Sources/Extensions/CGSizeExtension.swift; sourceTree = "<group>"; };
-		85ED5206DB4C82A4B74C63D25A487493 /* mz_zip_rw.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_zip_rw.c; path = SSZipArchive/minizip/mz_zip_rw.c; sourceTree = "<group>"; };
+		85ED5206DB4C82A4B74C63D25A487493 /* mz_zip_rw.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_zip_rw.c; path = SSZipArchive/minizip/mz_zip_rw.c; sourceTree = "<group>"; };
 		879997EF7ED1125C57162E05076B0743 /* UIWindowTransitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIWindowTransitions.swift; sourceTree = "<group>"; };
-		87CCC1EC635429F13CD3C5CC67025C5A /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
+		87CCC1EC635429F13CD3C5CC67025C5A /* mz_strm_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_mem.c; path = SSZipArchive/minizip/mz_strm_mem.c; sourceTree = "<group>"; };
 		8907AE6FE4B54AA4FCBD6C9D5DEB7E64 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ArrayExtension.swift; path = Sources/Extensions/ArrayExtension.swift; sourceTree = "<group>"; };
-		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C65B626D14ABF6AB761BA976926A87E /* Pods-HouJia_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HouJia_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CF2B5A81DB9259B7B08018CEC1320EC /* mz_strm_pkcrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_pkcrypt.h; path = SSZipArchive/minizip/mz_strm_pkcrypt.h; sourceTree = "<group>"; };
-		8F558D9639DCCFEDF139412C2CA115CE /* mz_strm.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm.c; path = SSZipArchive/minizip/mz_strm.c; sourceTree = "<group>"; };
-		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSZipArchive.framework; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F558D9639DCCFEDF139412C2CA115CE /* mz_strm.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm.c; path = SSZipArchive/minizip/mz_strm.c; sourceTree = "<group>"; };
+		91B23470DEB9A986332BEB5034234BC7 /* SSZipArchive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSZipArchive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939D19ED576FB1207A22FE93F1B37F67 /* BundleExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleExtension.swift; path = Sources/Extensions/BundleExtension.swift; sourceTree = "<group>"; };
 		950E1FFCE5758F632D0969FF18E54173 /* UITextView+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
 		95C9AC330B85CD6990678947CE829824 /* UILabel+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
-		979402CA3791CCD7A08DBB4F21967B64 /* mz_strm_wzaes.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_wzaes.c; path = SSZipArchive/minizip/mz_strm_wzaes.c; sourceTree = "<group>"; };
+		979402CA3791CCD7A08DBB4F21967B64 /* mz_strm_wzaes.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_wzaes.c; path = SSZipArchive/minizip/mz_strm_wzaes.c; sourceTree = "<group>"; };
 		981D164978D4DAB42744BF6102C6596C /* SwiftyUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyUtils.xcconfig; sourceTree = "<group>"; };
 		9885F85EC6E30C04140EF295FA8CF1AB /* Coordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		99AE9335B8F162AC522C855430F1EB9F /* BaseLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseLogger.swift; sourceTree = "<group>"; };
@@ -413,12 +415,12 @@
 		9A688D8BA1008E544814012163151962 /* UIView+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		9B5AFB5DB10473FADE87719659AAFBEB /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
 		9CC5CC02D2C035B64BB8DE2B16FB0F93 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtension.swift; path = Sources/Extensions/UIKit/UIAlertControllerExtension.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F2165D0064128B87D8B71655F34F75E /* Occupiable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Occupiable.swift; path = Sources/Protocols/Occupiable.swift; sourceTree = "<group>"; };
 		9F2DBBD82841348B600407F5FA5E3ED3 /* NSObjectExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSObjectExtension.swift; path = Sources/Extensions/UIKit/NSObjectExtension.swift; sourceTree = "<group>"; };
 		A1538528ECDBA253B3F3D95264EE943F /* Injectable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Injectable.swift; path = Sources/Protocols/Injectable.swift; sourceTree = "<group>"; };
 		A3110F4B150E7BE055C62A2774C731F0 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = Sources/Extensions/ColorExtension.swift; sourceTree = "<group>"; };
-		A3F47D354BA54988C5467CCED157C512 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
+		A3F47D354BA54988C5467CCED157C512 /* mz_strm_zlib.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_zlib.c; path = SSZipArchive/minizip/mz_strm_zlib.c; sourceTree = "<group>"; };
 		A57248654226581172FD04B49A15A78C /* ExampleCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleCoordinator.swift; sourceTree = "<group>"; };
 		A63D94A6A6843A376D0B11203F703044 /* Pods-HouJia_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HouJia_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A6CAA071A58ACE4BD946989CDA32FE98 /* UITesting.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITesting.swift; path = Sources/Others/UITesting.swift; sourceTree = "<group>"; };
@@ -437,7 +439,7 @@
 		B85FAD1438D40BA1ED7D234F02156BE0 /* NSRangeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSRangeExtension.swift; path = Sources/Extensions/NSRangeExtension.swift; sourceTree = "<group>"; };
 		BEF31F866556F9137162D1F196D1988D /* mz_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_os.h; path = SSZipArchive/minizip/mz_os.h; sourceTree = "<group>"; };
 		BF66B7654E3BBD952240EE8E2D537270 /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		C03D8B177B56AF86003CEC37370B477F /* mz_strm_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_strm_buf.c; path = SSZipArchive/minizip/mz_strm_buf.c; sourceTree = "<group>"; };
+		C03D8B177B56AF86003CEC37370B477F /* mz_strm_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_buf.c; path = SSZipArchive/minizip/mz_strm_buf.c; sourceTree = "<group>"; };
 		C04B15FE22D2BF2533C4DA471CF0CFD5 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextFieldExtension.swift; path = Sources/Extensions/UIKit/UITextFieldExtension.swift; sourceTree = "<group>"; };
 		C357651495FF590ACA8AC542E0776986 /* NSLayoutConstraint+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+.swift"; sourceTree = "<group>"; };
 		C43F32A24B33FCF1E44A8AC61A8CD89C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
@@ -452,23 +454,23 @@
 		CD4AC7B4ECB534379C346E4AD9B744E3 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
 		CE41C2241640803D2437F3E81D51DA1E /* UIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = Sources/Extensions/UIKit/UIImageExtension.swift; sourceTree = "<group>"; };
 		CF7D3F526CDBD195124CD457E40D4BB2 /* SwiftyUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyUtils-umbrella.h"; sourceTree = "<group>"; };
-		D09548CAD561FBEFD175953D5A21E031 /* DeviceGuru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DeviceGuru.framework; path = DeviceGuru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D09548CAD561FBEFD175953D5A21E031 /* DeviceGuru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceGuru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3579D7059C620F10CA3DA3B555965D8 /* mz_zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_zip.h; path = SSZipArchive/minizip/mz_zip.h; sourceTree = "<group>"; };
 		D39671C33034D20A38986B23DA3CE5AB /* DeviceGuru-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceGuru-prefix.pch"; sourceTree = "<group>"; };
 		D3E3D8474EE9D5AD506E84CEEB592F0D /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtension.swift; path = Sources/Extensions/UIKit/UIStoryboardExtension.swift; sourceTree = "<group>"; };
-		D8A8ED8C8BB52568203C3F4F326EC599 /* HouJia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HouJia.framework; path = HouJia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A8ED8C8BB52568203C3F4F326EC599 /* HouJia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HouJia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98B625FA7C2E8F270A8A9D2433D697C /* DeviceGuru.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceGuru.swift; path = Source/DeviceGuru.swift; sourceTree = "<group>"; };
 		DA23020DD63A8A4FC96FB5EE52E72629 /* Pods-HouJia_Example.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HouJia_Example.test.xcconfig"; sourceTree = "<group>"; };
 		DB000BCA7F47B553820B5B9329703178 /* ButtonWithImageAndLabelSuperView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonWithImageAndLabelSuperView.swift; sourceTree = "<group>"; };
 		DBA9A59AFB759EC77D311D38CA962D4A /* ButtonWithImageAndLabelView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ButtonWithImageAndLabelView.swift; sourceTree = "<group>"; };
 		DC270DD07A0FD34D31E92CAB233F48CA /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
 		DFCAFA980BFDCCFE28E81438BFFDA0C7 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		E088AF8F3DC3A04112863D2643EB35ED /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyUtils.framework; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E088AF8F3DC3A04112863D2643EB35ED /* SwiftyUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E237571AFDD11857B3DAEA733DEB5D78 /* Then.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Then.swift; path = Sources/Protocols/Then.swift; sourceTree = "<group>"; };
 		E338DB6A5572DA8297D8345858B20156 /* CGFloat+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CGFloat+.swift"; sourceTree = "<group>"; };
 		E5AA03C05FDB2F16C9F82F82DEB9B77D /* Pods-HouJia_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HouJia_Example-frameworks.sh"; sourceTree = "<group>"; };
 		E85691325694D3F5733BA5963BA71EAC /* mz_strm_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_mem.h; path = SSZipArchive/minizip/mz_strm_mem.h; sourceTree = "<group>"; };
-		EB606C6EBF6CB686BB1A270F6F01B158 /* Pods_HouJia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HouJia_Example.framework; path = "Pods-HouJia_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB606C6EBF6CB686BB1A270F6F01B158 /* Pods_HouJia_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HouJia_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED747D58FB5325DEEA6D0FFCDC36947C /* HasSafeAreaBottomView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HasSafeAreaBottomView.swift; sourceTree = "<group>"; };
 		ED7FCDD024933B06140B1A4BD0668499 /* UIViewController+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		ED8F9C73D8E511EC93C6E0A06EDCD7A6 /* mz.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz.h; path = SSZipArchive/minizip/mz.h; sourceTree = "<group>"; };
@@ -477,7 +479,7 @@
 		F10EDC7C6915017C2362A08FAA2D011A /* URLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLExtension.swift; path = Sources/Extensions/URLExtension.swift; sourceTree = "<group>"; };
 		F1636925BADDA86ABBBF13C707720A56 /* mz_strm_zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_zlib.h; path = SSZipArchive/minizip/mz_strm_zlib.h; sourceTree = "<group>"; };
 		F1EC67D1C898AE91F8DD2E07A60E44CB /* Pods-HouJia_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HouJia_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F53580EE7A00FF8BD9B8E8D25A3C8319 /* AFDateHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AFDateHelper.framework; path = AFDateHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F53580EE7A00FF8BD9B8E8D25A3C8319 /* AFDateHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AFDateHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6413FB60889900FA42C5C6461051C16 /* UIImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		F647761C2CF146043DA7C62C96575523 /* DeviceGuru+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DeviceGuru+Extension.swift"; path = "Source/DeviceGuru+Extension.swift"; sourceTree = "<group>"; };
 		F69266DB27D071007D68219BB7F4D755 /* DoubleExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoubleExtension.swift; path = Sources/Extensions/DoubleExtension.swift; sourceTree = "<group>"; };
@@ -485,12 +487,12 @@
 		F85F4332368F9B596185F0CCA4CDCB27 /* Pods-HouJia_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HouJia_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F9BEEDE91A73FDE74AB85A8D938991D0 /* mz_strm_os.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mz_strm_os.h; path = SSZipArchive/minizip/mz_strm_os.h; sourceTree = "<group>"; };
 		FA1BFA5573FEC7834B806DD4DCEE535C /* SSZipArchive-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSZipArchive-Info.plist"; sourceTree = "<group>"; };
-		FA95A511BB749F48A8897BEF65D96D85 /* mz_os.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_os.c; path = SSZipArchive/minizip/mz_os.c; sourceTree = "<group>"; };
+		FA95A511BB749F48A8897BEF65D96D85 /* mz_os.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_os.c; path = SSZipArchive/minizip/mz_os.c; sourceTree = "<group>"; };
 		FAAECBC9A7AE414691DA9FC63CAA5FFF /* AFDateHelper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AFDateHelper-Info.plist"; sourceTree = "<group>"; };
-		FAE7158BF274D969B3381159C9378E6A /* HouJia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HouJia.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FAE7158BF274D969B3381159C9378E6A /* HouJia.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HouJia.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FAEFB04BE91BFCD84C140C215E0C0FAA /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NotificationCenterExtension.swift; path = Sources/Extensions/NotificationCenterExtension.swift; sourceTree = "<group>"; };
 		FD85411576F7487AED6741748875B0E8 /* DeviceGuru.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceGuru.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE020D74C245F73620B57DF8F34ABDA6 /* mz_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mz_compat.c; path = SSZipArchive/minizip/mz_compat.c; sourceTree = "<group>"; };
+		FE020D74C245F73620B57DF8F34ABDA6 /* mz_compat.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_compat.c; path = SSZipArchive/minizip/mz_compat.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -600,7 +602,6 @@
 				41819FB139269632EDD8664A328FC7DD /* DateHelper.swift */,
 				C63D3263BCE1B26814FD056D9A1E5B47 /* Support Files */,
 			);
-			name = AFDateHelper;
 			path = AFDateHelper;
 			sourceTree = "<group>";
 		};
@@ -637,7 +638,6 @@
 				BF66B7654E3BBD952240EE8E2D537270 /* Observable.swift */,
 				8A119B6A2753964C3A556331A7C0C3C1 /* UI */,
 			);
-			name = Base;
 			path = Base;
 			sourceTree = "<group>";
 		};
@@ -686,6 +686,7 @@
 				65C55EEA9FBC5F8FE39E7F0466318D14 /* Storyboard+.swift */,
 				26DE62A0C828916B684D2563902C942C /* String+.swift */,
 				3C7090392FCA43A4F33227580F485A5B /* URL+.swift */,
+				02E67D892447E8C300584E86 /* Copying.swift */,
 				205D67A6305C297E13DC9BD13CF7E36B /* Base */,
 			);
 			name = Utils;
@@ -734,7 +735,6 @@
 				DBA9A59AFB759EC77D311D38CA962D4A /* ButtonWithImageAndLabelView.swift */,
 				ADB0E5AF57795FBA846604AB471546B3 /* ButtonWithImageAndLabelView.xib */,
 			);
-			name = ButtonWithImageAndLabel;
 			path = ButtonWithImageAndLabel;
 			sourceTree = "<group>";
 		};
@@ -745,7 +745,6 @@
 				479B335C63EB2449D744C7A8A1ACDF61 /* LoginTextFieldView.swift */,
 				B2C4D5C76A510C7394734B78E8FD0E28 /* LoginTextFieldView.xib */,
 			);
-			name = LoginTextFieldView;
 			path = LoginTextFieldView;
 			sourceTree = "<group>";
 		};
@@ -820,7 +819,6 @@
 				332437482A85ABBB4DA41C0BE092BA0D /* UserDefaultsExtension.swift */,
 				BBC7A95C37F76EC653D7F2B8A5B8D23F /* Support Files */,
 			);
-			name = SwiftyUtils;
 			path = SwiftyUtils;
 			sourceTree = "<group>";
 		};
@@ -850,7 +848,6 @@
 				637E5327AF84196D1E72784A367195A5 /* ButtonWithImageAndLabel */,
 				74166E6C75EAC9147469DAEC84E1DDAD /* LoginTextFieldView */,
 			);
-			name = UI;
 			path = UI;
 			sourceTree = "<group>";
 		};
@@ -863,7 +860,6 @@
 				15853DFF66BC30A91CB075684CDD0FBB /* Resources */,
 				51F547A7A2742EB7B2FE649FE2D37B35 /* Support Files */,
 			);
-			name = DeviceGuru;
 			path = DeviceGuru;
 			sourceTree = "<group>";
 		};
@@ -888,7 +884,6 @@
 				679D02D1E6FDF0DFFE12D7C0E4C71EDA /* MBProgressHUD.m */,
 				AA0E3F53F60FC3ABC7BD3DEF91DE3F50 /* Support Files */,
 			);
-			name = MBProgressHUD;
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1052,7 +1047,6 @@
 				EF6D2FC470E391CBD1BBD8A2E78A1E8F /* ZipArchive.h */,
 				791FC6AD35DBBA51CE76E9C97DEEB297 /* Support Files */,
 			);
-			name = SSZipArchive;
 			path = SSZipArchive;
 			sourceTree = "<group>";
 		};
@@ -1603,6 +1597,7 @@
 				7A398FE47306056F59D9B3EFEF923D3E /* NSLayoutConstraint+.swift in Sources */,
 				18E9B8FDCE2F44E90DCA1BD6CB30E4E7 /* NSPersistentContainerExtension.swift in Sources */,
 				6F77F8B96C73AA405BB0F4B38C142E92 /* Observable.swift in Sources */,
+				02E67D8A2447E8C300584E86 /* Copying.swift in Sources */,
 				2DD08FBF4A04837BA15DA5A23EFDAEFF /* PaddingLabel.swift in Sources */,
 				76B8552C0069D1E045D9E851B2B9E6A6 /* PersistentContainerManager.swift in Sources */,
 				669151CDF57F011D81C324E4249DF3E0 /* Storyboard+.swift in Sources */,
@@ -1983,8 +1978,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -2490,8 +2484,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

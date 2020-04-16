@@ -32,4 +32,11 @@ extension UITableView {
     tableFooterView = spinner
     tableFooterView?.isHidden = false
   }
+  
+  // [解決 iOS 11 之後 UITableView 的 contentSize & contentOffset 失準問題](http://shoshino21.logdown.com/posts/3417231)
+  public func closeSelfSizing() {
+    estimatedRowHeight = 0
+    estimatedSectionHeaderHeight = 0
+    estimatedSectionFooterHeight = 0
+  }
 }
