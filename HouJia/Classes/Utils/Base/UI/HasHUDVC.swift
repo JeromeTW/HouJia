@@ -18,16 +18,15 @@ extension HasHUDVC {
     DispatchQueue.main.async {
       [weak self] in
       guard let strongSelf = self else { return }
-      if strongSelf.theHUDShowCounter.intValue > 0 {
-        // 已經顯示了
-        
-      } else {
-        MBProgressHUD.showAdded(to: strongSelf.view, animated: true)
-      }
       synchronized(strongSelf.theHUDShowCounter) {
         guard let innerSelf = self else { return }
-        strongSelf.theHUDShowCounter = NSNumber(value: strongSelf.theHUDShowCounter.intValue + 1)
-        logT(issue: "theHUDShowCounter", message: "theHUDShowCounter:\(strongSelf.theHUDShowCounter.intValue)")
+        if innerSelf.theHUDShowCounter.intValue > 0 {
+          // 已經顯示了
+        } else {
+          MBProgressHUD.showAdded(to: innerSelf.view, animated: true)
+        }
+        innerSelf.theHUDShowCounter = NSNumber(value: innerSelf.theHUDShowCounter.intValue + 1)
+        logT(issue: "theHUDShowCounter", message: "theHUDShowCounter:\(innerSelf.theHUDShowCounter.intValue)")
       }
     }
   }
@@ -36,19 +35,19 @@ extension HasHUDVC {
     DispatchQueue.main.async {
       [weak self] in
       guard let strongSelf = self else { return }
-      if strongSelf.theHUDShowCounter.intValue < 1 {
-        // 有問題
-        assertionFailure()
-      } else if strongSelf.theHUDShowCounter.intValue == 1 {
-        // 最後一個 HUD 請求
-        MBProgressHUD.hide(for: strongSelf.view, animated: true)
-      } else {
-        // 還有其他 HUD 請求
-      }
       synchronized(strongSelf.theHUDShowCounter) {
         guard let innerSelf = self else { return }
-        strongSelf.theHUDShowCounter = NSNumber(value: strongSelf.theHUDShowCounter.intValue - 1)
-        logT(issue: "theHUDShowCounter", message: "theHUDShowCounter:\(strongSelf.theHUDShowCounter.intValue)")
+        if innerSelf.theHUDShowCounter.intValue < 1 {
+          // 有問題
+          assertionFailure()
+        } else if innerSelf.theHUDShowCounter.intValue == 1 {
+          // 最後一個 HUD 請求
+          MBProgressHUD.hide(for: innerSelf.view, animated: true)
+        } else {
+          // 還有其他 HUD 請求
+        }
+        innerSelf.theHUDShowCounter = NSNumber(value: innerSelf.theHUDShowCounter.intValue - 1)
+        logT(issue: "theHUDShowCounter", message: "theHUDShowCounter:\(innerSelf.theHUDShowCounter.intValue)")
       }
     }
   }
