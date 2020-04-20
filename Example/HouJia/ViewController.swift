@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: BaseViewController {
+class ViewController: BaseViewController, HasHUDVC {
 
+  var theHUDShowCounter: AtomicInteger = AtomicInteger()
   @IBOutlet var tableView: UITableView! {
     didSet {
       tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
