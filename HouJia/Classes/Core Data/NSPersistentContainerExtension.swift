@@ -5,8 +5,8 @@
 import CoreData
 
 extension NSPersistentContainer {
-  public func saveContext(backgroundContext: NSManagedObjectContext? = nil) throws {
-    let context = backgroundContext ?? viewContext
+  public func saveContext(_ aContext: NSManagedObjectContext? = nil) throws {
+    let context = aContext ?? viewContext
     guard context.hasChanges else { return }
     do {
       try context.save()

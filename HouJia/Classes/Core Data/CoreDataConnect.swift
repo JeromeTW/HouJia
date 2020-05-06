@@ -37,7 +37,7 @@ public class CoreDataConnect {
       insetObject.setValue(value, forKey: key)
     }
 
-    try persistentContainer.saveContext()
+    try persistentContainer.saveContext(context)
   }
 
   // retrieve
@@ -83,7 +83,7 @@ public class CoreDataConnect {
           result.setValue(value, forKey: key)
         }
       }
-      try persistentContainer.saveContext()
+      try persistentContainer.saveContext(aContext)
     }
   }
 
@@ -95,7 +95,7 @@ public class CoreDataConnect {
         context.delete(result)
       }
 
-      try persistentContainer.saveContext()
+      try persistentContainer.saveContext(context)
     }
   }
 
