@@ -26,11 +26,23 @@ public class CoreDataConnect {
   }
 
   // MARK: - Functions
-
+  public func getProperContext() -> NSManagedObjectContext {
+    if Thread.isMainThread {
+      return viewContext
+    } else {
+      return backgroundContext
+    }
+  }
+  
   // insert
   // NOTE: myEntityName(在Video.xcdatamodeld中設定) 必須跟 class name 一致才能用範型
   public func insert<T: NSManagedObject>(type _: T.Type, attributeInfo: [String: Any], aContext: NSManagedObjectContext? = nil) throws {
-    let context = aContext ?? viewContext
+    var context: NSManagedObjectContext!
+    if let notNil = aContext {
+      context = notNil
+    } else {
+      context = getProperContext()
+    }
     let insetObject = NSEntityDescription.insertNewObject(forEntityName: String(describing: T.self), into: context)
 
     for (key, value) in attributeInfo {
@@ -43,7 +55,12 @@ public class CoreDataConnect {
   // retrieve
   // NOTE: 如果找不到結果會回傳 nil, 不會回傳空陣列
   public func retrieve<T: NSManagedObject>(type _: T.Type, predicate: NSPredicate? = nil, sort: [[String: Bool]]? = nil, limit: Int? = nil, aContext: NSManagedObjectContext? = nil) -> [T]? {
-    let context = aContext ?? viewContext
+    var context: NSManagedObjectContext!
+    if let notNil = aContext {
+      context = notNil
+    } else {
+      context = getProperContext()
+    }
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: T.self))
 
     // predicate
@@ -89,7 +106,12 @@ public class CoreDataConnect {
 
   // delete
   public func delete<T: NSManagedObject>(type: T.Type, predicate: NSPredicate? = nil, aContext: NSManagedObjectContext? = nil) throws {
-    let context = aContext ?? viewContext
+    var context: NSManagedObjectContext!
+    if let notNil = aContext {
+      context = notNil
+    } else {
+      context = getProperContext()
+    }
     if let results = self.retrieve(type: type, predicate: predicate, sort: nil, limit: nil, aContext: aContext) {
       for result in results {
         context.delete(result)
@@ -100,7 +122,12 @@ public class CoreDataConnect {
   }
 
   public func getCount<T: NSManagedObject>(type _: T.Type, predicate: NSPredicate? = nil, aContext: NSManagedObjectContext? = nil) -> Int {
-    let context = aContext ?? viewContext
+    var context: NSManagedObjectContext!
+    if let notNil = aContext {
+      context = notNil
+    } else {
+      context = getProperContext()
+    }
     var count = 0
     let request = NSFetchRequest<NSNumber>(entityName: String(describing: T.self))
 
@@ -120,7 +147,12 @@ public class CoreDataConnect {
 
   public func getFRC<T: NSManagedObject>(type _: T.Type, predicate: NSPredicate? = nil, sortDescriptors:
     [NSSortDescriptor], limit: Int? = nil, sectionNameKeyPath: String? = nil, cacheName: String? = nil, aContext: NSManagedObjectContext? = nil) -> NSFetchedResultsController<T> {
-    let context = aContext ?? viewContext
+    var context: NSManagedObjectContext!
+    if let notNil = aContext {
+      context = notNil
+    } else {
+      context = getProperContext()
+    }
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: T.self))
 
     // predicate
@@ -155,7 +187,12 @@ public protocol HasID {
 extension CoreDataConnect {
   // This Entity must has id property
   public func generateNewID<T: HasID>(_: T.Type, aContext: NSManagedObjectContext? = nil) -> Int64 {
-    let context = aContext ?? viewContext
+    var context: NSManagedObjectContext!
+    if let notNil = aContext {
+      context = notNil
+    } else {
+      context = getProperContext()
+    }
     var newID: Int64 = 1
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: T.self))
     request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: false)]
@@ -182,7 +219,12 @@ public protocol HasOrder {
 extension CoreDataConnect {
   // This Entity must has order property
   public func generateNewOrder<T: HasOrder>(_: T.Type, aContext: NSManagedObjectContext? = nil) -> Int64 {
-    let context = aContext ?? viewContext
+    var context: NSManagedObjectContext!
+    if let notNil = aContext {
+      context = notNil
+    } else {
+      context = getProperContext()
+    }
     var newOrder: Int64 = 1
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: T.self))
     request.sortDescriptors = [NSSortDescriptor(key: "order", ascending: false)]
