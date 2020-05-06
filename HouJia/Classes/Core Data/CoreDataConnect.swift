@@ -36,7 +36,7 @@ public class CoreDataConnect {
   
   // insert
   // NOTE: myEntityName(在Video.xcdatamodeld中設定) 必須跟 class name 一致才能用範型
-  public func insert<T: NSManagedObject>(type _: T.Type, attributeInfo: [String: Any], aContext: NSManagedObjectContext? = nil) throws {
+  public func insert<T: NSManagedObject>(type _: T.Type, attributeInfo: [String: Any], aContext: NSManagedObjectContext? = nil, shouldSave: Bool = true) throws {
     var context: NSManagedObjectContext!
     if let notNil = aContext {
       context = notNil
@@ -49,7 +49,9 @@ public class CoreDataConnect {
       insetObject.setValue(value, forKey: key)
     }
 
-    try persistentContainer.saveContext(context)
+    if shouldSave {
+      try context.saveIfChanged()
+    }
   }
 
   // retrieve
@@ -93,19 +95,27 @@ public class CoreDataConnect {
   }
 
   // update
-  public func update<T: NSManagedObject>(type: T.Type, predicate: NSPredicate? = nil, limit: Int? = 1, attributeInfo: [String: Any], aContext: NSManagedObjectContext? = nil) throws {
-    if let results = self.retrieve(type: type, predicate: predicate, sort: nil, limit: limit, aContext: aContext) {
+  public func update<T: NSManagedObject>(type: T.Type, predicate: NSPredicate? = nil, limit: Int? = 1, attributeInfo: [String: Any], aContext: NSManagedObjectContext? = nil, shouldSave: Bool = true) throws {
+    var context: NSManagedObjectContext!
+    if let notNil = aContext {
+      context = notNil
+    } else {
+      context = getProperContext()
+    }
+    if let results = self.retrieve(type: type, predicate: predicate, sort: nil, limit: limit, aContext: context) {
       for result in results {
         for (key, value) in attributeInfo {
           result.setValue(value, forKey: key)
         }
       }
-      try persistentContainer.saveContext(aContext)
+      if shouldSave {
+        try context.saveIfChanged()
+      }
     }
   }
 
   // delete
-  public func delete<T: NSManagedObject>(type: T.Type, predicate: NSPredicate? = nil, aContext: NSManagedObjectContext? = nil) throws {
+  public func delete<T: NSManagedObject>(type: T.Type, predicate: NSPredicate? = nil, aContext: NSManagedObjectContext? = nil, shouldSave: Bool = true) throws {
     var context: NSManagedObjectContext!
     if let notNil = aContext {
       context = notNil
@@ -117,7 +127,9 @@ public class CoreDataConnect {
         context.delete(result)
       }
 
-      try persistentContainer.saveContext(context)
+      if shouldSave {
+        try context.saveIfChanged()
+      }
     }
   }
 

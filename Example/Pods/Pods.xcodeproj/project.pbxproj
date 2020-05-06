@@ -29,7 +29,7 @@
 		1697D7C3D209FBCA35BEB7F88C14FFD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F85A1D31A073B63B846522C1A595D5 /* Foundation.framework */; };
 		175D441B75E75D113CC6DE85CB00BDAC /* mz_strm_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 5416B4369733668FB6E817434FA3FE56 /* mz_strm_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		18701CC9CAE9F51BF8BA92A6CC237312 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332437482A85ABBB4DA41C0BE092BA0D /* UserDefaultsExtension.swift */; };
-		18E9B8FDCE2F44E90DCA1BD6CB30E4E7 /* NSPersistentContainerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B495B3638CB88FFCE730FD3E36C35A /* NSPersistentContainerExtension.swift */; };
+		18E9B8FDCE2F44E90DCA1BD6CB30E4E7 /* NSManagedObjectContextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B495B3638CB88FFCE730FD3E36C35A /* NSManagedObjectContextExtension.swift */; };
 		1A17A215D3ED206546CBA9F925FC0B63 /* Data+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C288609BE175969788ED3B4D731AAE6 /* Data+.swift */; };
 		1D9BD2A90871228B9B997E3CB135AEC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F85A1D31A073B63B846522C1A595D5 /* Foundation.framework */; };
 		1E1EE88957579251C9C5C142DE9245DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F85A1D31A073B63B846522C1A595D5 /* Foundation.framework */; };
@@ -307,7 +307,7 @@
 		1200C7DD60AB4FE57D6D9016BA8D32CC /* SwiftyUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyUtils-dummy.m"; sourceTree = "<group>"; };
 		13B1D760E37EE0DF94B733239925D393 /* Pods-HouJia_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HouJia_Tests-dummy.m"; sourceTree = "<group>"; };
 		15E056E9B2A89DC1941E4F63230BA99C /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
-		17B495B3638CB88FFCE730FD3E36C35A /* NSPersistentContainerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerExtension.swift; sourceTree = "<group>"; };
+		17B495B3638CB88FFCE730FD3E36C35A /* NSManagedObjectContextExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContextExtension.swift; sourceTree = "<group>"; };
 		17DB202C635EF765813270369945757C /* mz_strm_pkcrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mz_strm_pkcrypt.c; path = SSZipArchive/minizip/mz_strm_pkcrypt.c; sourceTree = "<group>"; };
 		1840208897B81FB37EB0211A2BA91E54 /* UIButton+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		1AD68A197F76D2684AAADC86011D6866 /* DictionaryExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryExtension.swift; path = Sources/Extensions/DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -703,7 +703,7 @@
 			isa = PBXGroup;
 			children = (
 				8291977C17E6B940F6B6533EC3B6342E /* CoreDataConnect.swift */,
-				17B495B3638CB88FFCE730FD3E36C35A /* NSPersistentContainerExtension.swift */,
+				17B495B3638CB88FFCE730FD3E36C35A /* NSManagedObjectContextExtension.swift */,
 				58FDC7DB2734B7CE5DD3978AE088858A /* PersistentContainerManager.swift */,
 			);
 			name = "Core Data";
@@ -1602,7 +1602,7 @@
 				98A4A0D23ED1B91F93463C0D7DEC4D14 /* LogTextView.swift in Sources */,
 				52D36A2641D6959E67E6CF3FC7391BAE /* NetworkRequestOperation.swift in Sources */,
 				7A398FE47306056F59D9B3EFEF923D3E /* NSLayoutConstraint+.swift in Sources */,
-				18E9B8FDCE2F44E90DCA1BD6CB30E4E7 /* NSPersistentContainerExtension.swift in Sources */,
+				18E9B8FDCE2F44E90DCA1BD6CB30E4E7 /* NSManagedObjectContextExtension.swift in Sources */,
 				02872D06244D293E00CAB9B0 /* AtomicInteger.swift in Sources */,
 				6F77F8B96C73AA405BB0F4B38C142E92 /* Observable.swift in Sources */,
 				02E67D8A2447E8C300584E86 /* Copying.swift in Sources */,
