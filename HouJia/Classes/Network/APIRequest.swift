@@ -66,9 +66,9 @@ public struct APIRequest: Hashable {
     self.body = body
   }
 
-  public init?(url: URL, jsonDictionary: [String: Any], otherHeaders: [HTTPHeader]? = nil) {
+  public init?(url: URL, method: HTTPMethod = .post, jsonDictionary: [String: Any], otherHeaders: [HTTPHeader]? = nil) {
     self.url = url
-    self.method = .post
+    self.method = method
     self.headers = [HTTPHeader(field: "Content-Type", value: "application/json; charset=utf-8")] + (otherHeaders ?? [])
     do {
       let body = try JSONSerialization.data(withJSONObject: jsonDictionary, options: JSONSerialization.WritingOptions(rawValue: 0))
