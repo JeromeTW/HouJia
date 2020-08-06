@@ -86,9 +86,11 @@ public class CoreDataConnect {
     }
 
     do {
-      let result = try context.fetch(request) as! [T]
-      return result.isEmpty ? nil : result
-
+      if let result = try context.fetch(request) as? [T] {
+        return result.isEmpty ? nil : result
+      } else {
+        return nil
+      }
     } catch {
       fatalError("\(error)")
     }
