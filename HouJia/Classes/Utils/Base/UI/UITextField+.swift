@@ -26,8 +26,13 @@ extension UITextField {
     datePicker.datePickerMode = .date
     datePicker.date = defaultDate
     datePicker.maximumDate = maximumDate
+    if #available(iOS 13.4, *) {
+      datePicker.preferredDatePickerStyle = .wheels
+    } else {
+      // Fallback on earlier versions
+    }
     inputView = datePicker
-
+    
     // Create a toolbar and assign it to inputAccessoryView
     let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 44.0))
     let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
