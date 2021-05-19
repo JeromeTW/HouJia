@@ -14,4 +14,8 @@ extension UITableViewCell {
     clearView.backgroundColor = UIColor.clear
     selectedBackgroundView = clearView
   }
+  
+  public func separator(hide: Bool) {
+    separatorInset.left = hide ? bounds.size.width : 0
+  }
 }

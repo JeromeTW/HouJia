@@ -170,3 +170,33 @@ public func getContentType(_ url: URL) -> String {
 
   return "\(mimeType!)"
 }
+
+public func createGoToSettingsAlertController(title: String, message: String, beforeSettingsActionNeedToDone: (() -> Void)?, cancelActionHandler: (() -> Void)?) -> UIAlertController {
+  let alertController = UIAlertController (title: title, message: message, preferredStyle: .alert)
+
+  let settingsAction = UIAlertAction(title: R.string.localizable.go_to_settings(), style: .default) { (_) -> Void in
+    DispatchQueue.main.async {
+      beforeSettingsActionNeedToDone?()
+      guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+        assertionFailure()
+        return
+      }
+      
+      if UIApplication.shared.canOpenURL(settingsUrl) {
+        UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+          logC("Settings opened: \(success)") // Prints true
+        })
+      } else {
+        logF("無法開啟\(settingsUrl.absoluteString)")
+      }
+    }
+  }
+  alertController.addAction(settingsAction)
+  let cancelAction = UIAlertAction(title: R.string.localizable.common_cancel(), style: .default) { _ in
+    DispatchQueue.main.async {
+      cancelActionHandler?()
+    }
+  }
+  alertController.addAction(cancelAction)
+  return alertController
+}

@@ -13,6 +13,7 @@
 		01A072CE6246777E84833304AB699FEF /* Pods-HouJia_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 286F200B334F7E0D633D7689572FD0BA /* Pods-HouJia_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01FE48C60F63F4B61AC5963A7BA7AE2F /* mz_zip_rw.c in Sources */ = {isa = PBXBuildFile; fileRef = 85ED5206DB4C82A4B74C63D25A487493 /* mz_zip_rw.c */; };
 		020EE18E2B9E17752B21A8C347AFFFEC /* mz_strm_split.c in Sources */ = {isa = PBXBuildFile; fileRef = 4883D842E4FB40BD52D054AED2350C61 /* mz_strm_split.c */; };
+		023908E226553D5000B1139F /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023908E126553D5000B1139F /* UINavigationController+.swift */; };
 		02872D06244D293E00CAB9B0 /* AtomicInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02872D05244D293E00CAB9B0 /* AtomicInteger.swift */; };
 		02CAEDFE2452BA4200E76130 /* AtomicBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CAEDFD2452BA4200E76130 /* AtomicBool.swift */; };
 		02E67D8A2447E8C300584E86 /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E67D892447E8C300584E86 /* Copying.swift */; };
@@ -281,6 +282,7 @@
 		00097AF95A458D6A78B35503E7455367 /* BaseViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		021427794393EE583F0AEE951FCCE9DA /* UIApplicationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIApplicationExtension.swift; path = Sources/Extensions/UIKit/UIApplicationExtension.swift; sourceTree = "<group>"; };
 		021DE81EA20059B83E09935D9ADA80AC /* DeviceGuru-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeviceGuru-dummy.m"; sourceTree = "<group>"; };
+		023908E126553D5000B1139F /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 		02872D05244D293E00CAB9B0 /* AtomicInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicInteger.swift; sourceTree = "<group>"; };
 		02A687EF1980A2EB6D42AF8DDB65C016 /* BaseView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		02CAEDFD2452BA4200E76130 /* AtomicBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicBool.swift; sourceTree = "<group>"; };
@@ -851,6 +853,7 @@
 				3CD5FCF2C9C9E8CC24DC109F8BF0D174 /* UIViewController+Alerts.swift */,
 				430496649A74C51248C203499F49669B /* UIViewExtension.swift */,
 				879997EF7ED1125C57162E05076B0743 /* UIWindowTransitions.swift */,
+				023908E126553D5000B1139F /* UINavigationController+.swift */,
 				637E5327AF84196D1E72784A367195A5 /* ButtonWithImageAndLabel */,
 				74166E6C75EAC9147469DAEC84E1DDAD /* LoginTextFieldView */,
 			);
@@ -1596,6 +1599,7 @@
 				B2B059597C945D38781773584C3A775D /* ImageScrollView.swift in Sources */,
 				35D10997D71028D89AB29917C7CC3E1A /* JeromeNavigationBar.swift in Sources */,
 				FA261681830D75B3FF9BD483D1739E0B /* JeromeNavigationBarStatusBarBaseVC.xib in Sources */,
+				023908E226553D5000B1139F /* UINavigationController+.swift in Sources */,
 				46D4F82DB9565F8BC8809FBF0BEFBD6D /* LoginTextFieldSuperView.swift in Sources */,
 				E2DDF9B5581F95E622697DBC20C3CBC9 /* LoginTextFieldView.swift in Sources */,
 				4106D020EA34332754FD4F4975FFE3CF /* LoginTextFieldView.xib in Sources */,
