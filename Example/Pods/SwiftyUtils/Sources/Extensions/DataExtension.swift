@@ -57,7 +57,7 @@ extension Data {
             hexString = "0x"
         }
 
-        self.withUnsafeBytes { bytes in
+        self.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> Void in
             for index in 0..<count {
                 if spaces && (index % 4) == 0 && index != 0 && index != (count - 1) {
                     hexString += " "
