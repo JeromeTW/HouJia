@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HouJia'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'A short description of HouJia.'
 
 # This description is used to generate tags and improve search results.
@@ -41,10 +41,10 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'WebKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'DeviceGuru', '6.0.3'
-  s.dependency 'SwiftyUtils', '5.0.0'
+  s.dependency 'DeviceGuru', '10.0.8'
+  s.dependency 'SwiftyUtils', '5.2.0'
   s.dependency 'AFDateHelper', '4.3.0'
-  s.dependency 'SSZipArchive', '2.2.2'
+  s.dependency 'SSZipArchive', '2.6.0'
   s.dependency 'MBProgressHUD', '1.2.0'
   
 end
