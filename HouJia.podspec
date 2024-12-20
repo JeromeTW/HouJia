@@ -44,7 +44,7 @@ TODO: Add long description of the pod here.
   s.dependency 'DeviceGuru', '10.0.8'
   s.dependency 'SwiftyUtils', '5.2.0'
   s.dependency 'AFDateHelper', '4.3.0'
-  s.dependency 'SSZipArchive', '2.6.0'
+  s.dependency 'SSZipArchive', '2.4.3'
   s.dependency 'MBProgressHUD', '1.2.0'
   
 end
