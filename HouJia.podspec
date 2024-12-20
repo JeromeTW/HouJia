@@ -28,8 +28,8 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/JeromeTW/HouJia.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '11.0'
-  s.platform     = :ios, '11.0'
+  s.ios.deployment_target = '13.0'
+  s.platform     = :ios, '13.0'
   s.swift_version = '5.0'
 
   s.source_files = 'HouJia/Classes/**/*'
